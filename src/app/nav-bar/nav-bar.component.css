@@ -1,0 +1,18 @@
+.nav-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.nav-bar-title {
+  font-size: 32px;
+  width: 33%
+}
+.nav-bar-sections {
+  display: flex;
+  justify-content: space-evenly;
+  width: 67%;
+}
+.nav-bar-section {
+  font-size: 22px;
+}

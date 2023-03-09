@@ -1,0 +1,11 @@
+.media-container {
+}
+.media-row {
+  display: flex;
+  justify-content: left;
+}
+.media-object {
+  width: 34%;
+  height: 350px;
+  border: 0;
+}

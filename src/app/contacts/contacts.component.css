@@ -1,0 +1,16 @@
+.contacts-container {
+  text-align: center;
+  padding: 250px;
+}
+.contact-title {
+  font-size: xxx-large;
+  padding-bottom: -5px;
+  margin-bottom: 0;
+}
+.contact-subtitle {
+  font-size: medium;
+  margin-bottom: 40px;
+}
+.contact-item {
+  font-size: large;
+}
