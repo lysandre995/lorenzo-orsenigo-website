@@ -1,0 +1,8 @@
+<div class="projects-container">
+  <ng-container *ngFor="let project of projects">
+    <div class="projects-object">
+      <img routerLink="{{project.pageUrl}}" src="{{project.imgUrl}}" alt="">
+      <div class="projects-object-title">{{project.title}}</div>
+    </div>
+  </ng-container>
+</div>

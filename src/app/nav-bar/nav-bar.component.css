@@ -3,8 +3,10 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 42px;
 }
 .nav-bar-title {
+  padding-left: 10px;
   font-size: 32px;
   width: 33%
 }
@@ -15,4 +17,30 @@
 }
 .nav-bar-section {
   font-size: 22px;
+}
+.nav-bar-hamburger {
+  display: none;
+}
+@media only screen and (max-width: 900px) {
+  .nav-bar-title {
+    font-size: 28px;
+  }
+  .nav-bar-section {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 741px) {
+  .nav-bar-title {
+    font-size: 28px;
+    width: 95%;
+  }
+  .nav-bar-sections {
+    display: none;
+  }
+  .nav-bar-hamburger {
+    padding-right: 10px;
+    display: flex;
+    justify-content: right;
+    width: 5%;
+  }
 }
