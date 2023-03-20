@@ -1,3 +1,11 @@
+.nav-bar-extra {
+  position: fixed;
+  top: 0;
+  height: 42px;
+  z-index: 2;
+  background-color: white;
+  width: 100%;
+}
 .nav-bar-container {
   display: flex;
   justify-content: space-between;
@@ -21,6 +29,13 @@
 .nav-bar-hamburger {
   display: none;
 }
+.nav-bar-modal {
+  display: none;
+  width: 100%;
+  overflow: auto;
+  text-align: center;
+  background-color: white;
+}
 @media only screen and (max-width: 900px) {
   .nav-bar-title {
     font-size: 28px;
@@ -29,7 +44,7 @@
     font-size: 18px;
   }
 }
-@media only screen and (max-width: 741px) {
+@media only screen and (max-width: 751px) {
   .nav-bar-title {
     font-size: 28px;
     width: 95%;

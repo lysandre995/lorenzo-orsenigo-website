@@ -1,10 +1,18 @@
-<div class="nav-bar-container">
-  <div class="nav-bar-title"><a class="button" routerLink="/"routerLinkActive="activebutton" ariaCurrentWhenActive="page">Lorenzo Orsenigo</a></div>
-  <div class="nav-bar-sections">
-    <div class="nav-bar-section"><a class="button" routerLink="/bio" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Bio</a></div>
-    <div class="nav-bar-section"><a class="button" routerLink="/projects" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Projects</a></div>
-    <div class="nav-bar-section"><a class="button" routerLink="/contacts" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Contacts</a></div>
-    <div class="nav-bar-section"><a class="button" routerLink="/events" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Events</a></div>
+<div class="nav-bar-extra">
+  <div class="nav-bar-container">
+    <div class="nav-bar-title"><a class="button" routerLink="/"routerLinkActive="activebutton" ariaCurrentWhenActive="page">Lorenzo Orsenigo</a></div>
+    <div class="nav-bar-sections">
+      <div class="nav-bar-section"><a class="button" routerLink="/bio" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Bio</a></div>
+      <div class="nav-bar-section"><a class="button" routerLink="/projects" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Projects</a></div>
+      <div class="nav-bar-section"><a class="button" routerLink="/contacts" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Contacts</a></div>
+      <div class="nav-bar-section"><a class="button" routerLink="/events" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Events</a></div>
+    </div>
+    <div class="nav-bar-hamburger" (click)="toggleModal()"><a><fa-icon [icon]="faBars"></fa-icon></a></div>
   </div>
-  <div class="nav-bar-hamburger"><fa-icon [icon]="faBars"></fa-icon></div>
+  <div id="nav-bar-modal-id" class="nav-bar-modal">
+    <div class="nav-bar-section" (click)="toggleModal()"><a class="button" routerLink="/bio" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Bio</a></div>
+    <div class="nav-bar-section" (click)="toggleModal()"><a class="button" routerLink="/projects" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Projects</a></div>
+    <div class="nav-bar-section" (click)="toggleModal()"><a class="button" routerLink="/contacts" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Contacts</a></div>
+    <div class="nav-bar-section" (click)="toggleModal()"><a class="button" routerLink="/events" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Events</a></div>
+  </div>
 </div>
