@@ -21,11 +21,6 @@ a:hover {
   color: gray;
 }
 
-app-bio {
-  display: flex;
-  justify-content: space-around;
-}
-
 app-footer {
   position: absolute;
   bottom: 0;
