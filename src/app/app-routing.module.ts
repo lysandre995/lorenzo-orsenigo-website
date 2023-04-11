@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BioComponent } from "./bio/bio.component";
-import { ContactsComponent } from "./contacts/contacts.component";
-import { EventsComponent } from "./events/events.component";
-import { HomeComponent } from "./home/home.component";
-import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
-import { ProjectsComponent } from "./projects/projects.component";
+import { BioComponent } from "./components/bio/bio.component";
+import { ContactsComponent } from "./components/contacts/contacts.component";
+import { EventsComponent } from "./components/events/events.component";
+import { HomeComponent } from "./components/home/home.component";
+import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
+import { ProjectsComponent } from "./components/projects/projects.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
