@@ -1,0 +1,35 @@
+.event-container {
+  display: flex;
+  width: 1280px;
+}
+.event-calendar-page {
+  background-color: silver;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  padding: 0 10px;
+}
+.event-calendar-page-day {
+  font-size: 32px;
+}
+.event-calendar-page-month {
+  font-size: 20px;
+}
+.event-calendar-page-year {
+  font-size: 20px;
+}
+.event-calendar-page-hour {
+  font-size: 26px;
+}
+.event-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.event-location {
+  display: flex;
+  flex-direction: column;
+}
