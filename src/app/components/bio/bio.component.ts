@@ -9,7 +9,7 @@ import { BioService } from "../../services/bio.service";
 export class BioComponent implements OnInit {
   public title = '';
   public descriptionChunks: string[] = [];
-  // public imageUrl = '';
+  public imageUrl = '';
 
   constructor(private readonly bioService: BioService) {
   }
@@ -18,7 +18,7 @@ export class BioComponent implements OnInit {
     const bio = (await this.bioService.getBio());
     this.title = bio.title;
     this.descriptionChunks = this.getChunks(bio.text);
-    // this.imageUrl = bio.picture;
+    this.imageUrl = bio.picture;
   }
 
   private getChunks(text: string) {
