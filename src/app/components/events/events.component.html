@@ -1,3 +1,5 @@
 <div class="events-container">
-  <app-event></app-event>
+  <ng-container *ngFor="let event of events">
+    <app-event [event]=event></app-event>
+  </ng-container>
 </div>

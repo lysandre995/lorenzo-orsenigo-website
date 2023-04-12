@@ -1,20 +1,34 @@
 <div class="event-container">
   <div class="event-calendar-page">
+    <div class="event-calendar-page-day">{{event.date.getDay() + 1}}</div>
+    <div class="event-calendar-page-month">{{event.date.getMonth() + 1}}</div>
+    <div class="event-calendar-page-year">{{event.date.getFullYear()}}</div>
+    <div class="event-calendar-page-hour">{{event.date.getHours()}}:{{event.date.getMinutes()}}</div>
+  </div>
+  <div class="event-cover">
+    <img [src]=event.coverUrl alt="">
+  </div>
+  <div class="event-body">
+    <div class="event-body-title">{{event.name}}</div>
+  </div>
+  <div class="event-location">
+    <div class="event-location-city">{{event.location}}</div>
+    <div class="event-location-location">Albert Hall</div>
+    <div class="event-location-address">Getty Rd. 156 - Chelsea</div>
+  </div>
+</div>
+<div class="event-container-mobile">
+  <div class="event-calendar-page">
     <div class="event-calendar-page-day">13</div>
     <div class="event-calendar-page-month">Nov</div>
     <div class="event-calendar-page-year">2023</div>
     <div class="event-calendar-page-hour">18:00</div>
   </div>
-  <div class="event-cover">
-    <img src="https://picsum.photos/200/300" alt="">
-  </div>
   <div class="event-body">
     <div class="event-body-title">La maison</div>
-    <div class="event-body-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-    <div class="event-body-tickets-and-more">
-      <div class="event-body-more-information">More information</div>
-      <div class="event-body-tickets"><fa-icon [icon]="faTicket"></fa-icon> Tickets</div>
-    </div>
+  </div>
+  <div class="event-cover">
+    <img src="https://sonify.at/wp-content/themes/sonify/images/blaetter.png" alt="">
   </div>
   <div class="event-location">
     <div class="event-location-city">London</div>

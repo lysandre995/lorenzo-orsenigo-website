@@ -2,8 +2,10 @@
   display: flex;
   margin: 10px 200px;
   max-width: 1280px;
+  width: 1280px;
   max-height: 300px;
   background-color: whitesmoke;
+  justify-content: space-between;
 }
 .event-calendar-page {
   background-color: gainsboro;
@@ -41,13 +43,7 @@
 .event-body-title {
   font-size: 32px;
   font-weight: bold;
-}
-.event-body-description {
-  font-size: 20px;
-  max-height: 150px;
-  overflow: hidden;
-  white-space: normal;
-  text-overflow: ellipsis;
+  text-align: center;
 }
 .event-body-tickets-and-more {
   display: flex;
@@ -90,5 +86,28 @@
 @media only screen and (max-width: 1200px) {
   .event-container {
     display: none;
+  }
+  .event-container-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    background-color: whitesmoke;
+  }
+  .event-calendar-page {
+    margin: 0;
+  }
+  .event-cover img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .event-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 30px;
+  }
+  .event-body-title {
+    font-size: 32px;
   }
 }

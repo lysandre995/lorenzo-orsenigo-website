@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { faTicket } from "@fortawesome/free-solid-svg-icons";
+import { Component, Input, OnInit } from '@angular/core';
+import { EventInteface } from "../../../interfaces/event.inteface";
+import { EventParsedInterface } from "../../../interfaces/event-parsed.interface";
 
 @Component({
   selector: 'app-event',
@@ -7,5 +8,14 @@ import { faTicket } from "@fortawesome/free-solid-svg-icons";
   styleUrls: ['./event.component.css']
 })
 export class EventComponent {
-  public faTicket = faTicket;
+  @Input()
+  public event: EventParsedInterface = {
+    id: 0,
+    name: '',
+    date: new Date(),
+    location: '',
+    eventUrl: '',
+    description: '',
+    coverUrl: ''
+  };
 }
