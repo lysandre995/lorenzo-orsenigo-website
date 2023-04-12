@@ -13,7 +13,7 @@ export class EventsService {
   constructor() { }
 
   private async getEventsSummary(): Promise<void> {
-    this.eventsSummary = (await axios.get('https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/main/event-summary.json')).data;
+    this.eventsSummary = (await axios.get('https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/main/events-summary.json')).data;
   }
 
   public async getLatestEvents(offset: number): Promise<EventParsedInterface[]>{
