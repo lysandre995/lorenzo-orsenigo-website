@@ -1,38 +1,26 @@
 <div class="event-container">
   <div class="event-calendar-page">
-    <div class="event-calendar-page-day">{{event.date.getDay() + 1}}</div>
-    <div class="event-calendar-page-month">{{event.date.getMonth() + 1}}</div>
+    <div class="event-calendar-page-day">{{day}}</div>
+    <div class="event-calendar-page-month">{{month}}</div>
     <div class="event-calendar-page-year">{{event.date.getFullYear()}}</div>
-    <div class="event-calendar-page-hour">{{event.date.getHours()}}:{{event.date.getMinutes()}}</div>
+    <div class="event-calendar-page-hour">{{hours}}:{{minutes}}</div>
   </div>
-  <div class="event-cover">
-    <img [src]=event.coverUrl alt="">
+  <img class="event-cover" [src]=event.coverUrl alt="">
+  <div class="event-body">
+    <div class="event-body-title">{{event.name}}</div>
+  </div>
+  <div class="event-location">{{event.location}}</div>
+</div>
+<div class="event-container-mobile">
+  <div class="event-calendar-page">
+    <div class="event-calendar-page-day">{{day}}</div>
+    <div class="event-calendar-page-month">{{month}}</div>
+    <div class="event-calendar-page-year">{{event.date.getFullYear()}}</div>
+    <div class="event-calendar-page-hour">{{hours}}:{{minutes}}</div>
   </div>
   <div class="event-body">
     <div class="event-body-title">{{event.name}}</div>
   </div>
-  <div class="event-location">
-    <div class="event-location-city">{{event.location}}</div>
-    <div class="event-location-location">Albert Hall</div>
-    <div class="event-location-address">Getty Rd. 156 - Chelsea</div>
-  </div>
-</div>
-<div class="event-container-mobile">
-  <div class="event-calendar-page">
-    <div class="event-calendar-page-day">13</div>
-    <div class="event-calendar-page-month">Nov</div>
-    <div class="event-calendar-page-year">2023</div>
-    <div class="event-calendar-page-hour">18:00</div>
-  </div>
-  <div class="event-body">
-    <div class="event-body-title">La maison</div>
-  </div>
-  <div class="event-cover">
-    <img src="https://sonify.at/wp-content/themes/sonify/images/blaetter.png" alt="">
-  </div>
-  <div class="event-location">
-    <div class="event-location-city">London</div>
-    <div class="event-location-location">Albert Hall</div>
-    <div class="event-location-address">Getty Rd. 156 - Chelsea</div>
-  </div>
+  <img class="event-cover" [src]=event.coverUrl alt="">
+  <div class="event-location">{{event.location}}</div>
 </div>

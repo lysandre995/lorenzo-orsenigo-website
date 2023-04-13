@@ -13,8 +13,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 10px 0 0;
   padding: 0 10px;
+  width: 85px;
 }
 .event-calendar-page-day {
   font-size: 32px;
@@ -28,8 +28,7 @@
 .event-calendar-page-hour {
   font-size: 26px;
 }
-.event-cover img {
-  height: 100%;
+.event-cover {
   width: 200px;
   object-fit: scale-down;
 }
@@ -37,8 +36,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0 30px;
   max-height: 300px;
+  width: 700px;
 }
 .event-body-title {
   font-size: 32px;
@@ -55,20 +54,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  min-width: 200px;
+  width: 250px;
   align-items: center;
   text-align: center;
-}
-.event-location-city {
   font-size: 20px;
   font-weight: bold;
-}
-.event-location-location {
-  font-style: italic;
-  font-size: 18px;
-}
-.event-location-address {
-  font-size: 14px;
 }
 .event-container-mobile {
   display: none;
@@ -93,11 +83,13 @@
     width: 100%;
     justify-content: center;
     background-color: whitesmoke;
+    margin-bottom: 30px;
   }
   .event-calendar-page {
     margin: 0;
+    width: 100%;
   }
-  .event-cover img {
+  .event-cover {
     width: 100%;
     object-fit: cover;
   }
@@ -106,8 +98,12 @@
     flex-direction: column;
     justify-content: space-evenly;
     padding: 0 30px;
+    width: 100%;
   }
   .event-body-title {
-    font-size: 32px;
+    font-size: 24px;
+  }
+  .event-location {
+    width: 100%;
   }
 }
