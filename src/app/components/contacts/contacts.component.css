@@ -14,3 +14,10 @@
 .contact-item {
   font-size: large;
 }
+
+@media only screen and (max-width: 600px) {
+  .contacts-container {
+    text-align: center;
+    padding: 10%;
+  }
+}

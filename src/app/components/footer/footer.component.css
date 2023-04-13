@@ -3,3 +3,9 @@
   position: relative;
   bottom: 10px;
 }
+
+@media only screen and (max-width: 450px) {
+  .footer-container {
+    font-size: 8px;
+  }
+}

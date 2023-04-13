@@ -21,6 +21,11 @@ a:hover {
   color: gray;
 }
 
+app-event {
+  display: flex;
+  justify-content: center;
+}
+
 app-footer {
   position: absolute;
   bottom: 0;

@@ -8,6 +8,6 @@ export class BioService {
   constructor() { }
 
   public async getBio() {
-    return (await axios.get('https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/main/Bio.json')).data[0];
+    return (await axios.get('https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/main/bio.json')).data;
   }
 }

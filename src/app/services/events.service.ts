@@ -20,12 +20,7 @@ export class EventsService {
     await this.getEventsSummary();
     const latestEvents: EventParsedInterface[] = [];
     const sortedEventReferences = this.eventsSummary.sort((a, b) => {
-      if (a > b) {
-        return -1;
-      } else if (a < b) {
-        return 1;
-      }
-      return 0;
+      return (new Date(b.date)).getTime() - (new Date(a.date)).getTime();
     });
     const slicedEventReferences = sortedEventReferences.slice(offset, offset + 10);
 

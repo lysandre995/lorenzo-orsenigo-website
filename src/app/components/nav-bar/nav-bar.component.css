@@ -34,7 +34,7 @@
   width: 100%;
   overflow: auto;
   text-align: center;
-  background-color: white;
+  background-color: whitesmoke;
 }
 @media only screen and (max-width: 900px) {
   .nav-bar-title {

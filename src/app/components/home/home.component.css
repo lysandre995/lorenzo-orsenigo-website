@@ -34,4 +34,8 @@
   .home-container-name-text {
     font-size: 30px;
   }
+  .home-container img {
+    height: 500px;
+    object-fit: cover;
+  }
 }
