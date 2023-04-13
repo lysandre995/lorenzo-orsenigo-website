@@ -6,4 +6,5 @@ export interface EventParsedInterface {
   eventUrl: string;
   description: string;
   coverUrl: string;
+  active: boolean;
 }

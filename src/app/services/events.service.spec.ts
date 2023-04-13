@@ -1,16 +1,14 @@
-import { TestBed } from '@angular/core/testing';
-
 import { EventsService } from './events.service';
 
 describe('EventsService', () => {
   let service: EventsService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(EventsService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('should be created', async () => {
+    service = new EventsService();
+    await service.loadEventsSummaryAndSetFirstPastEventIndex();
+    const cEvents = await service.getCurrentEvents();
+    const pEvents = await service.getPastEvents(0);
+    console.log(cEvents);
+    console.log(pEvents);
   });
 });

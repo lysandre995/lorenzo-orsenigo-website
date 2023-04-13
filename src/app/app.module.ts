@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { EventComponent } from './components/events/event/event.component';
+import { EventDetailComponent } from './event-detail/event-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { EventComponent } from './components/events/event/event.component';
     FooterComponent,
     PageNotFoundComponent,
     ProjectsComponent,
-    EventComponent
+    EventComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,

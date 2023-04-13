@@ -17,7 +17,8 @@ export class EventComponent {
     location: '',
     eventUrl: '',
     description: '',
-    coverUrl: ''
+    coverUrl: '',
+    active: true
   };
 
   get day(): string {
@@ -35,11 +36,25 @@ export class EventComponent {
     return this.twoDigitsString(this.event.date.getMinutes());
   }
 
+  public getActiveStyle() {
+    return !this.event.active ? 'filter: grayscale(1); opacity: 0.7;' : 'filter: grayscale(0); opacity: 1;'
+  }
+
+  public getEventDetailPagePath() {
+    return `/events/${this.justifyEventName()}`
+  }
+
   private twoDigitsString(n: number) {
     if (Math.floor(n / 10) === 0) {
       return '0' + String(n);
     } else {
       return String(n);
     }
+  }
+
+  private justifyEventName() {
+    return this.event.name.toLowerCase()
+      .trim()
+      .replaceAll(' ', '-')
   }
 }

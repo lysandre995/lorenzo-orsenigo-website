@@ -1,11 +1,19 @@
 <div class="events-container">
   <div class="events-radio-button">
-    <input type=radio name="events-switch" id="ongoing" checked>
+    <input type=radio name="ongoing-events-switch" id="ongoing" checked (change)="toggleOngoing()">
     <label for="ongoing">Ongoing</label>
-    <input type=radio name="events-switch" id="past">
+    <input type=radio name="ongoing-events-switch" id="past" (change)="toggleOngoing()">
     <label for="past">Past</label>
   </div>
-  <ng-container *ngFor="let event of events">
-    <app-event [event]=event></app-event>
+  <ng-container *ngIf="ongoing">
+    <ng-container *ngFor="let event of currentEvents">
+      <app-event [event]=event></app-event>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="!ongoing">
+    <ng-container *ngFor="let event of pastEvents">
+      <app-event [event]=event></app-event>
+    </ng-container>
+    <button class="events-more-past-events-button" (click)="getMorePastEvents()">More events</button>
   </ng-container>
 </div>

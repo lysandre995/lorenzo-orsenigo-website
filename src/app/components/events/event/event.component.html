@@ -1,4 +1,4 @@
-<div class="event-container">
+<div class="event-container" [style]="getActiveStyle()" routerLink="{{getEventDetailPagePath()}}">
   <div class="event-calendar-page">
     <div class="event-calendar-page-day">{{day}}</div>
     <div class="event-calendar-page-month">{{month}}</div>
@@ -11,7 +11,7 @@
   </div>
   <div class="event-location">{{event.location}}</div>
 </div>
-<div class="event-container-mobile">
+<div class="event-container-mobile" [style]="getActiveStyle()" routerLink="{{getEventDetailPagePath()}}">
   <div class="event-calendar-page">
     <div class="event-calendar-page-day">{{day}}</div>
     <div class="event-calendar-page-month">{{month}}</div>

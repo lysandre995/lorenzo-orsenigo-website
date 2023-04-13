@@ -7,6 +7,9 @@
   background-color: whitesmoke;
   justify-content: space-between;
 }
+.event-container:hover {
+  cursor: pointer;
+}
 .event-calendar-page {
   background-color: gainsboro;
   display: flex;
@@ -62,6 +65,9 @@
 }
 .event-container-mobile {
   display: none;
+}
+.event-container-mobile:hover {
+  cursor: pointer;
 }
 @media only screen and (max-width: 1500px) {
   .event-body-description {
