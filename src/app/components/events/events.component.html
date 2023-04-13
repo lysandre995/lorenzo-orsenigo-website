@@ -1,4 +1,10 @@
 <div class="events-container">
+  <div class="events-radio-button">
+    <input type=radio name="events-switch" id="ongoing" checked>
+    <label for="ongoing">Ongoing</label>
+    <input type=radio name="events-switch" id="past">
+    <label for="past">Past</label>
+  </div>
   <ng-container *ngFor="let event of events">
     <app-event [event]=event></app-event>
   </ng-container>

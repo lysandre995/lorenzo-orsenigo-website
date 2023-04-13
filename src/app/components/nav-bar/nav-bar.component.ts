@@ -11,6 +11,6 @@ export class NavBarComponent {
 
   toggleModal(): void {
     const modal = document.getElementById('nav-bar-modal-id');
-    modal!.style.display === 'none' ? modal!.style.display = 'block' : modal!.style.display = 'none';
+    modal!.style.display === 'none' || modal!.style.display === '' ? modal!.style.display = 'block' : modal!.style.display = 'none';
   }
 }
