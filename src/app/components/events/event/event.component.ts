@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { EventInteface } from "../../../interfaces/event.inteface";
 import { EventParsedInterface } from "../../../interfaces/event-parsed.interface";
 import { constants } from "../../../constants";
+import { Params } from "@angular/router";
 
 @Component({
   selector: 'app-event',
@@ -36,12 +37,8 @@ export class EventComponent {
     return this.twoDigitsString(this.event.date.getMinutes());
   }
 
-  public getActiveStyle() {
-    return !this.event.active ? 'filter: grayscale(1); opacity: 0.7;' : 'filter: grayscale(0); opacity: 1;'
-  }
-
-  public getEventDetailPagePath() {
-    return `/events/${this.justifyEventName()}`
+  public getEventDetailsParam(): Params {
+    return {id: this.event.id, active: this.event.active};
   }
 
   private twoDigitsString(n: number) {

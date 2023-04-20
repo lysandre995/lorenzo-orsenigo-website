@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'bio', component: BioComponent, pathMatch: 'full'},
   { path: 'projects', component: ProjectsComponent, pathMatch: 'full'},
   { path: 'contacts', component: ContactsComponent, pathMatch: 'full'},
-  { path: 'events', component: EventsComponent, pathMatch: 'full' },
+  { path: 'events', component: EventsComponent, pathMatch: 'full'},
+  { path: 'events/event-details', component: EventDetailComponent, pathMatch: 'prefix'},
   { path: '**', component: PageNotFoundComponent }
 ];
 

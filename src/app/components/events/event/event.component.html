@@ -1,4 +1,4 @@
-<div class="event-container" [style]="getActiveStyle()" [routerLink]="getEventDetailPagePath()">
+<div class="event-container" routerLink="/events/event-details" [queryParams]="getEventDetailsParam()" routerLinkActive="activebutton" ariaCurrentWhenActive="page">
   <div class="event-calendar-page">
     <div class="event-calendar-page-day">{{day}}</div>
     <div class="event-calendar-page-month">{{month}}</div>
@@ -11,7 +11,7 @@
   </div>
   <div class="event-location">{{event.location}}</div>
 </div>
-<div class="event-container-mobile" [style]="getActiveStyle()" routerLink="{{getEventDetailPagePath()}}">
+<div class="event-container-mobile" routerLink="/events/event-details" [queryParams]="getEventDetailsParam()" routerLinkActive="activebutton" ariaCurrentWhenActive="page">
   <div class="event-calendar-page">
     <div class="event-calendar-page-day">{{day}}</div>
     <div class="event-calendar-page-month">{{month}}</div>

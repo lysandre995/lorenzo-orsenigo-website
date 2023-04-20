@@ -1,8 +1,8 @@
 <div class="events-container">
   <div class="events-radio-button">
-    <input type=radio name="ongoing-events-switch" id="ongoing" checked (change)="toggleOngoing()">
+    <input type=radio name="ongoing-events-switch" id="ongoing" [checked]=ongoing (change)="toggleOngoing()">
     <label for="ongoing">Ongoing</label>
-    <input type=radio name="ongoing-events-switch" id="past" (change)="toggleOngoing()">
+    <input type=radio name="ongoing-events-switch" id="past" [checked]=!ongoing (change)="toggleOngoing()">
     <label for="past">Past</label>
   </div>
   <ng-container *ngIf="ongoing">

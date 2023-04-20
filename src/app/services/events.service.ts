@@ -9,29 +9,44 @@ import { constants } from "../constants";
   providedIn: 'root'
 })
 export class EventsService {
+  private _isCurrentPageOngoing = true;
+  private _currentOffset = 0;
   private eventsSummary: EventSummaryInterface[] = [];
   private currentEvents: EventParsedInterface[] = [];
   private pastEvents: EventParsedInterface[] = [];
   private firstPastEventIndex = 0;
 
-  public async loadEventsSummaryAndSetFirstPastEventIndex(): Promise<void> {
-    this.eventsSummary = (await axios.get(`${constants.baseUrl}${constants.eventsSummaryFile}`)).data
-        .sort((a: EventInteface, b: EventInteface) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime());
-    for (let index = 0; index < this.eventsSummary.length; index++) {
-      if (new Date(this.eventsSummary[index].date).getTime() < new Date().getTime()) {
-        this.firstPastEventIndex = index;
-        break;
-      } else {
-        this.firstPastEventIndex = this.eventsSummary.length
-      }
-    }
+  public async initEventsService() {
+    await this.loadEventsSummary();
+    this.setFirstPastEventIndex();
+  }
+
+  public get isCurrentPageOngoing(): boolean {
+    return this._isCurrentPageOngoing;
+  }
+
+  public get currentOffset(): number {
+    return this._currentOffset;
+  }
+
+  public offsetAdd() {
+    return ++this._currentOffset;
+  }
+
+  public offsetRemove() {
+    return --this._currentOffset;
+  }
+
+  public toggleIsCurrentOngoing(): boolean {
+    this._isCurrentPageOngoing = !this._isCurrentPageOngoing;
+    return this._isCurrentPageOngoing;
   }
 
   public async getCurrentEvents(): Promise<EventParsedInterface[]> {
     if (this.currentEvents.length === 0) {
       await this.fillCurrentEvents();
     }
-    return this.currentEvents; 
+    return this.currentEvents;
   }
 
   // FIX the past events are paginated so this kind of approach doesn't work
@@ -40,7 +55,15 @@ export class EventsService {
     if (this.pastEvents.length === 0) {
       await this.fillPastEvents(offset);
     }
-    return this.pastEvents;  
+    return this.pastEvents;
+  }
+
+  public async getCurrentEventById(id: number): Promise<EventParsedInterface> {
+    return this.currentEvents.filter(event => event.id === id)[0];
+  }
+
+  public async getPastEventById(id: number): Promise<EventParsedInterface> {
+    return this.pastEvents.filter(event => event.id === id)[0];
   }
 
   private async fillCurrentEvents(): Promise<void>{
@@ -98,5 +121,25 @@ export class EventsService {
       }
     }
     this.pastEvents = pastEvents;
+  }
+
+  private async loadEventsSummary(): Promise<void> {
+    if (this.eventsSummary.length === 0) {
+      this.eventsSummary = (await axios.get(`${constants.baseUrl}${constants.eventsSummaryFile}`)).data
+        .sort((a: EventInteface, b: EventInteface) => (new Date(b.date)).getTime() - (new Date(a.date)).getTime());
+    }
+  }
+
+  private setFirstPastEventIndex(): void {
+    if (this.firstPastEventIndex === 0 && this.eventsSummary.length !== 0) {
+      for (let index = 0; index < this.eventsSummary.length; index++) {
+        if (new Date(this.eventsSummary[index].date).getTime() < new Date().getTime()) {
+          this.firstPastEventIndex = index;
+          break;
+        } else {
+          this.firstPastEventIndex = this.eventsSummary.length
+        }
+      }
+    }
   }
 }
