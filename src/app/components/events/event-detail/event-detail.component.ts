@@ -25,8 +25,6 @@ export class EventDetailComponent implements OnInit {
   public async ngOnInit(): Promise<void> {
     const id = this.route.snapshot.queryParamMap.get('id') ?? "-1";
     const active = this.route.snapshot.queryParamMap.get('active') === 'true';
-    console.log(id)
-    console.log(active)
     await this.eventsService.initEventsService();
     if (active) {
       this.event = await this.eventsService.getCurrentEventById(Number(id));

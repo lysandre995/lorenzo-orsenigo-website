@@ -11,19 +11,17 @@ import { EventParsedInterface } from "../../interfaces/event-parsed.interface";
 export class EventsComponent implements OnInit {
   public currentEvents: EventParsedInterface[] = [];
   public pastEvents: EventParsedInterface[] = [];
-  public offset: number | undefined;
   public ongoing: boolean | undefined;
 
   constructor(private readonly eventsService: EventsService) {}
 
   async ngOnInit() {
-    this.offset = this.eventsService.currentOffset;
     this.ongoing = this.eventsService.isCurrentPageOngoing;
     await this.eventsService.initEventsService();
     this.currentEvents = (await this.eventsService.getCurrentEvents()).sort((a, b) => {
       return a.date.getTime() - b .date.getTime()
     });
-    this.pastEvents = await this.eventsService.getPastEvents(this.offset);
+    this.pastEvents = await this.eventsService.getPastEvents();
   }
 
   public toggleOngoing() {
@@ -31,10 +29,10 @@ export class EventsComponent implements OnInit {
   }
 
   public async getMorePastEvents() {
-    this.offset = this.eventsService.offsetAdd();
-    const pastEvents = await this.eventsService.getPastEvents(this.offset);
+    this.eventsService.offsetAdd();
+    const pastEvents = await this.eventsService.getPastEvents();
     if (pastEvents.length === 0) {
-      this.offset = this.eventsService.offsetRemove();
+      this.eventsService.offsetRemove();
     }
   }
 }

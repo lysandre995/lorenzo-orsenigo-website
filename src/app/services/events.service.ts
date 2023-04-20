@@ -10,7 +10,7 @@ import { constants } from "../constants";
 })
 export class EventsService {
   private _isCurrentPageOngoing = true;
-  private _currentOffset = 0;
+  private currentOffset = 0;
   private eventsSummary: EventSummaryInterface[] = [];
   private currentEvents: EventParsedInterface[] = [];
   private pastEvents: EventParsedInterface[] = [];
@@ -25,16 +25,12 @@ export class EventsService {
     return this._isCurrentPageOngoing;
   }
 
-  public get currentOffset(): number {
-    return this._currentOffset;
+  public offsetAdd(): void {
+    this.currentOffset++;
   }
 
-  public offsetAdd() {
-    return ++this._currentOffset;
-  }
-
-  public offsetRemove() {
-    return --this._currentOffset;
+  public offsetRemove(): void {
+    this.currentOffset--;
   }
 
   public toggleIsCurrentOngoing(): boolean {
@@ -49,11 +45,9 @@ export class EventsService {
     return this.currentEvents;
   }
 
-  // FIX the past events are paginated so this kind of approach doesn't work
-  // in this way it's impossible to obtain earlier events
-  public async getPastEvents(offset: number): Promise<EventParsedInterface[]> {
+  public async getPastEvents(): Promise<EventParsedInterface[]> {
     if (this.pastEvents.length === 0) {
-      await this.fillPastEvents(offset);
+      await this.fillPastEvents(this.currentOffset);
     }
     return this.pastEvents;
   }
