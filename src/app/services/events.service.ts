@@ -10,6 +10,8 @@ import { constants } from "../constants";
 })
 export class EventsService {
   private eventsSummary: EventSummaryInterface[] = [];
+  private currentEvents: EventParsedInterface[] = [];
+  private pastEvents: EventParsedInterface[] = [];
   private firstPastEventIndex = 0;
 
   public async loadEventsSummaryAndSetFirstPastEventIndex(): Promise<void> {
@@ -25,7 +27,23 @@ export class EventsService {
     }
   }
 
-  public async getCurrentEvents(): Promise<EventParsedInterface[]>{
+  public async getCurrentEvents(): Promise<EventParsedInterface[]> {
+    if (this.currentEvents.length === 0) {
+      await this.fillCurrentEvents();
+    }
+    return this.currentEvents; 
+  }
+
+  // FIX the past events are paginated so this kind of approach doesn't work
+  // in this way it's impossible to obtain earlier events
+  public async getPastEvents(offset: number): Promise<EventParsedInterface[]> {
+    if (this.pastEvents.length === 0) {
+      await this.fillPastEvents(offset);
+    }
+    return this.pastEvents;  
+  }
+
+  private async fillCurrentEvents(): Promise<void>{
     const currentEvents: EventParsedInterface[] = [];
     const filteredEventReferences = this.eventsSummary.slice(0, this.firstPastEventIndex);
 
@@ -49,10 +67,10 @@ export class EventsService {
       }
       currentEvents.push(currentParsedEvent);
     }
-    return currentEvents;
+    this.currentEvents = currentEvents;
   }
 
-  public async getPastEvents(offset: number): Promise<EventParsedInterface[]> {
+  private async fillPastEvents(offset: number): Promise<void> {
     const pastEvents: EventParsedInterface[] = [];
     const startIndex = this.firstPastEventIndex + 10 * offset;
     const endIndex = startIndex + 10;
@@ -79,6 +97,6 @@ export class EventsService {
         pastEvents.push(currentParsedEvent);
       }
     }
-    return pastEvents;
+    this.pastEvents = pastEvents;
   }
 }
