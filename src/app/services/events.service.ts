@@ -16,6 +16,8 @@ export class EventsService {
   private pastEvents: EventParsedInterface[] = [];
   private firstPastEventIndex = 0;
 
+  constructor() {}
+
   public async initEventsService() {
     await this.loadEventsSummary();
     this.setFirstPastEventIndex();

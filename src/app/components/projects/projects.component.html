@@ -1,8 +1,8 @@
 <div class="projects-container">
-  <ng-container *ngFor="let project of projects">
-    <div class="projects-object">
-      <img routerLink="{{project.pageUrl}}" src="{{project.imgUrl}}" alt="">
-      <div class="projects-object-title">{{project.title}}</div>
+  <ng-container *ngFor="let projectCategory of projectCategories">
+    <div class="projects-card">
+      <img class="project-card-image" [src]="projectCategory.picture">
+      <div class="project-card-title">{{projectCategory.name}}</div>
     </div>
   </ng-container>
 </div>
