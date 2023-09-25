@@ -1,8 +1,10 @@
 <div class="projects-container">
-  <ng-container *ngFor="let projectCategory of projectCategories">
-    <div class="projects-card">
-      <img class="project-card-image" [src]="projectCategory.picture">
-      <div class="project-card-title">{{projectCategory.name}}</div>
-    </div>
-  </ng-container>
+  <div class="project-container-grid">
+    <ng-container *ngFor="let category of categories">
+      <div class="project-container-category">
+        <div class="project-container-category-img"><img class="button" [src]="category.pictureUrl" alt="" [routerLink]="category.path" routerLinkActive="activebutton" ariaCurrentWhenActive="page"></div>
+        <div class="project-container-category-name">{{category.name}}</div>
+      </div>
+    </ng-container>
+  </div>
 </div>

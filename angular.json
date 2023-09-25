@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lorenzo-orsenigo": {
+    "lorenzo-orsenigo-website": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lorenzo-orsenigo",
+            "outputPath": "dist/lorenzo-orsenigo-website",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "lorenzo-orsenigo:build:production"
+              "browserTarget": "lorenzo-orsenigo-website:build:production"
             },
             "development": {
-              "browserTarget": "lorenzo-orsenigo:build:development"
+              "browserTarget": "lorenzo-orsenigo-website:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lorenzo-orsenigo:build"
+            "browserTarget": "lorenzo-orsenigo-website:build"
           }
         },
         "test": {
@@ -96,6 +96,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "6242582d-96dc-4a7c-8135-ff446934a813"
   }
 }

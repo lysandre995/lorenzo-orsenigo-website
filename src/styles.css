@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  margin: 0 0 60px 0;
+  margin: 0 0 0 0;
 }
 
 /* Hyperlink */
@@ -18,12 +18,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: gray;
-}
-
-app-event {
-  display: flex;
-  justify-content: center;
+  color: grey;
 }
 
 app-footer {
@@ -31,6 +26,4 @@ app-footer {
   bottom: 0;
   text-align: center;
   width: 100%;
-  height: 60px;
-  line-height: 60px;
 }

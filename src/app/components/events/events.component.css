@@ -1,9 +1,28 @@
 .events-container {
-  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 70px 0 300px 0;
+  background-color: #95d6d0;
+}
+
+.events-container-title {
+  font-size: 36px;
+  text-align: right;
+  padding-right: 50px;
+  width: 100%;
+}
+
+.events-container-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.events-radio-button input{
-  color: dimgrey;
+
+.events-container-more-button {
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
 }

@@ -1,27 +1,42 @@
 .projects-container {
+  padding: 100px 20px 300px 20px;
+  background-color: #95d6d0;
+}
+
+.project-container-grid {
   display: flex;
   justify-content: space-evenly;
-  padding: 8% 0;
 }
-.projects-card {
+
+.project-container-category {
+  position: relative;
+  z-index: 0;
+}
+
+.project-container-category-img {
   width: 500px;
   height: 500px;
-  position: relative;;
+  border-radius: 100%;
 }
-.project-card-image {
-  width: 100%;
-  height: 100%;
+
+.project-container-category-img img {
+  width: 500px;
+  height: 500px;
   object-fit: cover;
-  border-radius: 8px
+  border-radius: 100%;
 }
-.project-card-title {
+
+.project-container-category-img img:hover {
+  cursor: pointer;
+}
+
+.project-container-category-name {
   position: absolute;
-  bottom: 8px;
-  right: 16px;
+  width: 100%;
+  text-align: center;
+  bottom: 20px;
   color: white;
-  display: initial;
-  font-size: 32px;
+  font-size: 30px;
   text-shadow:
     1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-  z-index: 1;
 }

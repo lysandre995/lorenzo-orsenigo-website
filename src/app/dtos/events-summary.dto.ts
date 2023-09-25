@@ -1,4 +1,4 @@
-export interface EventSummaryInterface {
+export interface EventsSummaryDto {
   eventId: number;
   fileId: number;
   date: string;

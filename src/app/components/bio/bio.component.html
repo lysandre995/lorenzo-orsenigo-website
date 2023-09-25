@@ -1,7 +1,7 @@
 <div class="bio-container">
-  <img class="bio-img" [src]=imageUrl alt = "">
-  <h1>{{title}}</h1>
-  <ng-container *ngFor="let chunk of descriptionChunks">
-    <p>{{chunk}}</p>
-  </ng-container>
+  <div class="bio-container-title">{{title}}</div>
+  <div class="bio-container-body">
+    <div class="bio-container-body-img"><img [src]="pictureUrl" alt=""></div>
+    <div class="bio-container-body-text">{{text}}</div>
+  </div>
 </div>

@@ -1,16 +1,22 @@
-import { Component } from '@angular/core';
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {Component, OnInit} from '@angular/core';
+import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent {
-  public faBars = faBars;
+export class NavBarComponent implements OnInit {
+  public isHomePage = false;
 
-  toggleModal(): void {
-    const modal = document.getElementById('nav-bar-modal-id');
-    modal!.style.display === 'none' || modal!.style.display === '' ? modal!.style.display = 'block' : modal!.style.display = 'none';
+  constructor(private readonly router: Router) {
+  }
+
+  public ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.isHomePage = this.router.url === '/';
+      }
+    });
   }
 }

@@ -1,5 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { ProjectsService } from "../../services/projects.service";
+import {Component, OnInit} from '@angular/core';
+import {Routes} from "@angular/router";
+import {SoloProjectsComponent} from "./solo-projects/solo-projects.component";
+import {DuoProjectsComponent} from "./duo-projects/duo-projects.component";
+import {PhdProjectsComponent} from "./phd-projects/phd-projects.component";
+import {ProjectService} from "../../services/project.service";
+import {ProjectCategoryDto} from "../../dtos/project-category.dto";
+import {ProjectSummaryDto} from "../../dtos/project-summary-dto";
 
 @Component({
   selector: 'app-projects',
@@ -7,12 +13,14 @@ import { ProjectsService } from "../../services/projects.service";
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-  public projectCategories: any = []
+  public categories: ProjectCategoryDto[] = [];
+  public projectsSummary: ProjectSummaryDto[] = [];
 
-  constructor(private readonly projectService: ProjectsService) {}
+  constructor(private readonly projectService: ProjectService) {
+  }
 
-  async ngOnInit() {
-    await this.projectService.initProjectService()
-    this.projectCategories = await this.projectService.getCategories();
+  public async ngOnInit(): Promise<void> {
+    this.categories = await this.projectService.getProjectCategories();
+    this.projectsSummary = await this.projectService.getProjectsSummary();
   }
 }

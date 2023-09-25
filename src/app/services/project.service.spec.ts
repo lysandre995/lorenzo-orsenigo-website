@@ -1,18 +1,16 @@
-/*
 import { TestBed } from '@angular/core/testing';
 
-import { NumberHelperService } from './number-helper.service';
+import { ProjectService } from './project.service';
 
-describe('NumberHelperService', () => {
-  let service: NumberHelperService;
+describe('ProjectService', () => {
+  let service: ProjectService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(NumberHelperService);
+    service = TestBed.inject(ProjectService);
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
 });
- */

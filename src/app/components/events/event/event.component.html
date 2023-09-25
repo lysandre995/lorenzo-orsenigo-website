@@ -1,26 +1,13 @@
-<div class="event-container" routerLink="/events/event-details" [queryParams]="getEventDetailsParam()" routerLinkActive="activebutton" ariaCurrentWhenActive="page">
-  <div class="event-calendar-page">
-    <div class="event-calendar-page-day">{{day}}</div>
-    <div class="event-calendar-page-month">{{month}}</div>
-    <div class="event-calendar-page-year">{{event.date.getFullYear()}}</div>
-    <div class="event-calendar-page-hour">{{hours}}:{{minutes}}</div>
+<div class="event-container">
+  <div class="event-container-when">
+    <div class="event-container-when-date">{{date}}</div>
+    <div class="event-container-when-time">{{time}}</div>
   </div>
-  <img class="event-cover" [src]=event.coverUrl alt="">
-  <div class="event-body">
-    <div class="event-body-title">{{event.name}}</div>
+  <div class="event-container-picture"><img [src]="pictureUrl" alt=""></div>
+  <div class="event-container-content">
+    <div class="event-container-content-what">{{title}}</div>
+    <div class="event-container-content-where">{{location}}</div>
+    <div class="event-container-content-link"><a [href]="link" target="_blank">Link <i class="ph-link"></i></a></div>
   </div>
-  <div class="event-location">{{event.location}}</div>
-</div>
-<div class="event-container-mobile" routerLink="/events/event-details" [queryParams]="getEventDetailsParam()" routerLinkActive="activebutton" ariaCurrentWhenActive="page">
-  <div class="event-calendar-page">
-    <div class="event-calendar-page-day">{{day}}</div>
-    <div class="event-calendar-page-month">{{month}}</div>
-    <div class="event-calendar-page-year">{{event.date.getFullYear()}}</div>
-    <div class="event-calendar-page-hour">{{hours}}:{{minutes}}</div>
-  </div>
-  <div class="event-body">
-    <div class="event-body-title">{{event.name}}</div>
-  </div>
-  <img class="event-cover" [src]=event.coverUrl alt="">
-  <div class="event-location">{{event.location}}</div>
+  <div class="event-container-more-info">More info</div>
 </div>

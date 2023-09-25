@@ -1,116 +1,61 @@
 .event-container {
   display: flex;
-  margin: 10px 200px;
-  max-width: 1280px;
-  width: 1280px;
-  max-height: 300px;
-  background-color: whitesmoke;
-  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 30px;
 }
-.event-container:hover {
-  cursor: pointer;
-}
-.event-calendar-page {
-  background-color: gainsboro;
+
+.event-container-when {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
-  width: 85px;
+  width: 200px;
+  height: 100px;
+  background-color: gainsboro;
 }
-.event-calendar-page-day {
-  font-size: 32px;
-}
-.event-calendar-page-month {
+
+.event-container-when-date {
   font-size: 20px;
 }
-.event-calendar-page-year {
-  font-size: 20px;
+
+.event-container-when-time {
+  font-size: 16px;
 }
-.event-calendar-page-hour {
+
+.event-container-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px 0 20px;
+  width: 500px;
+  height: 100px;
+  background-color: white;
+}
+
+.event-container-content-what {
   font-size: 26px;
 }
-.event-cover {
-  width: 200px;
-  object-fit: scale-down;
+
+.event-container-content-where {
+  font-size: 16px;
 }
-.event-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  max-height: 300px;
-  width: 700px;
-}
-.event-body-title {
-  font-size: 32px;
-  font-weight: bold;
-  text-align: center;
-}
-.event-body-tickets-and-more {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
-}
-.event-location {
-  background-color: gainsboro;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 250px;
-  align-items: center;
-  text-align: center;
+
+.event-container-content-link {
   font-size: 20px;
-  font-weight: bold;
 }
-.event-container-mobile {
-  display: none;
+
+.event-container-picture img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
-.event-container-mobile:hover {
-  cursor: pointer;
-}
-@media only screen and (max-width: 1500px) {
-  .event-body-description {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .event-body-title {
-    font-size: 24px;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .event-container {
-    display: none;
-  }
-  .event-container-mobile {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    justify-content: center;
-    background-color: whitesmoke;
-    margin-bottom: 50px;
-  }
-  .event-calendar-page {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  .event-cover {
-    width: 100%;
-    object-fit: cover;
-  }
-  .event-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 0;
-    width: 100%;
-  }
-  .event-body-title {
-    font-size: 24px;
-  }
-  .event-location {
-    width: 100%;
-  }
+
+.event-container-more-info {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gainsboro;
 }

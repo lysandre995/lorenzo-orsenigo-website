@@ -1,57 +1,33 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { EventInteface } from "../../../interfaces/event.inteface";
-import { EventParsedInterface } from "../../../interfaces/event-parsed.interface";
-import { constants } from "../../../constants";
-import { Params } from "@angular/router";
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
   styleUrls: ['./event.component.css']
 })
-export class EventComponent {
+export class EventComponent implements OnInit {
   @Input()
-  public event: EventParsedInterface = {
-    id: 0,
-    name: '',
-    date: new Date(),
-    location: '',
-    eventUrl: '',
-    description: '',
-    coverUrl: '',
-    active: true
-  };
+  public date: string = "";
+  @Input()
+  public location: string = "";
+  @Input()
+  public link: string = "";
+  @Input()
+  public title: string = "";
+  @Input()
+  public description: string = "";
+  @Input()
+  public pictureUrl: string = "";
 
-  get day(): string {
-    return this.twoDigitsString(this.event.date.getDate());
+  public time = "";
+
+  public ngOnInit() {
+    const dateObject = new Date(this.date);
+    this.date = this.getTwoDigitsString(dateObject.getDate()) + "-" + this.getTwoDigitsString(dateObject.getMonth() + 1) + "-" + dateObject.getFullYear();
+    this.time = this.getTwoDigitsString(dateObject.getHours()) + ":" + this.getTwoDigitsString(dateObject.getMinutes());
   }
 
-  get month(): string {
-    return constants.months[this.event.date.getMonth()];
-  }
-
-  get hours(): string {
-    return this.twoDigitsString(this.event.date.getHours());
-  }
-  get minutes(): string {
-    return this.twoDigitsString(this.event.date.getMinutes());
-  }
-
-  public getEventDetailsParam(): Params {
-    return {id: this.event.id, active: this.event.active};
-  }
-
-  private twoDigitsString(n: number) {
-    if (Math.floor(n / 10) === 0) {
-      return '0' + String(n);
-    } else {
-      return String(n);
-    }
-  }
-
-  private justifyEventName() {
-    return this.event.name.toLowerCase()
-      .trim()
-      .replaceAll(' ', '-')
+  private getTwoDigitsString(n: number): string {
+    return n > 9 ? n.toString() : "0" + n.toString();
   }
 }

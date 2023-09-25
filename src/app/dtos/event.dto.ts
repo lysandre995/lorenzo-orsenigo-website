@@ -1,10 +1,9 @@
-export interface EventParsedInterface {
+export interface EventDto {
   id: number;
   name: string;
-  date: Date;
+  date: string;
   location: string;
   eventUrl: string;
   description: string;
   coverUrl: string;
-  active: boolean;
 }

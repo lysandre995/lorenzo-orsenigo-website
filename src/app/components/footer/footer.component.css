@@ -1,11 +1,40 @@
 .footer-container {
-  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
   position: relative;
-  bottom: 10px;
 }
 
-@media only screen and (max-width: 450px) {
-  .footer-container {
-    font-size: 8px;
-  }
+.footer-container-social-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  height: 150px;
+}
+
+.footer-container-signature {
+  color: white;
+  font-size: 15px;
+}
+
+.footer-container-signature a {
+  color: white;
+  font-size: 15px;
+}
+
+.footer-container-signature a:hover {
+  color: lightgrey;
+}
+
+.footer-container-artist-role {
+  font-size: 75px;
+  position: absolute;
+  right: 20px;
+  bottom: 80px;
+  text-align: right;
+  width: 40%;
+  color: white;
+  text-shadow:
+    1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
