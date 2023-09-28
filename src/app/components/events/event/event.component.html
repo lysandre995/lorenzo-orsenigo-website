@@ -9,5 +9,7 @@
     <div class="event-container-content-where">{{location}}</div>
     <div class="event-container-content-link"><a [href]="link" target="_blank">Link <i class="ph-link"></i></a></div>
   </div>
-  <div class="event-container-more-info">More info</div>
+  <div class="event-container-more-info" (click)="openDialog()">More info</div>
 </div>
+<div class="dialog-background" *ngIf="isDialogOpen"></div>
+<app-dialog *ngIf="isDialogOpen" (closeDialog)="closeDialog()" [content]="description"></app-dialog>

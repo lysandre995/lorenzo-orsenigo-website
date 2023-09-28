@@ -15,6 +15,7 @@ import { SoloProjectsComponent } from './components/projects/solo-projects/solo-
 import { DuoProjectsComponent } from './components/projects/duo-projects/duo-projects.component';
 import { PhdProjectsComponent } from './components/projects/phd-projects/phd-projects.component';
 import { EventComponent } from './components/events/event/event.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EventComponent } from './components/events/event/event.component';
     SoloProjectsComponent,
     DuoProjectsComponent,
     PhdProjectsComponent,
-    EventComponent
+    EventComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,8 @@ export class EventComponent implements OnInit {
 
   public time = "";
 
+  public isDialogOpen = false
+
   public ngOnInit() {
     const dateObject = new Date(this.date);
     this.date = this.getTwoDigitsString(dateObject.getDate()) + "-" + this.getTwoDigitsString(dateObject.getMonth() + 1) + "-" + dateObject.getFullYear();
@@ -29,5 +31,15 @@ export class EventComponent implements OnInit {
 
   private getTwoDigitsString(n: number): string {
     return n > 9 ? n.toString() : "0" + n.toString();
+  }
+
+  public openDialog() {
+    document.body.classList.add("dialog-opened");
+    this.isDialogOpen = true;
+  }
+
+  public closeDialog() {
+    document.body.classList.remove("dialog-opened");
+    this.isDialogOpen = false;
   }
 }
