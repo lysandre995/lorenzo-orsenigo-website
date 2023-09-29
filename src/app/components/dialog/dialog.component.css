@@ -9,9 +9,15 @@
   z-index: 1000;
 }
 
-.dialog-container-close-container {
+.dialog-container-close-container-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.dialog-container-close-container {
+  display: flex;
   align-items: center;
   color: navy;
   margin-top: 10px;

@@ -21,8 +21,19 @@
   align-items: center;
 }
 
+.events-container-more-button-container {
+  display: flex;
+  justify-content: center;
+}
+
 .events-container-more-button {
   font-size: 20px;
   text-align: center;
-  width: 100%;
+  background: transparent;
+  border: transparent;
+}
+
+.events-container-more-button:hover {
+  color: gainsboro;
+  cursor: pointer;
 }
