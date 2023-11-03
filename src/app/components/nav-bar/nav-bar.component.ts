@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NavigationEnd, Router} from "@angular/router";
+import {NavigationEnd, Router, withEnabledBlockingInitialNavigation} from "@angular/router";
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,6 +8,7 @@ import {NavigationEnd, Router} from "@angular/router";
 })
 export class NavBarComponent implements OnInit {
   public isHomePage = false;
+  public isMobileMenuDisplayed = false;
 
   constructor(private readonly router: Router) {
   }
@@ -18,5 +19,13 @@ export class NavBarComponent implements OnInit {
         this.isHomePage = this.router.url === '/';
       }
     });
+  }
+
+  public openMobileMenu() {
+    this.toggleMobileMenu();
+  }
+
+  private toggleMobileMenu() {
+    this.isMobileMenuDisplayed = !this.isMobileMenuDisplayed;
   }
 }
