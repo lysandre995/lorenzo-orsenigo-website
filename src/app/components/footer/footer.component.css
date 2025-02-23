@@ -38,3 +38,15 @@
   text-shadow:
     1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
+
+@media only screen and (max-width: 950px) {
+  .footer-container-artist-role {font-size: 60px}
+}
+
+@media only screen and (max-width: 700px) {
+  .footer-container-artist-role {font-size: 45px}
+}
+
+@media only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 3) {
+  .footer-container-artist-role {font-size: 28px}
+}
