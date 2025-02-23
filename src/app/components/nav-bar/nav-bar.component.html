@@ -4,16 +4,21 @@
       <div class="navbar-container-name-home">Lorenzo Orsenigo</div>
     </ng-container>
     <ng-container *ngIf="!isHomePage">
-      <div class="navbar-container-img"><a class="button" routerLink="/" routerLinkActive="activebutton" ariaCurrentWhenActive="page"><img src="https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/main/img/cover.jpeg" alt=""></a></div>
+      <div class="navbar-container-img"><a class="button" routerLink="/" routerLinkActive="activebutton" ariaCurrentWhenActive="page" (click)="isMobileMenuDisplayed = false;"><img src="https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/main/img/cover.jpeg" alt=""></a></div>
     </ng-container>
     <div class="navbar-container-menu">
       <div class="navbar-container-menu-element"><a class="button" routerLink="/bio" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Bio</a></div>
       <div class="navbar-container-menu-element"><a class="button" routerLink="/projects" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Projects</a></div>
-      <div class="navbar-container-menu-element"><a class="button" routerLink="/contacts" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Contacts</a></div>
       <div class="navbar-container-menu-element"><a class="button" routerLink="/events" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Events</a></div>
     </div>
+    <div class="navbar-container-menu-hamburger"><i class="ph-list" style="color: white; font-size: 25px; text-align: right" (click)="openMobileMenu()"></i></div>
   </div>
   <ng-container *ngIf="!isHomePage">
     <div class="navbar-container-name">Lorenzo Orsenigo</div>
   </ng-container>
+  <div *ngIf="isMobileMenuDisplayed" class="navbar-mobile-menu">
+    <div class="navbar-container-menu-element"><a class="button" routerLink="/bio" routerLinkActive="activebutton" ariaCurrentWhenActive="page" (click)="isMobileMenuDisplayed = false;">Bio</a></div>
+    <div class="navbar-container-menu-element"><a class="button" routerLink="/projects" routerLinkActive="activebutton" ariaCurrentWhenActive="page" (click)="isMobileMenuDisplayed = false;">Projects</a></div>
+    <div class="navbar-container-menu-element"><a class="button" routerLink="/events" routerLinkActive="activebutton" ariaCurrentWhenActive="page" (click)="isMobileMenuDisplayed = false;">Events</a></div>
+  </div>
 </div>

@@ -60,10 +60,55 @@
   z-index: 3;
 }
 
+.navbar-container-menu-hamburger {
+  display: none;
+  justify-content: end;
+  font-size: 18px;
+  z-index: 3;
+  flex-grow: 0.8;
+}
+
+i .ph-hamburger {
+  color: white
+}
+
 .navbar-container-menu-element a {
   color: white;
 }
 
 .navbar-container-menu-element a:hover {
   color: lightgrey;
+}
+
+.navbar-mobile-menu {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 2;
+  font-size: 18px;
+  background-color: darkgrey;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar-container-menu {
+    display: none;
+  }
+
+  .navbar-container-menu-hamburger {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .navbar-container-name-home {font-size: 72px}
+  .navbar-container-name {font-size: 72px}
+}
+
+@media only screen and (max-width: 700px) {
+  .navbar-container-name-home {font-size: 50px}
+  .navbar-container-name {font-size: 50px}
+}
+
+@media only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 3) {
+  .navbar-container-name-home {font-size: 32px}
+  .navbar-container-name {font-size: 32px}
 }
