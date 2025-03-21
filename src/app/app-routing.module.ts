@@ -9,10 +9,11 @@ import {BioComponent} from "./components/bio/bio.component";
 import {SoloProjectsComponent} from "./components/projects/solo-projects/solo-projects.component";
 import {DuoProjectsComponent} from "./components/projects/duo-projects/duo-projects.component";
 import {PhdProjectsComponent} from "./components/projects/phd-projects/phd-projects.component";
+import { BioResolver } from './components/bio/bio.resolver';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
-  { path: 'bio', component: BioComponent, pathMatch: 'full'},
+  { path: 'bio', component: BioComponent, pathMatch: 'full', resolve: { contentData: BioResolver }},
   { path: 'projects', component: ProjectsComponent, pathMatch: 'full'},
   { path: 'contacts', component: ContactsComponent, pathMatch: 'full'},
   { path: 'events', component: EventsComponent, pathMatch: 'full'},

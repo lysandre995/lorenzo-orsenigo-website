@@ -1,3 +1,5 @@
+@import "assets/css/bootstrap.min.css";
+
 * {
   font-family: "Segoe UI", sans-serif;
 }
@@ -27,3 +29,10 @@ app-footer {
   text-align: center;
   width: 100%;
 }
+
+/* app-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - var(--navbar-height) - var(--footer-height));
+} */

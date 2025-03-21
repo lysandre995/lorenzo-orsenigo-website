@@ -1,4 +1,4 @@
-<div class="navbar-extra">
+<!-- <div class="navbar-extra">
   <div class="navbar-container">
     <ng-container *ngIf="isHomePage">
       <div class="navbar-container-name-home">Lorenzo Orsenigo</div>
@@ -21,4 +21,25 @@
     <div class="navbar-container-menu-element"><a class="button" routerLink="/projects" routerLinkActive="activebutton" ariaCurrentWhenActive="page" (click)="isMobileMenuDisplayed = false;">Projects</a></div>
     <div class="navbar-container-menu-element"><a class="button" routerLink="/events" routerLinkActive="activebutton" ariaCurrentWhenActive="page" (click)="isMobileMenuDisplayed = false;">Events</a></div>
   </div>
-</div>
+</div> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="/">Lorenzo Orsenigo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/bio" routerLinkActive="activebutton" ariaCurrentWhenActive="page" (click)="isMobileMenuDisplayed = false;">Bio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/projects" routerLinkActive="activebutton" ariaCurrentWhenActive="page" (click)="isMobileMenuDisplayed = false;">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/events" routerLinkActive="activebutton" ariaCurrentWhenActive="page" (click)="isMobileMenuDisplayed = false;">Events</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

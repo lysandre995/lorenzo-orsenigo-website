@@ -1,4 +1,4 @@
-<div class="projects-container">
+<!-- <div class="projects-container">
   <div class="project-container-grid">
     <ng-container *ngFor="let category of categories">
       <div class="project-container-category">
@@ -7,4 +7,23 @@
       </div>
     </ng-container>
   </div>
+</div> -->
+
+<div class="container-fluid content-wrapper">
+    <div class="row">
+        <ng-container *ngFor="let category of categories">
+            <div class="col-md-4 mb-4">
+                <div class="image-container">
+                    <img
+                        [src]="category.pictureUrl"
+                        alt=""
+                        [routerLink]="category.path"
+                        routerLinkActive="activebutton"
+                        ariaCurrentWhenActive="page"
+                    />
+                    <div class="overlay">{{ category.name }}</div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
 </div>
