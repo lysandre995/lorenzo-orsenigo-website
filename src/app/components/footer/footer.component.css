@@ -1,4 +1,4 @@
-.footer-container {
+/* .footer-container {
   display: flex;
   flex-direction: column;
   background-color: black;
@@ -49,4 +49,4 @@
 
 @media only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 3) {
   .footer-container-artist-role {font-size: 28px}
-}
+} */

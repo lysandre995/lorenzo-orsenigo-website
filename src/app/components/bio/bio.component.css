@@ -1,4 +1,4 @@
-.bio-container {
+/* .bio-container {
   display: flex;
   flex-direction: column;
   background-color: #b1c9cd;
@@ -28,4 +28,44 @@
   font-size: 22px;
   text-align: left;
   line-height: 40px;
+} */
+/* Assicura che il contenitore occupi tutto lo spazio disponibile tra navbar e footer */
+.bio-container {
+    height: calc(100vh - var(--navbar-height) - var(--footer-height)); /* Regolabile */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/* La riga deve riempire lo spazio disponibile */
+.bio-content {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+/* Colonna immagine: riempie tutto lo spazio disponibile senza deformazioni */
+.bio-image {
+    width: 50vw; /* Occupa esattamente metà schermo */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Colonna testo: scrollabile se necessario */
+.bio-text {
+    width: 50vw; /* Altra metà dello schermo */
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px; /* Per leggibilità */
 }

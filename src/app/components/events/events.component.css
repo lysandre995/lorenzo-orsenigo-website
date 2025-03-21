@@ -1,4 +1,4 @@
-.events-container {
+/* .events-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -36,4 +36,23 @@
 .events-container-more-button:hover {
   color: gainsboro;
   cursor: pointer;
+} */
+
+h3.text-end {
+    text-align: right;
+}
+.image-container {
+    width: 100%;         /* Imposta la larghezza al 100% della colonna */
+    height: 230px;       /* Imposta l'altezza desiderata */
+    overflow: hidden;    /* Nascondi la parte dell'immagine che esce dallo spazio */
+}
+.image-container img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.list-group-item {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 0;
 }
