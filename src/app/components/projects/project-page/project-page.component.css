@@ -1,0 +1,8 @@
+img {
+    border-radius: 8px;
+}
+
+.carousel-inner img,
+.carousel-inner video {
+    border-radius: 8px;
+}

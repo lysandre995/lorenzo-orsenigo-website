@@ -1,14 +1,5 @@
 .content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - var(--navbar-height) - var(--footer-height));
-    padding: 10px;
-}
-.row {
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
+    padding-bottom: var(--footer-height);
 }
 .image-container {
     position: relative;
@@ -47,10 +38,4 @@
 }
 .image-container:hover .overlay {
     opacity: 1;
-}
-@media (max-width: 768px) {
-    .content-wrapper {
-        height: auto;
-        padding-bottom: var(--footer-height);
-    }
 }
