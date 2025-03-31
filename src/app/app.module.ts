@@ -16,6 +16,9 @@ import { DuoProjectsComponent } from './components/projects/duo-projects/duo-pro
 import { PhdProjectsComponent } from './components/projects/phd-projects/phd-projects.component';
 import { EventComponent } from './components/events/event/event.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { ProjectPageComponent } from './components/projects/project-page/project-page.component';
+import { ProjectPageLobbyComponent } from './components/projects/project-page-lobby/project-page-lobby.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -32,11 +35,14 @@ import { DialogComponent } from './components/dialog/dialog.component';
     DuoProjectsComponent,
     PhdProjectsComponent,
     EventComponent,
-    DialogComponent
+    DialogComponent,
+    ProjectPageComponent,
+    ProjectPageLobbyComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

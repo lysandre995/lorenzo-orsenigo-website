@@ -1,0 +1,50 @@
+<div class="container my-5" style="padding-bottom: var(--footer-height);">
+    <!-- Titolo e sottotitolo -->
+    <div class="text-center mb-4">
+      <h1>{{project.title}}</h1>
+      <h4>{{project.subtitle}}</h4>
+    </div>
+
+    <div class="mb-4">
+      <p id="description" class="form-control" rows="4" style="border-style: none; resize: none;" readonly>{{project.description}}</p>
+    </div>
+
+    <div class="row">
+      <div class="col-12 mb-4">
+        <img [src]="project.pictureUrl" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-lg-6">
+        <div id="carouselExampleControls" class="carousel slide">
+          <div class="carousel-inner">
+            <div *ngFor="let item of project.carouselItems; let i = index"
+                 class="carousel-item" [class.active]="i === 0">
+              <div *ngIf="item.type === 'image'">
+                <img [src]="item.src" class="d-block w-100" [alt]="item.alt">
+              </div>
+              <div *ngIf="item.type === 'video'">
+                <video class="d-block w-100" controls>
+                  <source [src]="item.src" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div *ngIf="item.type === 'audio'">
+                <audio class="d-block w-100" controls>
+                  <source [src]="item.src" type="audio/mp3">
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

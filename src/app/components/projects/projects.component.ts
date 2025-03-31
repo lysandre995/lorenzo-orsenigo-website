@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, HostListener, OnInit } from "@angular/core";
-import { Routes } from "@angular/router";
+import { ActivatedRoute, Routes } from "@angular/router";
 import { SoloProjectsComponent } from "./solo-projects/solo-projects.component";
 import { DuoProjectsComponent } from "./duo-projects/duo-projects.component";
 import { PhdProjectsComponent } from "./phd-projects/phd-projects.component";
@@ -14,13 +14,16 @@ import { ProjectSummaryDto } from "../../dtos/project-summary-dto";
 })
 export class ProjectsComponent implements OnInit, AfterViewInit {
     public categories: ProjectCategoryDto[] = [];
-    public projectsSummary: ProjectSummaryDto[] = [];
+    //public projectsSummary: ProjectSummaryDto[] = [];
 
-    constructor(private readonly projectService: ProjectService) {}
+    constructor(private readonly route: ActivatedRoute) {}
 
     public async ngOnInit(): Promise<void> {
-        this.categories = await this.projectService.getProjectCategories();
-        this.projectsSummary = await this.projectService.getProjectsSummary();
+        //this.categories = await this.projectService.getProjectCategories();
+        //this.projectsSummary = await this.projectService.getProjectsSummary();
+        this.route.data.subscribe(data => {
+            this.categories = data["categories"];
+        });
     }
 
     public ngAfterViewInit(): void {

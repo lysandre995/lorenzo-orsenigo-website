@@ -1,1 +1,24 @@
-<p>Work in progress</p>
+<ng-container *ngIf="projects.length === 0">
+    <p>Loading...</p>
+</ng-container>
+
+<ng-container *ngIf="projects.length > 0">
+    <div class="container-fluid content-wrapper">
+        <div class="row">
+            <ng-container *ngFor="let project of projects">
+                <div class="ol-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="image-container">
+                        <img
+                            [src]="project.pictureUrl"
+                            alt=""
+                            [routerLink]="project.path"
+                            routerLinkActive="activebutton"
+                            ariaCurrentWhenActive="page"
+                        />
+                        <div class="overlay">{{ project.name }}</div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</ng-container>
