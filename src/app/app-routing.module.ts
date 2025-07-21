@@ -19,12 +19,12 @@ import { ProjectPageLobbyResolver } from "./components/projects/project-page-lob
 const routes: Routes = [
     { path: "", component: HomeComponent, pathMatch: "full" },
     { path: "bio", component: BioComponent, pathMatch: "full", resolve: { contentData: BioResolver } },
-    { path: "projects", component: ProjectsComponent, pathMatch: "full", resolve: {categories: ProjectsResolver} },
+    { path: "projects", component: ProjectsComponent, pathMatch: "full" },
     { path: "contacts", component: ContactsComponent, pathMatch: "full" },
     { path: "events", component: EventsComponent, pathMatch: "full" },
     { path: "projects/solo", component: SoloProjectsComponent, pathMatch: "full" },
     { path: "projects/duo", component: DuoProjectsComponent, pathMatch: "full" },
-    { path: "projects/research", component: PhdProjectsComponent, pathMatch: "full", resolve: {projects: PhdProjectsResolver} },
+    { path: "projects/research", component: PhdProjectsComponent, pathMatch: "full" },
     { path: "projects/research/globokar-oliveros", component: ProjectPageLobbyComponent, pathMatch: "full", resolve: {lobbyProjects: ProjectPageLobbyResolver} },
     { path: "projects/research/globokar-oliveros/:subproject", component: ProjectPageComponent, pathMatch: "full" },
     { path: "**", component: PageNotFoundComponent }

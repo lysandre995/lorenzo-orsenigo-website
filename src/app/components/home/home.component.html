@@ -1,6 +1,10 @@
 <div class="home-container">
     <div *ngIf="!imgLoaded" class="home-image-placeholder">
-        <div class="placeholder-content"></div>
+        <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
     </div>
-  <img *ngIf="imgLoaded" [src]="imageUrl" alt="Lorenzo Orsenigo" class="home-container-img">
+    <img *ngIf="imgLoaded" [src]="imageUrl" alt="Lorenzo Orsenigo" class="home-container-img" />
 </div>

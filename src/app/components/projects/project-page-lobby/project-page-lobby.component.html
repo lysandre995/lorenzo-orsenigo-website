@@ -1,4 +1,4 @@
-<div class="container-fluid content-wrapper">
+<div *ngIf="!isLoading; else spinner" class="container-fluid content-wrapper">
     <ng-container *ngIf="columns === 5">
         <div class="row mb-4">
             <div class="col">
@@ -562,3 +562,11 @@
         </div>
     </ng-container>
 </div>
+
+<ng-template #spinner>
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</ng-template>

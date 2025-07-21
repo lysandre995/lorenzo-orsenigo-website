@@ -1,8 +1,4 @@
-<ng-container *ngIf="projects.length === 0">
-    <p>Loading...</p>
-</ng-container>
-
-<ng-container *ngIf="projects.length > 0">
+<ng-container *ngIf="!isLoading; else spinner">
     <div class="container-fluid content-wrapper">
         <div class="row">
             <ng-container *ngFor="let project of projects">
@@ -22,3 +18,11 @@
         </div>
     </div>
 </ng-container>
+
+<ng-template #spinner>
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+</ng-template>

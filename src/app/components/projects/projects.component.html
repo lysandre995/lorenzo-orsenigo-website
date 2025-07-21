@@ -8,8 +8,7 @@
     </ng-container>
   </div>
 </div> -->
-
-<div class="container-fluid content-wrapper">
+<div *ngIf="!isLoading; else spinner" class="container-fluid content-wrapper">
     <div class="row">
         <ng-container *ngFor="let category of categories">
             <div class="col-md-4 mb-4">
@@ -27,3 +26,11 @@
         </ng-container>
     </div>
 </div>
+
+<ng-template #spinner>
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</ng-template>
