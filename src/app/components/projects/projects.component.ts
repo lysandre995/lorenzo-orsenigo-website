@@ -13,17 +13,21 @@ import { ProjectSummaryDto } from "../../dtos/project-summary-dto";
     styleUrls: ["./projects.component.css"]
 })
 export class ProjectsComponent implements OnInit, AfterViewInit {
+    public isLoading = false;
     public categories: ProjectCategoryDto[] = [];
     //public projectsSummary: ProjectSummaryDto[] = [];
 
-    constructor(private readonly route: ActivatedRoute) {}
+    constructor(private readonly projectService: ProjectService) {}
 
     public async ngOnInit(): Promise<void> {
         //this.categories = await this.projectService.getProjectCategories();
         //this.projectsSummary = await this.projectService.getProjectsSummary();
-        this.route.data.subscribe(data => {
-            this.categories = data["categories"];
-        });
+        // this.route.data.subscribe(data => {
+        //     this.categories = data["categories"];
+        // });
+        this.isLoading = true;
+        this.categories = await this.projectService.getProjectCategoriesWithImages();
+        this.isLoading = false;
     }
 
     public ngAfterViewInit(): void {

@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
+import { every } from "rxjs";
 import { ProjectPageLobbyService } from "src/app/services/project-page-lobby.service";
 
 @Component({

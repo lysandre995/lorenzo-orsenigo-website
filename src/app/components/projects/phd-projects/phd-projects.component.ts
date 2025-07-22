@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { PhdProjectsService } from "src/app/services/phd-projects.service";
 
 @Component({
     selector: "app-phd-projects",
@@ -7,14 +8,18 @@ import { ActivatedRoute } from "@angular/router";
     styleUrls: ["./phd-projects.component.css"]
 })
 export class PhdProjectsComponent implements AfterViewInit, OnInit {
+    public isLoading = false;
     protected projects: any[] = [];
 
-    constructor(private readonly route: ActivatedRoute) {}
+    constructor(private readonly service: PhdProjectsService) {}
 
-    public ngOnInit(): void {
-        this.route.data.subscribe(data => {
-            this.projects = data["projects"];
-        });
+    public async ngOnInit(): Promise<void> {
+        // this.route.data.subscribe(data => {
+        //     this.projects = data["projects"];
+        // });
+        this.isLoading = true;
+        this.projects = await this.service.getPhdProjectsWithImages();
+        this.isLoading = false;
     }
 
     public ngAfterViewInit(): void {

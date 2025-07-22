@@ -19,6 +19,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
 import { ProjectPageComponent } from './components/projects/project-page/project-page.component';
 import { ProjectPageLobbyComponent } from './components/projects/project-page-lobby/project-page-lobby.component';
 import { NgOptimizedImage } from '@angular/common';
+import { WaitImageDirective } from './directives/wait-image.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { NgOptimizedImage } from '@angular/common';
     EventComponent,
     DialogComponent,
     ProjectPageComponent,
-    ProjectPageLobbyComponent
+    ProjectPageLobbyComponent,
+    WaitImageDirective
   ],
   imports: [
     BrowserModule,
