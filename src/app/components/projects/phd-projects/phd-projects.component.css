@@ -19,6 +19,9 @@
     background-size: cover;
     background-position: center;
 }
+.image-container:hover {
+    cursor: pointer;
+}
 .image-container img {
     position: absolute;
     top: 0;
