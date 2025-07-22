@@ -28,8 +28,6 @@ export class BioComponent implements OnInit, AfterViewInit {
         this.updateHeights();
     }
 
-
-
     private updateHeights(): void {
         const navbar = document.querySelector(".navbar") as HTMLElement;
         const footer = document.querySelector("footer") as HTMLElement;

@@ -1,62 +1,25 @@
-<!-- <div class="bio-container">
-  <div class="bio-container-title">{{title}}</div>
-  <div class="bio-container-body">
-    <app-image-container class="bio-container-body-img"><img [src]="pictureUrl" alt=""></app-image-container>
-    <app-text-container class="bio-container-body-text">{{text}}</app-text-container>
-  </div>
-</div> -->
-<!-- <div class="container mt-5 bio-container">
-    <h1 class="text-center mb-4">{{ title }}</h1>
-    <div class="row bio-content">
-        <div class="col-md-6 bio-image">
-            <div *ngIf="imageLoaded; else loadingImage">
-                <app-image-container [src]="pictureUrl" class="img-fluid bio-img" alt="Content Image" />
-            </div>
-            <ng-template #loadingImage>
-                <div class="loading-placeholder"></div>
-            </ng-template>
-        </div>
-        <div class="col-md-6 bio-text">
-            <div *ngIf="textLoaded; else loadingText">
-                <app-text-container [placeholder]="text"/>
-            </div>
-            <ng-template #loadingText>
-                <div class="loading-placeholder"></div>
-            </ng-template>
-        </div>
-    </div>
-</div> -->
 <div
     class="container-fluid d-flex flex-column"
     style="height: calc(100vh - var(--navbar-height) - var(--footer-height))"
 >
-<div class="row flex-shrink-0 py-3" style="flex-basis: 10%;">
-    <div class="col-12 text-center">
-        <h1 class="h4 h2-md">{{ title }}</h1>
-    </div>
-</div>
-    <div class="row flex-grow-1 overflow-hidden">
-        <div class="col-md-6 p-0 h-100 d-none d-md-block">
-            <img [src]="pictureUrl" class="img-fluid w-100 h-100 object-fit-cover" alt="Content Image" />
+    <div class="row flex-shrink-0 py-3" style="flex-basis: 10%">
+        <div class="col-12 text-center">
+            <h1 class="h4 h2-md">{{ title }}</h1>
         </div>
-        <div class="col-md-6 d-flex flex-column p-0 h-100 overflow-hidden">
+    </div>
+    <div class="row flex-grow-1 flex-column flex-md-row">
+        <div class="col-12 d-block d-md-none image-mobile" [ngStyle]="{ 'background-image': 'url(' + pictureUrl + ')' }"></div>
+
+        <div class="col-md-6 p-0 h-100 d-none d-md-block">
+            <div class="bio-image" [ngStyle]="{ 'background-image': 'url(' + pictureUrl + ')' }"></div>
+        </div>
+
+        <div class="col-md-6 d-flex flex-column p-0 h-100 overflow-hidden d-none d-md-flex">
+            <textarea class="flex-grow-1 w-100 border-0 p-4" readonly>{{ text }}</textarea>
+        </div>
+
+        <div class="col-12 d-flex flex-column p-0 flex-grow-1 mobile-text d-md-none">
             <textarea class="flex-grow-1 w-100 border-0 p-4" readonly>{{ text }}</textarea>
         </div>
     </div>
 </div>
-
-<!-- <div style="display: flex; flex-direction: column;">
-    <h1>My life in a nutshell</h1>
-    <div style="display: flex;">
-        <img [src]="pictureUrl" class="object-fit-cover" style="width: 50vw;" alt="Content Image" />
-        <p style="width: 50vw;">{{text}}</p>
-    </div>
-</div> -->
-<!--
-<div style="height: calc(100vh - var(--navbar-height) - var(--footer-height)); background-color: blueviolet; display: flex; flex-direction: column;">
-    <h1>My life in a nutshell</h1>
-    <div style="display: flex;">
-        <img [src]="pictureUrl" class="object-fit-cover" style="width: 50vw;" alt="Content Image" />
-        <p style="width: 50vw;">{{text}}</p>
-    </div>
-</div> -->

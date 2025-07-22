@@ -1,34 +1,3 @@
-/* .bio-container {
-  display: flex;
-  flex-direction: column;
-  background-color: #b1c9cd;
-}
-
-.bio-container-title {
-  font-size: 40px;
-  text-align: center;
-  margin: 75px;
-}
-
-.bio-container-body {
-  display: flex;
-}
-.bio-container-body-img {
-  width: 50%;
-}
-
-.bio-container-body-img img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.bio-container-body-text {
-  width: 50%;
-  margin: 0 15px;
-  font-size: 22px;
-  text-align: left;
-  line-height: 40px;
-} */
 /* Assicura che il contenitore occupi tutto lo spazio disponibile tra navbar e footer */
 .bio-container {
     height: calc(100vh - var(--navbar-height) - var(--footer-height)); /* Regolabile */
@@ -50,16 +19,37 @@
 .bio-image {
     width: 50vw; /* Occupa esattamente metà schermo */
     height: 100%;
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden; */
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.image-mobile {
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+    .image-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
 }
 
 .bio-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
 }
 
 /* Colonna testo: scrollabile se necessario */
