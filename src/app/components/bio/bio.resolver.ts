@@ -8,14 +8,17 @@ import { HomeService } from "src/app/services/home.service";
     providedIn: "root"
 })
 export class BioResolver implements Resolve<any> {
-    constructor(private readonly bioService: BioService, private readonly homeService: HomeService) {}
+    constructor(
+        private readonly bioService: BioService,
+        private readonly homeService: HomeService
+    ) {}
 
     resolve(_route: ActivatedRouteSnapshot, _state: RouterStateSnapshot): Observable<any> {
         return from(this.bioService.getBio()).pipe(
             switchMap(data => {
-                return this.homeService.loadImage(data.picture).pipe(
-                    map(() => ({title: data.title, text: data.text, picture: data.picture}))
-                )
+                return this.homeService
+                    .loadImage(data.picture)
+                    .pipe(map(() => ({ title: data.title, text: data.text, picture: data.picture })));
             })
         );
     }

@@ -5,7 +5,7 @@ import { backendRoutes } from "src/assets/backend-routes";
     providedIn: "root"
 })
 export class PhdProjectsService {
-    #phdProjects = null;
+    private phdProjects = null;
 
     constructor() {}
 
@@ -20,11 +20,13 @@ export class PhdProjectsService {
     }
 
     async getPhdProjectsWithImages() {
-        if (this.#phdProjects) { return this.#phdProjects }
+        if (this.phdProjects) {
+            return this.phdProjects;
+        }
 
         const projects = await this.getPhdProjects();
         await Promise.all(projects.map((p: any) => this.preloadImage(p.pictureUrl)));
-        this.#phdProjects = projects;
+        this.phdProjects = projects;
         return projects;
     }
 

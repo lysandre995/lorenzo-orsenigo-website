@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, HostListener, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
 import { ProjectPageLobbyService } from "src/app/services/project-page-lobby.service";
 import { backendRoutes } from "src/assets/backend-routes";
 

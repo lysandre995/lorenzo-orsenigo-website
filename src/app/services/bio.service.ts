@@ -1,16 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 import axios from "axios";
-import {backendRoutes} from "../../assets/backend-routes";
-import {BioDto} from "../dtos/bio.dto";
+import { backendRoutes } from "../../assets/backend-routes";
+import { BioDto } from "../dtos/bio.dto";
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: "root"
 })
 export class BioService {
+    constructor() {}
 
-  constructor() { }
-
-  public async getBio(): Promise<BioDto> {
-    return (await axios.get(backendRoutes.baseUrl + '/' + backendRoutes.bio)).data
-  }
+    public async getBio(): Promise<BioDto> {
+        return (await axios.get(backendRoutes.baseUrl + "/" + backendRoutes.bio)).data;
+    }
 }

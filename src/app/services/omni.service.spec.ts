@@ -1,13 +1,13 @@
 import { TestBed } from "@angular/core/testing";
 
-import { HomeService } from "./home.service";
+import { OmniService } from "./omni.service";
 
-describe("HomeService", () => {
-    let service: HomeService;
+describe("OmniService", () => {
+    let service: OmniService;
 
     beforeEach(() => {
         TestBed.configureTestingModule({});
-        service = TestBed.inject(HomeService);
+        service = TestBed.inject(OmniService);
     });
 
     it("should be created", () => {

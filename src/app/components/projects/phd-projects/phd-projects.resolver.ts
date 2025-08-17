@@ -11,7 +11,7 @@ export class PhdProjectsResolver implements Resolve<any> {
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
         return from(this.phdProjectsService.getPhdProjects()).pipe(
-            switchMap((projects: any )=> {
+            switchMap((projects: any) => {
                 return this.loadImages(projects).pipe(
                     switchMap(() => {
                         return of(projects);
@@ -36,7 +36,7 @@ export class PhdProjectsResolver implements Resolve<any> {
     }
 
     private loadImage(url: string): Promise<void> {
-        return new Promise((resolve) => {
+        return new Promise(resolve => {
             const img = new Image();
             img.src = url;
             img.onload = () => resolve();

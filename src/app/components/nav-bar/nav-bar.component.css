@@ -107,6 +107,6 @@ i .ph-hamburger {
 
 @media (max-width: 768px) {
     .navbar-collapse {
-      transition: none !important; /* Disabilita transizioni lente su dispositivi mobili */
+        transition: none !important; /* Disabilita transizioni lente su dispositivi mobili */
     }
-  }
+}

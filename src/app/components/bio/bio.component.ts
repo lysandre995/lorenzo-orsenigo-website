@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { OmniService } from "src/app/services/omni.service";
 
 @Component({
     selector: "app-bio",
@@ -12,16 +12,17 @@ export class BioComponent implements OnInit, AfterViewInit {
     public pictureUrl = "";
     protected imageLoaded = false;
     protected textLoaded = false;
+    public isLoading = false;
 
-    constructor(private readonly route: ActivatedRoute) {}
-    public ngOnInit() {
-        const data = this.route.snapshot.data["contentData"];
-        this.title = data.title;
-        this.text = data.text;
-        this.pictureUrl = data.picture;
-
-        this.imageLoaded = true;
-        this.textLoaded = true;
+    constructor(private readonly omniService: OmniService) {}
+    
+    public async ngOnInit() {
+        this.isLoading = true;
+        const data = await this.omniService.getBio();
+        this.title = data?.title ?? "";
+        this.text = data?.text ?? "";
+        this.pictureUrl = data?.picture ?? "";
+        this.isLoading = false;
     }
 
     public ngAfterViewInit(): void {

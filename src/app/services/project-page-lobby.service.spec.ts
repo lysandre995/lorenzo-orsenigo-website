@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { ProjectPageLobbyService } from './project-page-lobby.service';
+import { ProjectPageLobbyService } from "./project-page-lobby.service";
 
-describe('ProjectPageLobbyService', () => {
-  let service: ProjectPageLobbyService;
+describe("ProjectPageLobbyService", () => {
+    let service: ProjectPageLobbyService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ProjectPageLobbyService);
-  });
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+        service = TestBed.inject(ProjectPageLobbyService);
+    });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+    it("should be created", () => {
+        expect(service).toBeTruthy();
+    });
 });

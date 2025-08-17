@@ -1,5 +1,5 @@
 export interface EventsSummaryDto {
-  eventId: number;
-  fileId: number;
-  date: string;
+    eventId: number;
+    fileId: number;
+    date: string;
 }

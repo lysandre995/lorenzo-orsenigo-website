@@ -23,7 +23,7 @@ export class ProjectPageLobbyService {
 
     public async getStoredLobbyProjects() {
         if (!this.lobbyProjects || this.lobbyProjects.length === 0) {
-            const cache = localStorage.getItem("lobby-projects-cache")
+            const cache = localStorage.getItem("lobby-projects-cache");
             if (cache) {
                 const prjs = JSON.parse(cache);
                 (this.lobbyProjects as any) = prjs;

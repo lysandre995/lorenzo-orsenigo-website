@@ -42,9 +42,9 @@ h3.text-end {
     text-align: right;
 }
 .image-container {
-    width: 100%;         /* Imposta la larghezza al 100% della colonna */
-    height: 230px;       /* Imposta l'altezza desiderata */
-    overflow: hidden;    /* Nascondi la parte dell'immagine che esce dallo spazio */
+    width: 100%; /* Imposta la larghezza al 100% della colonna */
+    height: 230px; /* Imposta l'altezza desiderata */
+    overflow: hidden; /* Nascondi la parte dell'immagine che esce dallo spazio */
 }
 .image-container img {
     object-fit: cover;

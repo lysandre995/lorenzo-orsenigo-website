@@ -9,14 +9,12 @@ import { BioComponent } from "./components/bio/bio.component";
 import { SoloProjectsComponent } from "./components/projects/solo-projects/solo-projects.component";
 import { DuoProjectsComponent } from "./components/projects/duo-projects/duo-projects.component";
 import { PhdProjectsComponent } from "./components/projects/phd-projects/phd-projects.component";
-import { BioResolver } from "./components/bio/bio.resolver";
 import { ProjectPageLobbyComponent } from "./components/projects/project-page-lobby/project-page-lobby.component";
 import { ProjectPageComponent } from "./components/projects/project-page/project-page.component";
-import { ProjectPageLobbyResolver } from "./components/projects/project-page-lobby/project-page-lobby.resolver";
 
 const routes: Routes = [
     { path: "", component: HomeComponent, pathMatch: "full" },
-    { path: "bio", component: BioComponent, pathMatch: "full", resolve: { contentData: BioResolver } },
+    { path: "bio", component: BioComponent, pathMatch: "full" },
     { path: "projects", component: ProjectsComponent, pathMatch: "full" },
     { path: "contacts", component: ContactsComponent, pathMatch: "full" },
     { path: "events", component: EventsComponent, pathMatch: "full" },
@@ -27,7 +25,6 @@ const routes: Routes = [
         path: "projects/research/globokar-oliveros",
         component: ProjectPageLobbyComponent,
         pathMatch: "full",
-        resolve: { lobbyProjects: ProjectPageLobbyResolver }
     },
     { path: "projects/research/globokar-oliveros/:subproject", component: ProjectPageComponent, pathMatch: "full" },
     { path: "**", component: PageNotFoundComponent }

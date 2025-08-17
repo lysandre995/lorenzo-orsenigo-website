@@ -1,5 +1,5 @@
 export interface BioDto {
-  title: string;
-  text: string;
-  picture: string;
+    title: string;
+    text: string;
+    picture: string;
 }

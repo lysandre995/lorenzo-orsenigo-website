@@ -1,11 +1,6 @@
 import { AfterViewInit, Component, HostListener, OnInit } from "@angular/core";
-import { ActivatedRoute, Routes } from "@angular/router";
-import { SoloProjectsComponent } from "./solo-projects/solo-projects.component";
-import { DuoProjectsComponent } from "./duo-projects/duo-projects.component";
-import { PhdProjectsComponent } from "./phd-projects/phd-projects.component";
-import { ProjectService } from "../../services/project.service";
 import { ProjectCategoryDto } from "../../dtos/project-category.dto";
-import { ProjectSummaryDto } from "../../dtos/project-summary-dto";
+import { OmniService } from "src/app/services/omni.service";
 
 @Component({
     selector: "app-projects",
@@ -15,18 +10,12 @@ import { ProjectSummaryDto } from "../../dtos/project-summary-dto";
 export class ProjectsComponent implements OnInit, AfterViewInit {
     public isLoading = false;
     public categories: ProjectCategoryDto[] = [];
-    //public projectsSummary: ProjectSummaryDto[] = [];
 
-    constructor(private readonly projectService: ProjectService) {}
+    constructor(private readonly omniService: OmniService) {}
 
     public async ngOnInit(): Promise<void> {
-        //this.categories = await this.projectService.getProjectCategories();
-        //this.projectsSummary = await this.projectService.getProjectsSummary();
-        // this.route.data.subscribe(data => {
-        //     this.categories = data["categories"];
-        // });
         this.isLoading = true;
-        this.categories = await this.projectService.getProjectCategoriesWithImages();
+        this.categories = await this.omniService.getProjectCategoriesWithImages();
         this.isLoading = false;
     }
 

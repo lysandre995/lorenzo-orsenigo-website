@@ -1,77 +1,77 @@
 .event-container {
-  display: flex;
-  align-items: center;
-  height: 100px;
-  margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 30px;
 }
 
 .event-container-when {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 100px;
-  background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    background-color: gainsboro;
 }
 
 .event-container-when-date {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .event-container-when-time {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .event-container-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 20px 0 20px;
-  width: 500px;
-  height: 100px;
-  background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px 0 20px;
+    width: 500px;
+    height: 100px;
+    background-color: white;
 }
 
 .event-container-content-what {
-  font-size: 26px;
+    font-size: 26px;
 }
 
 .event-container-content-where {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .event-container-content-link {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .event-container-picture img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
 .event-container-more-info {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: gainsboro;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
 }
 
 .event-container-more-info:hover {
-  cursor: pointer;
-  color: grey;
+    cursor: pointer;
+    color: grey;
 }
 
 .dialog-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
 }

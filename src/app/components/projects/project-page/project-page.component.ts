@@ -12,7 +12,10 @@ export class ProjectPageComponent implements OnInit, AfterViewInit {
     protected subproject?: string;
     protected project?: any;
 
-    constructor(private readonly route: ActivatedRoute,private readonly projectPageLobbyService: ProjectPageLobbyService) {}
+    constructor(
+        private readonly route: ActivatedRoute,
+        private readonly projectPageLobbyService: ProjectPageLobbyService
+    ) {}
 
     public async ngOnInit(): Promise<void> {
         this.subproject = this.route.snapshot.paramMap.get("subproject") || "";

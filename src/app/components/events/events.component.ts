@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from "@angular/core";
 import { EventDto } from "../../dtos/event.dto";
-import { EventService } from "../../services/event.service";
 import { constants } from "../../constants";
+import { OmniService } from "src/app/services/omni.service";
 declare var bootstrap: any;
 
 @Component({
@@ -15,14 +15,17 @@ export class EventsComponent implements OnInit, AfterViewInit {
     protected modalDescription: string = "";
     private page = 0;
     private readonly pageSize: number;
+    protected isLoading = false;
 
-    constructor(private readonly eventService: EventService) {
+    constructor(private readonly omniService: OmniService) {
         this.pageSize = constants.pastEventsPageSize;
     }
 
     public async ngOnInit() {
-        this.upcoming = await this.eventService.getUpComingEvents();
-        this.past = await this.eventService.getPastEvents(this.page, this.pageSize);
+        this.isLoading = true;
+        this.upcoming = await this.omniService.getUpComingEvents();
+        this.past = await this.omniService.getPastEvents(this.page, this.pageSize);
+        this.isLoading = false;
     }
 
     public ngAfterViewInit(): void {
@@ -40,7 +43,7 @@ export class EventsComponent implements OnInit, AfterViewInit {
     }
 
     public async morePastEvents() {
-        this.past = [...this.past, ...(await this.eventService.getPastEvents(++this.page, this.pageSize))];
+        this.past = [...this.past, ...(await this.omniService.getPastEvents(++this.page, this.pageSize))];
     }
 
     protected openModal(description: string): void {
