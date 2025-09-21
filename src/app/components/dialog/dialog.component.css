@@ -1,33 +1,33 @@
 .dialog-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 .dialog-container-close-container-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .dialog-container-close-container {
-  display: flex;
-  align-items: center;
-  color: navy;
-  margin-top: 10px;
+    display: flex;
+    align-items: center;
+    color: navy;
+    margin-top: 10px;
 }
 
 .dialog-container-close-container:hover {
-  color: cornflowerblue;
-  cursor: pointer;
+    color: cornflowerblue;
+    cursor: pointer;
 }
 
 .dialog-container-close-container i.ph-x {
-  font-size: 25px;
+    font-size: 25px;
 }

@@ -1,7 +1,7 @@
-import {ProjectCategoryEnum} from "../enum/project-category.enum";
+import { ProjectCategoryEnum } from "../enum/project-category.enum";
 
 export interface ProjectSummaryDto {
-  projectId: number;
-  category: ProjectCategoryEnum;
-  fileId: number;
+    projectId: number;
+    category: ProjectCategoryEnum;
+    fileId: number;
 }

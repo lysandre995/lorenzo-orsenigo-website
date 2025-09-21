@@ -1,4 +1,4 @@
-.navbar-extra {
+/* .navbar-extra {
   position: fixed;
   top: 0;
   width: 100%;
@@ -44,8 +44,8 @@
 }
 
 .navbar-container-img img {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   border-radius: 100px;
   margin-left: 20px;
   object-fit: cover;
@@ -70,14 +70,6 @@
 
 i .ph-hamburger {
   color: white
-}
-
-.navbar-container-menu-element a {
-  color: white;
-}
-
-.navbar-container-menu-element a:hover {
-  color: lightgrey;
 }
 
 .navbar-mobile-menu {
@@ -111,4 +103,10 @@ i .ph-hamburger {
 @media only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 3) {
   .navbar-container-name-home {font-size: 32px}
   .navbar-container-name {font-size: 32px}
+} */
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        transition: none !important; /* Disabilita transizioni lente su dispositivi mobili */
+    }
 }

@@ -1,5 +1,5 @@
 export enum ProjectCategoryEnum {
-  Solo = 'Solo',
-  Duo = 'Duo Merors',
-  PhD = 'PhD'
+    Solo = "Solo",
+    Duo = "Duo Merors",
+    PhD = "PhD"
 }

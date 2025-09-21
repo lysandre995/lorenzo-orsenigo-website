@@ -1,10 +1,26 @@
-<div class="projects-container">
-  <div class="project-container-grid">
-    <ng-container *ngFor="let category of categories">
-      <div class="project-container-category">
-        <div class="project-container-category-img"><img class="button" [src]="category.pictureUrl" alt="" [routerLink]="category.path" routerLinkActive="activebutton" ariaCurrentWhenActive="page"></div>
-        <div class="project-container-category-name">{{category.name}}</div>
-      </div>
-    </ng-container>
-  </div>
+<div *ngIf="!isLoading; else spinner" class="container-fluid content-wrapper">
+    <div class="row">
+        <ng-container *ngFor="let category of categories">
+            <div class="col-md-4 mb-4">
+                <div class="image-container">
+                    <img
+                        [src]="category.pictureUrl"
+                        alt=""
+                        [routerLink]="category.path"
+                        routerLinkActive="activebutton"
+                        ariaCurrentWhenActive="page"
+                    />
+                    <div class="overlay">{{ category.name }}</div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
 </div>
+
+<ng-template #spinner>
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</ng-template>

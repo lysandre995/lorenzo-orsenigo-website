@@ -1,4 +1,7 @@
 <app-nav-bar></app-nav-bar>
-<div [ngClass]="isHomePage ? 'placeholder-home' : 'placeholder-not-home'" ></div>
+<div *ngIf="loader.loading$ | async" class="loader-overlay">
+    <!-- Spinner o logo -->
+    Hello
+</div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

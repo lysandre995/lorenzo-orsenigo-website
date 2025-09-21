@@ -1,3 +1,3 @@
 export const constants = {
-  pastEventsPageSize: 10
+    pastEventsPageSize: 10
 };
