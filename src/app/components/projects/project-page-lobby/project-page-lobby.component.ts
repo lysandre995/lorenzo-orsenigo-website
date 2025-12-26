@@ -14,6 +14,7 @@ export class ProjectPageLobbyComponent implements AfterViewInit, OnInit {
     protected basePicsUrls = `${assetPaths.globokarOliverosImgBaseUrl}/`;
 
     protected columns = 0;
+    protected layoutType = 0; // 0: masonry, 1: featured, 2: alternating, 3: uniform grid
 
     protected f0 = { pictureUrl: "", id: "", name: "" };
     protected f1 = { pictureUrl: "", id: "", name: "" };
@@ -35,6 +36,9 @@ export class ProjectPageLobbyComponent implements AfterViewInit, OnInit {
 
     public async ngOnInit(): Promise<void> {
         this.onResize();
+
+        // Select random layout type (only for desktop, mobile always uses single column)
+        this.layoutType = Math.floor(Math.random() * 4);
 
         this.isLoading = true;
         this.projects = await this.service.getStoredLobbyProjectsWithImages();

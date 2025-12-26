@@ -1,6 +1,15 @@
 .content-wrapper {
     padding-bottom: var(--footer-height);
 }
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Base circular image container */
 .image-container {
     position: relative;
     width: 100%;
@@ -10,9 +19,26 @@
     background-size: cover;
     background-position: center;
 }
+
+/* Large items (2x height) */
+.image-container.large {
+    padding-bottom: 200%;
+}
+
+/* Featured hero item (wide but shorter) */
+.image-container.featured {
+    padding-bottom: 40%;
+}
+
+/* Medium wide items */
+.image-container.medium-wide {
+    padding-bottom: 50%;
+}
+
 .image-container:hover {
     cursor: pointer;
 }
+
 .image-container img {
     position: absolute;
     top: 0;
@@ -22,9 +48,11 @@
     object-fit: cover;
     transition: filter 0.3s ease;
 }
+
 .image-container:hover img {
     filter: blur(5px);
 }
+
 .overlay {
     position: absolute;
     top: 45%;
@@ -40,6 +68,7 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+
 .image-container:hover .overlay {
     opacity: 1;
 }

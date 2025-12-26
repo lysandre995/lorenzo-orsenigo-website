@@ -1,573 +1,399 @@
 @if (!isLoading) {
   <div class="container-fluid content-wrapper">
-    @if (columns === 5) {
-      <div class="row mb-4">
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f0.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f0.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f0.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f1.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f1.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f1.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f2.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f2.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f2.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f3.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f3.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f3.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f4.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f4.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f4.name }}</div>
-          </div>
-        </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f5.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f5.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f5.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f6.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f6.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f6.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f7.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f7.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f7.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f8.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f8.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f8.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f9.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f9.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f9.name }}</div>
-          </div>
-        </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f10.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f10.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f10.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f11.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f11.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f11.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f12.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f12.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f12.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f13.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f13.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f13.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f14.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f14.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f14.name }}</div>
-          </div>
-        </div>
-      </div>
-    }
-    @if (columns === 3) {
-      <div class="row mb-4">
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f0.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f0.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f0.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f1.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f1.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f1.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f2.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f2.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f2.name }}</div>
-          </div>
-        </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f3.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f3.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f3.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f4.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f4.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f4.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f5.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f5.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f5.name }}</div>
-          </div>
-        </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f6.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f6.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f6.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f7.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f7.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f7.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f8.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f8.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f8.name }}</div>
-          </div>
-        </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f9.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f9.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f9.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f10.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f10.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f10.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f11.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f11.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f11.name }}</div>
-          </div>
-        </div>
-      </div>
-      <div class="row mb-4">
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f12.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f12.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f12.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f13.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f13.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f13.name }}</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="image-container">
-            <img
-              [src]="f14.pictureUrl"
-              alt=""
-              [routerLink]="'/projects/research/globokar-oliveros/' + f14.id"
-              routerLinkActive="activebutton"
-              ariaCurrentWhenActive="page"
-              />
-            <div class="overlay">{{ f14.name }}</div>
-          </div>
-        </div>
-      </div>
-    }
+
+    <!-- MOBILE: Single column layout (same for all layout types) -->
     @if (columns === 1) {
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f0.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f0.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f0.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f0.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f0.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f1.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f1.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f1.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f1.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f1.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f2.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f2.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f2.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f2.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f2.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f3.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f3.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f3.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f3.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f3.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f4.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f4.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f4.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f4.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f4.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f5.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f5.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f5.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f5.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f5.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f6.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f6.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f6.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f6.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f6.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f7.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f7.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f7.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f7.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f7.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f8.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f8.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f8.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f8.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f8.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f9.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f9.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f9.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f9.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f9.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f10.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f10.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f10.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f10.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f10.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f11.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f11.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f11.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f11.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f11.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f12.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f12.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f12.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f12.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f12.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f13.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f13.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f13.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f13.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f13.name }}</div>
         </div>
       </div>
       <div class="col mb-4">
         <div class="image-container">
-          <img
-            [src]="f14.pictureUrl"
-            alt=""
-            [routerLink]="'/projects/research/globokar-oliveros/' + f14.id"
-            routerLinkActive="activebutton"
-            ariaCurrentWhenActive="page"
-            />
+          <img [src]="f14.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f14.id" routerLinkActive="activebutton" ariaCurrentWhenActive="page" />
           <div class="overlay">{{ f14.name }}</div>
         </div>
       </div>
     }
+
+    <!-- DESKTOP LAYOUTS -->
+    @if (columns > 1) {
+
+      <!-- Layout 0: Masonry Asymmetric -->
+      @if (layoutType === 0) {
+        <div class="row mb-4">
+          <!-- Large item (2x2) -->
+          <div class="col-md-6">
+            <div class="image-container large">
+              <img [src]="f0.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f0.id" />
+              <div class="overlay">{{ f0.name }}</div>
+            </div>
+          </div>
+
+          <!-- Right column with 4 small items -->
+          <div class="col-md-6">
+            <div class="row mb-4">
+              <div class="col-6">
+                <div class="image-container">
+                  <img [src]="f1.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f1.id" />
+                  <div class="overlay">{{ f1.name }}</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="image-container">
+                  <img [src]="f2.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f2.id" />
+                  <div class="overlay">{{ f2.name }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="image-container">
+                  <img [src]="f3.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f3.id" />
+                  <div class="overlay">{{ f3.name }}</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="image-container">
+                  <img [src]="f4.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f4.id" />
+                  <div class="overlay">{{ f4.name }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medium items (2x1) -->
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <div class="image-container">
+              <img [src]="f5.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f5.id" />
+              <div class="overlay">{{ f5.name }}</div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="image-container medium-wide">
+              <img [src]="f6.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f6.id" />
+              <div class="overlay">{{ f6.name }}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regular grid for remaining items -->
+        @if (columns === 5) {
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f7.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f7.id" /><div class="overlay">{{ f7.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f8.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f8.id" /><div class="overlay">{{ f8.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f9.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f9.id" /><div class="overlay">{{ f9.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f10.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f10.id" /><div class="overlay">{{ f10.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f11.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f11.id" /><div class="overlay">{{ f11.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f12.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f12.id" /><div class="overlay">{{ f12.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f13.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f13.id" /><div class="overlay">{{ f13.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f14.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f14.id" /><div class="overlay">{{ f14.name }}</div></div></div>
+          </div>
+        }
+        @if (columns === 3) {
+          <div class="row mb-4">
+            <div class="col-md-4"><div class="image-container"><img [src]="f7.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f7.id" /><div class="overlay">{{ f7.name }}</div></div></div>
+            <div class="col-md-4"><div class="image-container"><img [src]="f8.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f8.id" /><div class="overlay">{{ f8.name }}</div></div></div>
+            <div class="col-md-4"><div class="image-container"><img [src]="f9.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f9.id" /><div class="overlay">{{ f9.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-md-4"><div class="image-container"><img [src]="f10.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f10.id" /><div class="overlay">{{ f10.name }}</div></div></div>
+            <div class="col-md-4"><div class="image-container"><img [src]="f11.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f11.id" /><div class="overlay">{{ f11.name }}</div></div></div>
+            <div class="col-md-4"><div class="image-container"><img [src]="f12.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f12.id" /><div class="overlay">{{ f12.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-md-4"><div class="image-container"><img [src]="f13.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f13.id" /><div class="overlay">{{ f13.name }}</div></div></div>
+            <div class="col-md-4"><div class="image-container"><img [src]="f14.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f14.id" /><div class="overlay">{{ f14.name }}</div></div></div>
+          </div>
+        }
+      }
+
+      <!-- Layout 1: Featured + Grid -->
+      @if (layoutType === 1) {
+        <!-- Featured hero item -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="image-container featured">
+              <img [src]="f0.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f0.id" />
+              <div class="overlay">{{ f0.name }}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid for remaining items -->
+        @if (columns === 5) {
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f1.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f1.id" /><div class="overlay">{{ f1.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f2.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f2.id" /><div class="overlay">{{ f2.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f3.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f3.id" /><div class="overlay">{{ f3.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f4.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f4.id" /><div class="overlay">{{ f4.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f5.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f5.id" /><div class="overlay">{{ f5.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f6.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f6.id" /><div class="overlay">{{ f6.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f7.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f7.id" /><div class="overlay">{{ f7.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f8.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f8.id" /><div class="overlay">{{ f8.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f9.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f9.id" /><div class="overlay">{{ f9.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f10.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f10.id" /><div class="overlay">{{ f10.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f11.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f11.id" /><div class="overlay">{{ f11.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f12.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f12.id" /><div class="overlay">{{ f12.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f13.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f13.id" /><div class="overlay">{{ f13.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f14.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f14.id" /><div class="overlay">{{ f14.name }}</div></div></div>
+          </div>
+        }
+        @if (columns === 3) {
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f1.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f1.id" /><div class="overlay">{{ f1.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f2.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f2.id" /><div class="overlay">{{ f2.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f3.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f3.id" /><div class="overlay">{{ f3.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f4.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f4.id" /><div class="overlay">{{ f4.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f5.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f5.id" /><div class="overlay">{{ f5.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f6.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f6.id" /><div class="overlay">{{ f6.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f7.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f7.id" /><div class="overlay">{{ f7.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f8.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f8.id" /><div class="overlay">{{ f8.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f9.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f9.id" /><div class="overlay">{{ f9.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f10.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f10.id" /><div class="overlay">{{ f10.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f11.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f11.id" /><div class="overlay">{{ f11.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f12.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f12.id" /><div class="overlay">{{ f12.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f13.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f13.id" /><div class="overlay">{{ f13.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f14.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f14.id" /><div class="overlay">{{ f14.name }}</div></div></div>
+          </div>
+        }
+      }
+
+      <!-- Layout 2: Alternating Spotlight -->
+      @if (layoutType === 2) {
+        <!-- Row 1: Large left + 2 small right -->
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <div class="image-container large">
+              <img [src]="f0.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f0.id" />
+              <div class="overlay">{{ f0.name }}</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row mb-4">
+              <div class="col-12">
+                <div class="image-container">
+                  <img [src]="f1.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f1.id" />
+                  <div class="overlay">{{ f1.name }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="image-container">
+                  <img [src]="f2.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f2.id" />
+                  <div class="overlay">{{ f2.name }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: 3 equal items -->
+        <div class="row mb-4">
+          <div class="col-md-4"><div class="image-container"><img [src]="f3.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f3.id" /><div class="overlay">{{ f3.name }}</div></div></div>
+          <div class="col-md-4"><div class="image-container"><img [src]="f4.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f4.id" /><div class="overlay">{{ f4.name }}</div></div></div>
+          <div class="col-md-4"><div class="image-container"><img [src]="f5.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f5.id" /><div class="overlay">{{ f5.name }}</div></div></div>
+        </div>
+
+        <!-- Row 3: 2 small left + large right -->
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <div class="row mb-4">
+              <div class="col-12">
+                <div class="image-container">
+                  <img [src]="f6.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f6.id" />
+                  <div class="overlay">{{ f6.name }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="image-container">
+                  <img [src]="f7.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f7.id" />
+                  <div class="overlay">{{ f7.name }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="image-container large">
+              <img [src]="f8.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f8.id" />
+              <div class="overlay">{{ f8.name }}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4: Regular grid -->
+        <div class="row mb-4">
+          <div class="col-md-4"><div class="image-container"><img [src]="f9.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f9.id" /><div class="overlay">{{ f9.name }}</div></div></div>
+          <div class="col-md-4"><div class="image-container"><img [src]="f10.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f10.id" /><div class="overlay">{{ f10.name }}</div></div></div>
+          <div class="col-md-4"><div class="image-container"><img [src]="f11.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f11.id" /><div class="overlay">{{ f11.name }}</div></div></div>
+        </div>
+
+        <!-- Row 5: Remaining items -->
+        <div class="row mb-4">
+          <div class="col-md-4"><div class="image-container"><img [src]="f12.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f12.id" /><div class="overlay">{{ f12.name }}</div></div></div>
+          <div class="col-md-4"><div class="image-container"><img [src]="f13.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f13.id" /><div class="overlay">{{ f13.name }}</div></div></div>
+          <div class="col-md-4"><div class="image-container"><img [src]="f14.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f14.id" /><div class="overlay">{{ f14.name }}</div></div></div>
+        </div>
+      }
+
+      <!-- Layout 3: Uniform Grid (original) -->
+      @if (layoutType === 3) {
+        @if (columns === 5) {
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f0.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f0.id" /><div class="overlay">{{ f0.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f1.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f1.id" /><div class="overlay">{{ f1.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f2.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f2.id" /><div class="overlay">{{ f2.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f3.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f3.id" /><div class="overlay">{{ f3.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f4.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f4.id" /><div class="overlay">{{ f4.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f5.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f5.id" /><div class="overlay">{{ f5.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f6.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f6.id" /><div class="overlay">{{ f6.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f7.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f7.id" /><div class="overlay">{{ f7.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f8.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f8.id" /><div class="overlay">{{ f8.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f9.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f9.id" /><div class="overlay">{{ f9.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f10.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f10.id" /><div class="overlay">{{ f10.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f11.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f11.id" /><div class="overlay">{{ f11.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f12.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f12.id" /><div class="overlay">{{ f12.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f13.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f13.id" /><div class="overlay">{{ f13.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f14.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f14.id" /><div class="overlay">{{ f14.name }}</div></div></div>
+          </div>
+        }
+
+        @if (columns === 3) {
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f0.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f0.id" /><div class="overlay">{{ f0.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f1.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f1.id" /><div class="overlay">{{ f1.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f2.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f2.id" /><div class="overlay">{{ f2.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f3.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f3.id" /><div class="overlay">{{ f3.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f4.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f4.id" /><div class="overlay">{{ f4.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f5.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f5.id" /><div class="overlay">{{ f5.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f6.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f6.id" /><div class="overlay">{{ f6.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f7.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f7.id" /><div class="overlay">{{ f7.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f8.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f8.id" /><div class="overlay">{{ f8.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f9.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f9.id" /><div class="overlay">{{ f9.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f10.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f10.id" /><div class="overlay">{{ f10.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f11.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f11.id" /><div class="overlay">{{ f11.name }}</div></div></div>
+          </div>
+          <div class="row mb-4">
+            <div class="col"><div class="image-container"><img [src]="f12.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f12.id" /><div class="overlay">{{ f12.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f13.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f13.id" /><div class="overlay">{{ f13.name }}</div></div></div>
+            <div class="col"><div class="image-container"><img [src]="f14.pictureUrl" alt="" [routerLink]="'/projects/research/globokar-oliveros/' + f14.id" /><div class="overlay">{{ f14.name }}</div></div></div>
+          </div>
+        }
+      }
+    }
   </div>
 } @else {
-  <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+  <div class="loading-container">
     <div class="spinner-border" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
 }
-
