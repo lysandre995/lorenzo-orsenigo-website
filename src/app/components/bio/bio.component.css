@@ -1,60 +1,227 @@
-/* Assicura che il contenitore occupi tutto lo spazio disponibile tra navbar e footer */
+/* ===========================================
+   CONTAINER & LAYOUT
+   =========================================== */
+
 .bio-container {
-    height: calc(100vh - var(--navbar-height) - var(--footer-height)); /* Regolabile */
-    width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #212529;
+}
+
+/* ===========================================
+   HEADER
+   =========================================== */
+
+.bio-header {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background-color: #212529;
+    border-bottom: 1px solid #333333;
+}
+
+.bio-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 600;
+    color: #ffffff;
     margin: 0;
-    padding: 0;
+    letter-spacing: -0.02em;
 }
 
-/* La riga deve riempire lo spazio disponibile */
+/* ===========================================
+   CONTENT LAYOUT
+   =========================================== */
+
 .bio-content {
-    flex: 1;
     display: flex;
+    flex: 1;
+    position: relative;
+}
+
+/* ===========================================
+   IMAGE SECTION
+   =========================================== */
+
+.bio-image-wrapper {
+    flex: 0 0 40%;
+    position: relative;
     overflow: hidden;
+    background-color: #212529;
 }
 
-/* Colonna immagine: riempie tutto lo spazio disponibile senza deformazioni */
 .bio-image {
-    width: 50vw; /* Occupa esattamente metà schermo */
-    height: 100%;
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; */
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-}
-.image-mobile {
     width: 100%;
-    height: 30vh;
+    height: 100%;
     background-size: cover;
-    background-position: top;
+    background-position: center top;
     background-repeat: no-repeat;
+    position: sticky;
+    top: 0;
 }
 
-@media (min-width: 768px) {
-    .image-mobile {
-        display: none;
+/* ===========================================
+   TEXT SECTION
+   =========================================== */
+
+.bio-text-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #212529;
+}
+
+.bio-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    padding-bottom: 8rem; /* Extra padding per evitare che il footer copra il contenuto */
+}
+
+.bio-paragraph {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.bio-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+/* ===========================================
+   LOADING STATE
+   =========================================== */
+
+.bio-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #212529;
+}
+
+.bio-loading .spinner-border {
+    color: #ffffff;
+}
+
+/* ===========================================
+   RESPONSIVE - TABLET (768px - 1024px)
+   =========================================== */
+
+@media (max-width: 1024px) {
+    .bio-image-wrapper {
+        flex: 0 0 35%;
+    }
+
+    .bio-text {
+        padding: 2.5rem 1.75rem;
+        padding-bottom: 7rem;
+    }
+
+    .bio-paragraph {
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 768px) {
+/* ===========================================
+   RESPONSIVE - MOBILE (< 768px)
+   =========================================== */
+
+@media (max-width: 767px) {
+    .bio-content {
+        flex-direction: column;
+    }
+
+    .bio-header {
+        padding: 1.5rem 1rem;
+    }
+
+    .bio-title {
+        font-size: 1.75rem;
+    }
+
+    .bio-image-wrapper {
+        flex: 0 0 auto;
+        height: 40vh;
+        min-height: 300px;
+        max-height: 400px;
+    }
+
+    .bio-image {
+        position: relative;
+    }
+
+    .bio-text-wrapper {
+        flex: 1;
+    }
+
+    .bio-text {
+        padding: 2rem 1.25rem;
+        padding-bottom: 10rem; /* Aumentato per mobile a causa del footer più alto */
+    }
+
+    .bio-paragraph {
+        font-size: 0.9375rem;
+        line-height: 1.65;
+        text-align: left;
+    }
 }
 
-.bio-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
+/* ===========================================
+   RESPONSIVE - SMALL MOBILE (< 480px)
+   =========================================== */
+
+@media (max-width: 480px) {
+    .bio-header {
+        padding: 1.25rem 0.875rem;
+    }
+
+    .bio-title {
+        font-size: 1.5rem;
+    }
+
+    .bio-image-wrapper {
+        height: 35vh;
+        min-height: 250px;
+    }
+
+    .bio-text {
+        padding: 1.5rem 1rem;
+        padding-bottom: 12rem; /* Padding ancora maggiore per schermi molto piccoli */
+    }
+
+    .bio-paragraph {
+        font-size: 0.875rem;
+        margin-bottom: 1.25rem;
+    }
 }
 
-/* Colonna testo: scrollabile se necessario */
-.bio-text {
-    width: 50vw; /* Altra metà dello schermo */
-    height: 100%;
-    overflow-y: auto;
-    padding: 20px; /* Per leggibilità */
+/* ===========================================
+   PRINT STYLES
+   =========================================== */
+
+@media print {
+    .bio-container {
+        min-height: 0;
+    }
+
+    .bio-content {
+        flex-direction: column;
+    }
+
+    .bio-image-wrapper {
+        height: 300px;
+        page-break-inside: avoid;
+    }
+
+    .bio-text {
+        padding: 1rem;
+    }
+
+    .bio-paragraph {
+        text-align: left;
+        page-break-inside: avoid;
+    }
 }

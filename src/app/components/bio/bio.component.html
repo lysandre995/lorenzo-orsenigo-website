@@ -1,32 +1,31 @@
 @if (!isLoading) {
-  <div class="container-fluid content-wrapper">
-    <div class="container-fluid d-flex flex-column"
-      style="height: calc(100vh - var(--navbar-height) - var(--footer-height))">
-      <div class="row flex-shrink-0 py-3" style="flex-basis: 10%">
-        <div class="col-12 text-center">
-          <h1 class="h4 h2-md">{{ title }}</h1>
-        </div>
+  <div class="bio-container">
+    <!-- Header Section -->
+    <header class="bio-header">
+      <h1 class="bio-title">{{ title }}</h1>
+    </header>
+
+    <!-- Content Section -->
+    <div class="bio-content">
+      <!-- Image Section -->
+      <div class="bio-image-wrapper">
+        <div class="bio-image" [style.background-image]="'url(' + pictureUrl + ')'"></div>
       </div>
-      <div class="row flex-grow-1 flex-column flex-md-row">
-        <div class="col-12 d-block d-md-none image-mobile"
-        [ngStyle]="{ 'background-image': 'url(' + pictureUrl + ')' }"></div>
-        <div class="col-md-6 p-0 h-100 d-none d-md-block">
-          <div class="bio-image" [ngStyle]="{ 'background-image': 'url(' + pictureUrl + ')' }"></div>
+
+      <!-- Text Section -->
+      <article class="bio-text-wrapper">
+        <div class="bio-text">
+          @for (paragraph of paragraphs; track $index) {
+            <p class="bio-paragraph">{{ paragraph }}</p>
+          }
         </div>
-        <div class="col-md-6 d-flex flex-column p-0 h-100 overflow-hidden d-none d-md-flex">
-          <textarea class="flex-grow-1 w-100 border-0 p-4" readonly>{{ text }}</textarea>
-        </div>
-        <div class="col-12 d-flex flex-column p-0 flex-grow-1 mobile-text d-md-none">
-          <textarea class="flex-grow-1 w-100 border-0 p-4" readonly>{{ text }}</textarea>
-        </div>
-      </div>
+      </article>
     </div>
   </div>
 } @else {
-  <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+  <div class="bio-loading">
     <div class="spinner-border" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
 }
-

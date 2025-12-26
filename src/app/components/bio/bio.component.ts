@@ -8,21 +8,23 @@ import { OmniService } from "src/app/services/omni.service";
     standalone: false
 })
 export class BioComponent implements OnInit, AfterViewInit {
-    public title = "";
-    public text = "";
-    public pictureUrl = "";
-    protected imageLoaded = false;
-    protected textLoaded = false;
-    public isLoading = false;
+    protected title = "";
+    protected paragraphs: string[] = [];
+    protected pictureUrl = "";
+    protected isLoading = false;
 
     constructor(private readonly omniService: OmniService) {}
-    
+
     public async ngOnInit() {
         this.isLoading = true;
         const data = await this.omniService.getBio();
         this.title = data?.title ?? "";
-        this.text = data?.text ?? "";
         this.pictureUrl = data?.picture ?? "";
+
+        // Split text into paragraphs for better formatting
+        const text = data?.text ?? "";
+        this.paragraphs = text.split('\n\n').filter(p => p.trim().length > 0);
+
         this.isLoading = false;
     }
 
