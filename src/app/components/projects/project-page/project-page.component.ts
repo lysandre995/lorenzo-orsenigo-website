@@ -6,7 +6,8 @@ import { ProjectPageLobbyService } from "src/app/services/project-page-lobby.ser
 @Component({
     selector: "app-project-page",
     templateUrl: "./project-page.component.html",
-    styleUrls: ["./project-page.component.css"]
+    styleUrls: ["./project-page.component.css"],
+    standalone: false
 })
 export class ProjectPageComponent implements OnInit, AfterViewInit {
     protected subproject?: string;

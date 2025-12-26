@@ -1,7 +1,9 @@
 <app-nav-bar></app-nav-bar>
-<div *ngIf="loader.loading$ | async" class="loader-overlay">
+@if (loader.loading$ | async) {
+  <div class="loader-overlay">
     <!-- Spinner o logo -->
     Hello
-</div>
+  </div>
+}
 <router-outlet></router-outlet>
 <app-footer></app-footer>

@@ -1,16 +1,17 @@
 import { AfterViewInit, Component, HostListener, OnInit } from "@angular/core";
 import { ProjectPageLobbyService } from "src/app/services/project-page-lobby.service";
-import { backendRoutes } from "src/assets/backend-routes";
+import { assetPaths } from "src/assets/backend-routes";
 
 @Component({
     selector: "app-project-page-lobby",
     templateUrl: "./project-page-lobby.component.html",
-    styleUrls: ["./project-page-lobby.component.css"]
+    styleUrls: ["./project-page-lobby.component.css"],
+    standalone: false
 })
 export class ProjectPageLobbyComponent implements AfterViewInit, OnInit {
     protected isLoading = false;
     protected projects: { pictureUrl: string; id: string; name: string }[] = [];
-    protected basePicsUrls = `${backendRoutes.baseUrl}/${backendRoutes.globokarOliverosImgBaseUrl}/`;
+    protected basePicsUrls = `${assetPaths.globokarOliverosImgBaseUrl}/`;
 
     protected columns = 0;
 
@@ -71,7 +72,7 @@ export class ProjectPageLobbyComponent implements AfterViewInit, OnInit {
         }
     }
 
-    @HostListener("window:resize", ["$event"])
+    @HostListener("window:resize")
     onResize() {
         const width = window.innerWidth;
         if (width < 576) {

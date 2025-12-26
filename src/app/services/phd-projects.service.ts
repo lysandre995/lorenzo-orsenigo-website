@@ -1,22 +1,16 @@
 import { Injectable } from "@angular/core";
-import { backendRoutes } from "src/assets/backend-routes";
+import phdProjectsData from "src/assets/data/phd-projects.json";
 
 @Injectable({
     providedIn: "root"
 })
 export class PhdProjectsService {
-    private phdProjects = null;
+    private phdProjects: any = null;
 
     constructor() {}
 
     async getPhdProjects() {
-        const response = await fetch(`${backendRoutes.baseUrl}/${backendRoutes.phdProjects}`);
-
-        let result;
-        if (response.ok) {
-            result = response.json();
-            return result;
-        }
+        return phdProjectsData;
     }
 
     async getPhdProjectsWithImages() {

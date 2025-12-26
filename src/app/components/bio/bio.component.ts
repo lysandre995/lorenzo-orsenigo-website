@@ -4,7 +4,8 @@ import { OmniService } from "src/app/services/omni.service";
 @Component({
     selector: "app-bio",
     templateUrl: "./bio.component.html",
-    styleUrls: ["./bio.component.css"]
+    styleUrls: ["./bio.component.css"],
+    standalone: false
 })
 export class BioComponent implements OnInit, AfterViewInit {
     public title = "";

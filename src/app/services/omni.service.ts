@@ -1,35 +1,40 @@
 import { Injectable } from "@angular/core";
-import { backendRoutes } from "../../assets/backend-routes";
 import { BioDto } from "../dtos/bio.dto";
 import { ProjectCategoryDto } from "../dtos/project-category.dto";
 import { ProjectsSummaryDto } from "../dtos/projects-summary-dto";
-import axios from "axios";
 import { EventsSummaryDto } from "../dtos/events-summary.dto";
 import { EventDto } from "../dtos/event.dto";
+import bioData from "../../assets/data/bio.json";
+import projectsSummaryData from "../../assets/data/projects-summary.json";
+import eventsSummaryData from "../../assets/data/events-summary.json";
+import eventsData from "../../assets/data/events-0.json";
+import phdProjectsData from "../../assets/data/phd-projects.json";
+import lobbyProjectsData from "../../assets/data/globokar-oliveros-projects-0.json";
 
 @Injectable({
     providedIn: "root"
 })
 export class OmniService {
-    private bioData?: BioDto;
+    private bioDataCache?: BioDto;
     private projectCategoriesData?: ProjectCategoryDto[];
-    private projectsSummary: ProjectsSummaryDto = { categories: [], projectsSummaries: [] };
-    private eventSummary: EventsSummaryDto[] = [];
-    private phdProjects = null;
-    private lobbyProjects = [];
+    private projectsSummary: ProjectsSummaryDto = projectsSummaryData as ProjectsSummaryDto;
+    private eventSummary: EventsSummaryDto[] = eventsSummaryData as EventsSummaryDto[];
+    private eventsContent: EventDto[] = eventsData as EventDto[];
+    private phdProjects: any = null;
+    private lobbyProjects: any[] = lobbyProjectsData as any[];
 
     constructor() {}
 
     public async getBio(): Promise<BioDto | undefined> {
-        if (!this.bioData) {
-            this.bioData = (await axios.get(backendRoutes.baseUrl + "/" + backendRoutes.bio)).data;
+        if (!this.bioDataCache) {
+            this.bioDataCache = bioData as BioDto;
 
-            if (this.bioData?.picture) {
-                await this.preloadImage(this.bioData?.picture);
+            if (this.bioDataCache?.picture) {
+                await this.preloadImage(this.bioDataCache?.picture);
             }
         }
 
-        return this.bioData;
+        return this.bioDataCache;
     }
 
     public async getProjectCategoriesWithImages(): Promise<ProjectCategoryDto[]> {
@@ -62,13 +67,7 @@ export class OmniService {
     }
 
     public async getPhdProjects() {
-        const response = await fetch(`${backendRoutes.baseUrl}/${backendRoutes.phdProjects}`);
-
-        let result;
-        if (response.ok) {
-            result = response.json();
-            return result;
-        }
+        return phdProjectsData;
     }
 
     public async getPhdProjectsWithImages() {
@@ -83,27 +82,10 @@ export class OmniService {
     }
 
     public async getLobbyProjects() {
-        const response = await fetch(`${backendRoutes.baseUrl}/${backendRoutes.projectPageLobby}`);
-
-        let result;
-        if (response.ok) {
-            result = await response.json();
-            localStorage.setItem("lobby-projects-cache", JSON.stringify(result));
-            (this.lobbyProjects as any) = result;
-            return result;
-        }
+        return this.lobbyProjects;
     }
 
     public async getStoredLobbyProjects() {
-        if (!this.lobbyProjects || this.lobbyProjects.length === 0) {
-            const cache = localStorage.getItem("lobby-projects-cache");
-            if (cache) {
-                const prjs = JSON.parse(cache);
-                (this.lobbyProjects as any) = prjs;
-                return this.lobbyProjects;
-            }
-            return await this.getLobbyProjects();
-        }
         return this.lobbyProjects;
     }
 
@@ -114,7 +96,7 @@ export class OmniService {
     }
 
     private async getEventsSummary(): Promise<void> {
-        this.eventSummary = (await axios.get(backendRoutes.baseUrl + "/" + backendRoutes.eventsSummary)).data;
+        // Event summary is already loaded in the constructor
     }
 
     private getUpComingEventsSummary(): EventsSummaryDto[] {
@@ -147,29 +129,17 @@ export class OmniService {
     }
 
     private async getEvents(eventsSummaryDto: EventsSummaryDto[]) {
-        let events: EventDto[] = [];
-        let previousFileId: number = -1;
-        let currentFileId: number;
-        let currentFileContent: EventDto[] = [];
+        const events: EventDto[] = [];
         for (const eventSummaryDto of eventsSummaryDto) {
-            currentFileId = eventSummaryDto.fileId;
-            if (currentFileId != previousFileId) {
-                previousFileId = currentFileId;
-                currentFileContent = (
-                    await axios.get(
-                        backendRoutes.baseUrl + "/" + backendRoutes.event.replace("%d", currentFileId.toString())
-                    )
-                ).data;
+            const event = this.eventsContent.find(e => e.id === eventSummaryDto.eventId);
+            if (event) {
+                events.push(event);
             }
-            events.push(currentFileContent.filter(event => event.id === eventSummaryDto.eventId)[0]);
         }
         return events;
     }
 
     private async getProjectCategories(): Promise<ProjectCategoryDto[]> {
-        if (this.projectsSummary.projectsSummaries.length === 0) {
-            this.projectsSummary = (await axios.get(backendRoutes.baseUrl + "/" + backendRoutes.projectsSummary)).data;
-        }
         return this.projectsSummary.categories;
     }
 

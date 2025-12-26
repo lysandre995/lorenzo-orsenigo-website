@@ -1,0 +1,228 @@
+[
+    {
+        "id": 0,
+        "name": "SONify!",
+        "date": "2023-05-07T18:30",
+        "location": "Graz, KUG",
+        "eventUrl": "https://sonify.at/",
+        "description": "Solitude or Intimacy Do common connections in the sound and creative process of several musicians exist? How is each work created? How does each composer work with sound and the performance? How do sound and staging correlate within these works? Addressing some of the aforementioned questions, I will be presenting my personal interpretation of Gérard Grisey's Stéle for two dragged bass drums, performer and light bulbs.",
+        "coverUrl": "https://sonify.at/wp-content/themes/sonify/images/blaetter.png"
+    },
+    {
+        "id": 1,
+        "name": "Trio-Bio @ Mittleyoung",
+        "date": "2023-05-19T18:00",
+        "location": "Cividale del Friuli, Chiesa di Santa Maria dei Battuti",
+        "eventUrl": "https://www.mittelfest.org/spettacolo/i-sogni-sono-gli-specchi-notturni-dellanima/",
+        "ticketsUrl": "https://www.vivaticket.com/it/ticket/i-sogni-sono-gli-specchi-notturni-dell-anima/205543",
+        "description": "Trio-Bio ((Verena Merstallinger, guitar; Lorenzo Orsenigo, percussion; Lena Sophie Knapp, text and voice) presents the interdisciplinary performance series 'Träume sind die nächtlichen Spiegel der Seele' (English translation 'Dreams are the night mirrors of the soul'). Based on the assumption that we human beings are confronted with our innermost desires, our highest hopes and our darkest fears, and that dreams, compared to reality, have no limits to imagination, the trio wants to explore the field of different narratives during dreaming. With the Träume series, Trio-Bio aims to blur the boundaries between reality and dream. By creating utopias and dystopias through music, performance and text, they want to stimulate the audience's critical and personal reflection. Trio-Bio is currently expanding their repertoire to work on new episodes of the Träume series, focusing on various topics, such as the human impact on the environmental crisis on our lives.",
+        "coverUrl": "assets/img/trio.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Duo Merors @ Riva San Vitale",
+        "date": "2023-08-27T17:00",
+        "location": "Riva San Vitale (CH)",
+        "eventUrl": "https://supportculture.migros.ch/de/veranstaltungen/concerto-duo-merors-chitarra-pecussioni/",
+        "description": "Duo Merors (Verena Merstallinger, guitar; Lorenzo Orsenigo, percussion) presents a concert of classical and contempoorary music. A newly composed, collaboratively-devised piece by Turin-based composer Luca Mazzilli is also included in the program",
+        "coverUrl": "assets/img/duo.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Duo Merors @ Alte Schmiede",
+        "date": "2023-10-20T19:00",
+        "location": "Wien, Alte Schmiede",
+        "eventUrl": "https://alte-schmiede.at/programm-3",
+        "description": "Duo Merors (Verena Merstallinger, guitar; Lorenzo Orsenigo, percussion) presents a concert of newly composed pieces by local composers, such as Yuheng Chen, Anna Wielend, Maria Pérez, Alireza Shahabolmolkfard, Mikolasek Michael.",
+        "coverUrl": "assets/img/duo.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Duo Merors @ Villa Borletti",
+        "date": "2023-02-24T21:00",
+        "location": "Villa Borletti, Origgio (VA)",
+        "eventUrl": "https://www.borlettioriggio.it/stagione-musicale-2022-2023/",
+        "description": "Duo Merors (Verena Merstallinger, guitar; Lorenzo Orsenigo, percussion) presents a concert of original and arranged music for guitar and percussion.",
+        "coverUrl": "assets/img/duo.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "Konfrontation - Verena Merstallinger",
+        "date": "2023-02-15T19:00",
+        "location": "Großer Saal, Anton Bruckner Private University, Linz",
+        "eventUrl": "https://www.bruckneruni.at/de/veranstaltungen/aktuelle-veranstaltungen/detail?tx_gtncachedevents_events%5Baction%5D=show&tx_gtncachedevents_events%5Bcontroller%5D=Event&tx_gtncachedevents_events%5Bevent%5D=3806630&cHash=37c0018862c7f56b34c8ce306b970a34",
+        "description": "Verena Merstallinger plays her MA Abschulsskonzert featuring Lorenzo Orsenigo. Works by Schulz, D'Angelo, Storsveen, Rodero Gil, Hisaishi, Villa-Lobos.",
+        "coverUrl": "assets/img/konfrontationen.png"
+    },
+    {
+        "id": 6,
+        "name": "Concerto di Capodanno - OAV",
+        "date": "2023-01-02T17:00",
+        "location": "Pentagono, Bormio (SO)",
+        "eventUrl": "https://www.orchestravivaldi.org/stagionesondrio",
+        "description": "Works by Copland, Bernstein, Pedraglio, J. Strauss.",
+        "coverUrl": "https://static.wixstatic.com/media/7a6459_e9697be4a2914c81a748bb0cd7aac357~mv2.jpg/v1/fill/w_959,h_868,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/7a6459_e9697be4a2914c81a748bb0cd7aac357~mv2.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Concerto di Capodanno - OAV",
+        "date": "2023-01-01T17:00",
+        "location": "Teatro Sociale, Sondrio",
+        "eventUrl": "https://www.orchestravivaldi.org/stagionesondrio",
+        "description": "Works by Copland, Bernstein, Pedraglio, J. Strauss.",
+        "coverUrl": "https://static.wixstatic.com/media/7a6459_e9697be4a2914c81a748bb0cd7aac357~mv2.jpg/v1/fill/w_959,h_868,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/7a6459_e9697be4a2914c81a748bb0cd7aac357~mv2.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Ensemble Kontrapunkte",
+        "date": "2024-04-08T19:30",
+        "location": "Musikverein, Glaeserner Saal, Wien",
+        "eventUrl": "https://www.musikverein.at/konzert/?id=000564f0",
+        "description": "Music by Muhli, Thomas, Antheil, Eichberg",
+        "coverUrl": "https://spielplan.musikverein.at/enrichment/uploads/pictures/concert/Gottfried_Rabl_c_Maria_Frodl.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Ensemble ARTIFEX",
+        "date": "2024-03-12T19:30",
+        "location": "Herman Markus Pressl-Saal, KUG, Graz",
+        "eventUrl": "",
+        "description": "Music by Grisey, Azzan, Korsun",
+        "coverUrl": ""
+    },
+    {
+        "id": 10,
+        "name": "mdw Spring School | Sonic Dialogues: Intersections of Art and Sound in Public Spaces",
+        "date": "2024-06-12",
+        "location": "mdw, Wien",
+        "eventUrl": "https://www.researchcatalogue.net/portal/announcement?announcement=2633215",
+        "description": "Presentation: 'Artistic Hacking. On public performance venues as _loci_ of transformative encounters'",
+        "coverUrl": "https://www.mdw.ac.at/magazin/new/wp-content/uploads/2024/09/spring-school-c-stp-print-032-7684.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Artistic Research Session",
+        "date": "2024-07-03",
+        "location": "KUG, Graz",
+        "eventUrl": "",
+        "description": "Collaboration with composer Juta Pranulyte",
+        "coverUrl": "https://images.squarespace-cdn.com/content/v1/65d22163ff93cf5cc8876b77/2a10c936-fea1-49be-9ea4-908a219bacc6/BW9.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Trio Bio: Experimentation and Research Session",
+        "date": "2024-07-24",
+        "location": "DH5, Linz",
+        "eventUrl": "",
+        "description": "Collaboration with guitarist and theater scholar Svetoslav Stoychev",
+        "coverUrl": "assets/img/trio.jpeg"
+    },
+    {
+        "id": 13,
+        "name": "ARTikulationen 2024. A Festival of Artistic Research",
+        "date": "2024-10-02",
+        "location": "KUG, Graz",
+        "eventUrl": "https://www.researchcatalogue.net/view/2920331/2940584",
+        "description": "Presentation and participatory performance",
+        "coverUrl": "https://doctorartium.kug.ac.at/fileadmin/_processed_/a/0/csm_2024_ARTikulationen_daef2f1116.webp"
+    },
+    {
+        "id": 14,
+        "name": "Texte & Töne 2024",
+        "date": "2024-11-09T15:00",
+        "location": "ORF, Bregenz",
+        "eventUrl": "https://vorarlberg.orf.at/studio/stories/3279814/",
+        "description": "Meow-Mouth by Juta Pranulyte - World Premier",
+        "coverUrl": "https://images.squarespace-cdn.com/content/v1/65d22163ff93cf5cc8876b77/2a10c936-fea1-49be-9ea4-908a219bacc6/BW9.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Solo Concert",
+        "date": "2024-11-18T19:30",
+        "location": "Kultum Graz",
+        "eventUrl": "https://www.kultum.at/einrichtung/137/kalender/calendar/2200315.html",
+        "description": "Music by Feldman, Grisey, Pranulyte",
+        "coverUrl": "https://www.kultum.at/img/53/d7/14eb217588cb733d73ac/-Hacking_26.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Lizard Ensemble @ Limina Festival",
+        "date": "2024-11-30T20:00",
+        "location": "Mozarteum University, Salzburg",
+        "eventUrl": "http://limina.moz.ac.at/",
+        "description": "Music by Uğurlu, Roth, Rizza, Cossidente, Lee, Gimenez-Comas",
+        "coverUrl": "https://lizardensemble.com/wp-content/uploads/2023/03/Lizard-Bild-4-1.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Trio-Bio feat. Nika Sarajlija",
+        "date": "2024-12-14T17:00",
+        "location": "Brucknerhaus, Linz",
+        "eventUrl": "https://www.brucknerhaus.at/programm/veranstaltungen/musikalischer-adventkalender-2024-14.12.2024-17-00",
+        "description": "'Tischgespräche. Ausschnitte aus dem Leben eines Tisches' - Interdisciplinary Performance",
+        "coverUrl": "assets/img/trio.jpeg"
+    },
+    {
+        "id": 18,
+        "name": "Grenzen - Lizard Ensemble",
+        "date": "2025-02-19T19:30",
+        "location": "Saal der Landesmusikschule Marchtrenk (AT)",
+        "eventUrl": "https://lizardensemble.com/blog/2025/02/09/grenzen/",
+        "description": "Music by Tjøgersen, Leitner, Roth, Habibian, Villoslada Duran and Pérez Díez",
+        "coverUrl": "https://lizardensemble.com/wp-content/uploads/2023/03/Lizard-Bild-4-1.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Grenzen - Lizard Ensemble",
+        "date": "2025-02-21T20:00",
+        "location": "NDR Konzerthaus, Kleiner Sendesaal, Hannover (DE)",
+        "eventUrl": "https://www.ndr.de/orchester_chor/radiophilharmonie/konzerte/Musik-213-Ensemble-Lizard,lizard104.html",
+        "description": "Music by Tjøgersen, Leitner, Roth, Habibian, Villoslada Duran and Pérez Díez",
+        "coverUrl": "https://lizardensemble.com/wp-content/uploads/2023/03/Lizard-Bild-4-1.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Ar@k International Conference for Artistic Research",
+        "date": "2025-03-17",
+        "location": "Kristiania University College, Oslo (NO)",
+        "eventUrl": "https://www.researchcatalogue.net/view/2421554/2674688",
+        "description": "Presentation: 'Standard and truthful, or alternative and creative..? Artistic Hacking as a method to challenge one-truth approaches to (music) interpretation",
+        "coverUrl": "https://www.kristiania.no/contentassets/959968459d6648c8ae26ba2758937537/rustad-arak.jpg?width=1440"
+    },
+    {
+        "id": 21,
+        "name": "Why Listening? - Intermedia Installation",
+        "date": "2025-03-26",
+        "location": "ESC medien kunst labor Graz",
+        "eventUrl": "https://esc.mur.at/en/projekt/our-next-guest-why-listening",
+        "description": "A Hacked Interpretation of Vinko Globokar's ?Corporel (1985) through Pauline Oliveros' meditations (1971 - 2016)",
+        "coverUrl": "assets/img/globokar-oliveros.jpg"
+    },
+    {
+        "id": 22,
+        "name": "Saison 2025 KORPUS III: SKIN - Schallfeld Ensemble",
+        "date": "2025-05-24",
+        "location": "Minoriten Saal, Graz",
+        "eventUrl": "https://www.schallfeldensemble.com/de/event/saison-2025-korpus-iii/",
+        "description": "Music by Saunders",
+        "coverUrl": "https://www.schallfeldensemble.com/wp-content/uploads/schallfeld5.jpg"
+    },
+    {
+        "id": 23,
+        "name": "We Left Babel",
+        "date": "2025-06-13",
+        "location": "Lentos Kunstmuseum, Linz",
+        "eventUrl": "https://www.lentos.at/programm/calender/musiktheaterlabor-dont-you-want-a-warm-embrace-2",
+        "description": "'Don't you want a warm embrace?' is a Musiktheaterlabor by the composition students of Anton Bruckner Private University Linz (class. Prof. Francois Sarhan)",
+        "coverUrl": "assets/img/Babel.jpeg"
+    },
+    {
+        "id": 24,
+        "name": "We Left Babel",
+        "date": "2025-06-14",
+        "location": "Lentos Kunstmuseum, Linz",
+        "eventUrl": "https://www.lentos.at/programm/calender/musiktheaterlabor-dont-you-want-a-warm-embrace-2",
+        "description": "'Don't you want a warm embrace?' is a Musiktheaterlabor by the composition students of Anton Bruckner Private University Linz (class. Prof. Francois Sarhan)",
+        "coverUrl": "assets/img/Babel.jpeg"
+    }
+]

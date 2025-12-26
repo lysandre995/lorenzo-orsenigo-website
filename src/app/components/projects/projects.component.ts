@@ -5,7 +5,8 @@ import { OmniService } from "src/app/services/omni.service";
 @Component({
     selector: "app-projects",
     templateUrl: "./projects.component.html",
-    styleUrls: ["./projects.component.css"]
+    styleUrls: ["./projects.component.css"],
+    standalone: false
 })
 export class ProjectsComponent implements OnInit, AfterViewInit {
     public isLoading = false;

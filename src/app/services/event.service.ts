@@ -1,33 +1,24 @@
 import { Injectable } from "@angular/core";
 import { EventsSummaryDto } from "../dtos/events-summary.dto";
-import axios from "axios";
-import { backendRoutes } from "../../assets/backend-routes";
 import { EventDto } from "../dtos/event.dto";
+import eventsSummaryData from "../../assets/data/events-summary.json";
+import eventsData from "../../assets/data/events-0.json";
 
 @Injectable({
     providedIn: "root"
 })
 export class EventService {
-    private eventSummary: EventsSummaryDto[] = [];
+    private eventSummary: EventsSummaryDto[] = eventsSummaryData as EventsSummaryDto[];
+    private eventsContent: EventDto[] = eventsData as EventDto[];
 
     public async getUpComingEvents(): Promise<EventDto[]> {
-        if (this.eventSummary.length === 0) {
-            await this.getEventsSummary();
-        }
         const upComingEventsSummary = this.getUpComingEventsSummary();
         return this.getEvents(upComingEventsSummary);
     }
 
     public async getPastEvents(page: number, pageSize: number): Promise<EventDto[]> {
-        if (this.eventSummary.length === 0) {
-            await this.getEventsSummary();
-        }
         const pastEventsSummary = this.getPastEventsSummary(page, pageSize);
         return this.getEvents(pastEventsSummary);
-    }
-
-    private async getEventsSummary(): Promise<void> {
-        this.eventSummary = (await axios.get(backendRoutes.baseUrl + "/" + backendRoutes.eventsSummary)).data;
     }
 
     private getUpComingEventsSummary(): EventsSummaryDto[] {
@@ -60,21 +51,12 @@ export class EventService {
     }
 
     private async getEvents(eventsSummaryDto: EventsSummaryDto[]) {
-        let events: EventDto[] = [];
-        let previousFileId: number = -1;
-        let currentFileId: number;
-        let currentFileContent: EventDto[] = [];
+        const events: EventDto[] = [];
         for (const eventSummaryDto of eventsSummaryDto) {
-            currentFileId = eventSummaryDto.fileId;
-            if (currentFileId != previousFileId) {
-                previousFileId = currentFileId;
-                currentFileContent = (
-                    await axios.get(
-                        backendRoutes.baseUrl + "/" + backendRoutes.event.replace("%d", currentFileId.toString())
-                    )
-                ).data;
+            const event = this.eventsContent.find(e => e.id === eventSummaryDto.eventId);
+            if (event) {
+                events.push(event);
             }
-            events.push(currentFileContent.filter(event => event.id === eventSummaryDto.eventId)[0]);
         }
         return events;
     }

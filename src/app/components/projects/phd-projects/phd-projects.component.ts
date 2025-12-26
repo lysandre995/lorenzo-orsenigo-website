@@ -5,7 +5,8 @@ import { PhdProjectsService } from "src/app/services/phd-projects.service";
 @Component({
     selector: "app-phd-projects",
     templateUrl: "./phd-projects.component.html",
-    styleUrls: ["./phd-projects.component.css"]
+    styleUrls: ["./phd-projects.component.css"],
+    standalone: false
 })
 export class PhdProjectsComponent implements AfterViewInit, OnInit {
     public isLoading = false;

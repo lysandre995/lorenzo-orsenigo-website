@@ -1,0 +1,27 @@
+{
+    "categories": [
+        {
+            "name": "Duo Merors",
+            "pictureUrl": "assets/img/DuoMerors_1.jpg",
+            "path": "/projects/duo"
+        },
+        {
+            "name": "Solo",
+            "pictureUrl": "assets/img/Solo_BW.jpg",
+            "path": "/projects/solo"
+        },
+        {
+            "name": "Research",
+            "pictureUrl": "assets/img/Research_Lorenzo_.jpg",
+            "path": "/projects/research",
+            "title": "Artistic Hacking - A Creative, Practice-based approach to performance.",
+            "subtitle": "Re-considering the role of the performer in the field of percussion contemporary practice",
+            "description": "Reflecting on the concept of music interpretation, one can notice that it traditionally involves an almost inflexible hierarchy between 'composer', 'performer', and 'audience'. Thus, (interpreter) performers are asked to reproduce what composers have previously conceived and written on paper, conveying 'messages' to the audience. In this scenario, the score becomes a veritable instruction manual that guides - but I would say 'limits' - the interpretive process. In fact, apart from minor interpretative choices, there is hardly room for the performer to question and, possibly, diverge from the original interpretation intended by the composer.\n\nLorenzo Orsenigo's artistic research focuses on investigating how (hacker) performers can include creativity in the process of interpretation. Through Artistic Hacking, understood as a form of methodological artistic manipulation based on the approach developed by McClure, Scambray & Kurtz in 'Hacking Exposed. Network Security Secrets & Solutions', Lorenzo Orsenigo aims to profoundly reconsider the performers' role, emphasizing the potential of their impact as re-interpreters, rather than mere executors, of pieces of music. In 'Hacking - a creative, practice-based approach to performance', Lorenzo Orsenigo examines some pieces from the contemporary repertoire for percussion instruments, looking for interpretations hidden beneath, or around, the surface of the score. However, to what extent can interpretation deviate from the “original source”? What are the risks of such an approach that might be perceived as invasive, harmful or even disrespectful?"
+        }
+    ],
+    "projectsSummaries": [        
+        {"projectId": 0, "category": "Duo Merors", "fileId": 0},
+        {"projectId": 1, "category": "Solo", "fileId": 0},
+        {"projectId": 2, "category": "Research", "fileId": 0}
+    ]
+}
