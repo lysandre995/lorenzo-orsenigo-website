@@ -1,5 +1,9 @@
 .content-wrapper {
-    padding-bottom: var(--footer-height);
+    min-height: calc(100vh - var(--navbar-height));
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-bottom: calc(var(--footer-height) + 1rem);
 }
 
 .loading-container {
@@ -18,21 +22,49 @@
     overflow: hidden;
     background-size: cover;
     background-position: center;
+    margin-bottom: 0.5rem;
 }
 
-/* Large items (2x height) */
+/* Large items (2x height) - now takes 2x space in grid */
 .image-container.large {
-    padding-bottom: 200%;
+    padding-bottom: 100%;
 }
 
-/* Featured hero item (wide but shorter) */
+/* Featured hero item (rectangular, shorter aspect ratio) */
 .image-container.featured {
-    padding-bottom: 40%;
+    padding-bottom: 35%;
+    border-radius: 20px;
 }
 
-/* Medium wide items */
+/* Medium wide items (slightly wider aspect ratio) */
 .image-container.medium-wide {
-    padding-bottom: 50%;
+    padding-bottom: 60%;
+    border-radius: 20px;
+}
+
+/* Make rows fill available space */
+.row {
+    flex: 1;
+    margin-bottom: 0.5rem;
+}
+
+.row:last-child {
+    margin-bottom: 0;
+}
+
+/* Special styling for stacked items in row */
+.h-50 {
+    height: 50% !important;
+}
+
+.mb-1 {
+    margin-bottom: 0.5rem !important;
+}
+
+/* Remove margin for nested containers */
+.image-container.no-margin {
+    padding-bottom: 100%;
+    margin-bottom: 0;
 }
 
 .image-container:hover {

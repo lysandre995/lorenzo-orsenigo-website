@@ -41,7 +41,8 @@ export class ProjectPageLobbyComponent implements AfterViewInit, OnInit {
         this.layoutType = Math.floor(Math.random() * 4);
 
         this.isLoading = true;
-        this.projects = await this.service.getStoredLobbyProjectsWithImages();
+        // Removed image preloading - let browser handle it with lazy loading
+        this.projects = await this.service.getStoredLobbyProjects();
 
         this.projects = this.shuffle(this.projects);
         this.f0 = this.projects[0];
