@@ -9,9 +9,10 @@ title: "Events"
   <section class="events-section">
     <h2>Upcoming</h2>
     <div class="events-grid">
-      {% for event in events %}
-        {% set eventDate = event.date | replace("T", " ") %}
-        {% if eventDate >= "2026-01-08" %}
+      {% set now = "2026-01-08T00:00:00" %}
+      {% set upcomingEvents = events | sortByDate("asc") %}
+      {% for event in upcomingEvents %}
+        {% if event.date >= now %}
       <article class="event-card">
         {% if event.coverUrl %}
         <div class="event-image">
@@ -20,7 +21,7 @@ title: "Events"
         {% endif %}
         <div class="event-content">
           <time class="event-date" datetime="{{ event.date }}">
-            {{ event.date }}
+            {{ event.date | formatDate }}
           </time>
           <h3 class="event-title">{{ event.name }}</h3>
           <p class="event-location">{{ event.location }}</p>
@@ -45,9 +46,10 @@ title: "Events"
   <section class="events-section">
     <h2>Past Events</h2>
     <div class="events-grid">
-      {% for event in events %}
-        {% set eventDate = event.date | replace("T", " ") %}
-        {% if eventDate < "2026-01-08" %}
+      {% set now = "2026-01-08T00:00:00" %}
+      {% set pastEvents = events | sortByDate("desc") %}
+      {% for event in pastEvents %}
+        {% if event.date < now %}
       <article class="event-card event-card-past">
         {% if event.coverUrl %}
         <div class="event-image">
@@ -56,7 +58,7 @@ title: "Events"
         {% endif %}
         <div class="event-content">
           <time class="event-date" datetime="{{ event.date }}">
-            {{ event.date }}
+            {{ event.date | formatDate }}
           </time>
           <h3 class="event-title">{{ event.name }}</h3>
           <p class="event-location">{{ event.location }}</p>
