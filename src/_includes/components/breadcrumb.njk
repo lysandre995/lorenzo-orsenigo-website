@@ -1,0 +1,20 @@
+<nav aria-label="Breadcrumb" class="site-breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    
+    {% set currentPath = "" %}
+    {% set segments = page.url.split('/') %}
+    
+    {% for segment in segments %}
+      {% if segment and segment != "" %}
+        {% set currentPath = currentPath + "/" + segment %}
+        
+        {% if loop.last %}
+           <li><span aria-current="page">{{ segment | capitalize | replace("-", " ") }}</span></li>
+        {% else %}
+           <li><a href="{{ currentPath }}/">{{ segment | capitalize | replace("-", " ") }}</a></li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ol>
+</nav>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | default("Lorenzo Orsenigo") }}</title>
+    <meta name="description" content="{{ description | default("Composer & Researcher") }}">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <header class="site-header">
+        <div class="site-logo">
+          <a href="/">Lorenzo Orsenigo</a>
+        </div>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/bio/">Bio</a></li>
+            <li><a href="/events/">Events</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/phd/">PHD</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="site-main">
+        {% if page.url != "/" and page.url != "/404.html" %}
+          {% include "components/breadcrumb.njk" %}
+        {% endif %}
+        {{ content | safe }}
+      </main>
+      <footer class="site-footer">
+        <div class="contact-info">
+          <a href="https://instagram.com/lorso_percussion" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="ph ph-instagram-logo"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCSELABk7HStKmOlyKvCeBrA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube">
+            <i class="ph ph-youtube-logo"></i>
+          </a>
+          <a href="mailto:info@lorenzoorsenigo.com" aria-label="Email">
+            <i class="ph ph-envelope-simple"></i>
+          </a>
+        </div>
+        <div class="credits">
+          <p>&copy; 2026 Lorenzo Orsenigo. Site by
+            <a href="https://alessandroalfano.com" target="_blank" rel="noopener noreferrer">Alessandro Alfano</a>.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+---
+layout: "layouts/base.njk"
+title: "404 - Page Not Found"
+permalink: "/404.html"
+eleventyExcludeFromCollections: true
+---
+
+<div class="error-404-container">
+  <h1 class="error-404-title">404</h1>
+  <p class="error-404-message">Page not found</p>
+  <p class="error-404-description">The page you're looking for doesn't exist or has been moved.</p>
+  <a href="/" class="error-404-home-link">← Back to Home</a>
+</div>
+
+<style>
+  .error-404-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+    text-align: center;
+    padding: var(--size-xl) var(--size-m);
+  }
+
+  .error-404-title {
+    font-size: 8rem;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: var(--size-m);
+    color: var(--color-text-light);
+  }
+
+  .error-404-message {
+    font-size: 2rem;
+    margin-bottom: var(--size-s);
+    color: var(--color-text);
+  }
+
+  .error-404-description {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--size-xl);
+    max-width: 500px;
+  }
+
+  .error-404-home-link {
+    display: inline-block;
+    padding: var(--size-s) var(--size-m);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.3s;
+    border-radius: 4px;
+  }
+
+  .error-404-home-link:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+    border-color: var(--color-text);
+  }
+
+  @media (max-width: 768px) {
+    .error-404-title {
+      font-size: 5rem;
+    }
+
+    .error-404-message {
+      font-size: 1.5rem;
+    }
+
+    .error-404-description {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .error-404-title {
+      font-size: 4rem;
+    }
+
+    .error-404-message {
+      font-size: 1.25rem;
+    }
+  }
+</style>

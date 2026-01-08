@@ -1,0 +1,17 @@
+{
+  "name": "lorenzo-website-new",
+  "version": "1.0.0",
+  "description": "Static research-oriented artistic website",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve",
+    "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "cross-env": "^7.0.3"
+  }
+}

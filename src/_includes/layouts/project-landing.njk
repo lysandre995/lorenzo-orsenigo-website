@@ -1,0 +1,126 @@
+---
+layout: "layouts/base.njk"
+---
+
+<div class="project-landing-container">
+  {% if title %}
+  <h1 class="page-title">{{ title }}</h1>
+  {% endif %}
+
+  <div class="circles-grid">
+    {# Logic: This template might be used for a collection OR manual links defined in frontmatter OR global data #}
+
+    {# 1. Check if 'items' are defined in frontmatter (Manual links) #}
+    {% if items %}
+      {% for item in items %}
+        <a href="{{ item.url }}" class="circle-link">
+          <div class="circle-inner" style="background-image: url('{{ item.image }}');">
+            <span class="circle-title">{{ item.title }}</span>
+          </div>
+        </a>
+      {% endfor %}
+
+    {# 2. Otherwise, if 'collectionName' is defined, iterate that collection #}
+    {% elif collectionName %}
+      {% for item in collections[collectionName] %}
+        <a href="{{ item.url }}" class="circle-link">
+          <div class="circle-inner" style="background-image: url('{{ item.data.thumb | default(item.data.image) }}');">
+            <span class="circle-title">{{ item.data.title }}</span>
+          </div>
+        </a>
+      {% endfor %}
+
+    {# 3. Check if a specific dataSource is defined #}
+    {% elif dataSource %}
+      {% if researchProjects and dataSource == 'researchProjects' %}
+        {% for project in researchProjects %}
+          <a href="{{ project.path }}" class="circle-link">
+            <div class="circle-inner" style="background-image: url('{{ project.pictureUrl }}');">
+              <span class="circle-title">{{ project.name }}</span>
+            </div>
+          </a>
+        {% endfor %}
+      {% endif %}
+
+    {# 4. Otherwise, use global projects data if available #}
+    {% elif projects %}
+      {% for project in projects %}
+        <a href="{{ project.path }}" class="circle-link">
+          <div class="circle-inner" style="background-image: url('{{ project.pictureUrl }}');">
+            <span class="circle-title">{{ project.name }}</span>
+          </div>
+        </a>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .project-landing-container {
+    padding: var(--size-xl) var(--size-m);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .page-title {
+    text-align: center;
+    margin-bottom: var(--size-xl);
+    font-weight: normal;
+  }
+
+  .circles-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--size-xl);
+  }
+
+  .circle-link {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .circle-link:hover {
+    transform: scale(1.05);
+  }
+
+  .circle-inner {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+  }
+
+  .circle-inner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    transition: background 0.3s;
+  }
+
+  .circle-link:hover .circle-inner::after {
+    background: rgba(0,0,0,0.7);
+  }
+
+  .circle-title {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: var(--size-m);
+    text-align: center;
+    padding: var(--size-s);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+  }
+</style>
