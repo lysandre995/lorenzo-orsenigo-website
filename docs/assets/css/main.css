@@ -1,0 +1,186 @@
+/* RESET & VARIABLES */
+:root {
+  /* Typography */
+  --font-main: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Fallback to system fonts for performance/simplicity */
+  --font-mono: "Fira Code", monospace;
+
+  --size-xs: 0.75rem;
+  --size-s: 1rem;
+  --size-m: 1.5rem;
+  --size-l: 2rem;
+  --size-xl: 3rem;
+  --size-xxl: 5rem;
+
+  /* Colors - Dark Theme by Default */
+  --color-bg: #222;
+  --color-bg-rgb: 34, 34, 34;
+  --color-text: #f8f8f8;
+  --color-text-light: #ccc;
+  --color-accent: #ddd;
+  --color-border: #444;
+
+  /* Layout */
+  --nav-height: 60px;
+  --footer-height: 100px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* UTILITIES */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* LAYOUT SHELL */
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--size-m);
+  background: rgba(var(--color-bg-rgb), 0.9);
+  /* slight transparency */
+  /* backdrop-filter: blur(5px); */
+  z-index: 1000;
+  border-bottom: 1px solid transparent;
+  /* Prepare for optional border */
+}
+
+.site-nav ul {
+  display: flex;
+  gap: var(--size-m);
+}
+
+.site-nav a {
+  text-transform: uppercase;
+  font-size: var(--size-xs);
+  letter-spacing: 1px;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+.site-main {
+  flex: 1;
+  padding-top: var(--nav-height);
+  /* Space for fixed header */
+  position: relative;
+  /* For absolute positioned children */
+}
+
+.site-footer {
+  padding: var(--size-m);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--size-xs);
+  color: var(--color-text-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-footer .contact-info {
+  display: flex;
+  gap: var(--size-s);
+  align-items: center;
+}
+
+.site-footer .contact-info a {
+  color: var(--color-text-light);
+  font-size: 1.5rem;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.site-footer .contact-info a:hover {
+  color: var(--color-text);
+}
+
+.site-footer .credits a {
+  color: var(--color-text-light);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.site-footer .credits a:hover {
+  color: var(--color-text);
+}
+
+/* RESPONSIVE BASE */
+@media (max-width: 768px) {
+  :root {
+    --size-m: 1rem;
+    --size-l: 1.5rem;
+    --size-xl: 2rem;
+  }
+}
+
+/* Breadcrumbs */
+.site-breadcrumb ol {
+  display: flex;
+  gap: 0.5rem;
+  font-size: var(--size-xs);
+  color: var(--color-text-light);
+  padding: var(--size-xs) var(--size-m);
+  list-style: none;
+  /* Ensure no bullets */
+}
+
+.site-breadcrumb li:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.5rem;
+  color: var(--color-border);
+}
+
+.site-breadcrumb a:hover {
+  text-decoration: underline;
+}
