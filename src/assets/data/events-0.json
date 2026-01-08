@@ -224,5 +224,105 @@
         "eventUrl": "https://www.lentos.at/programm/calender/musiktheaterlabor-dont-you-want-a-warm-embrace-2",
         "description": "'Don't you want a warm embrace?' is a Musiktheaterlabor by the composition students of Anton Bruckner Private University Linz (class. Prof. Francois Sarhan)",
         "coverUrl": "assets/img/Babel.jpeg"
+    },
+    {
+        "id": 25,
+        "name": "Cassandra v.1.0.3025“ von Alisa Kobzar",
+        "date": "2025-09-14",
+        "location": "Oesterreichischer Skulpturenpark, Graz",
+        "eventUrl": "https://www.museum-joanneum.at/skulpturenpark/unser-programm/ausstellungen/skulpturenpark/event/sound-park-fest-im-skulpturenpark",
+        "description": "Gehen. Hören. Entdecken. Performance-Tour. Mit dem Kollektiv Seven Circles: Elina Viļuma-Helling (Gesang), Lorenzo Orsenigo (Schlagzeug), Alexandra Škrilec,(Flöten), Anna Grenzner (Violoncello), Judith Selenko (Visuelles Design)",
+        "coverUrl": "https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/refs/heads/main/img/Cassandra_Kobzar.jpg"
+    },
+    {
+        "id": 26,
+        "name": "Lizard Ensemble @ 2k+ Festival",
+        "date": "2025-11-21",
+        "location": "Novi Sad (SRB)",
+        "eventUrl": "https://zkv.rs/2kplus/2025/11/20/lizard-ensemble/",
+        "description": "Music by Uğurlu, Roth, Rizza, Cossidente, Lee, Gimenez-Comas",
+        "coverUrl": "https://lizardensemble.com/wp-content/uploads/2023/03/Lizard-Bild-4-1.jpg"
+    },
+    {
+        "id": 27,
+        "name": "Lizard Ensemble",
+        "date": "2025-11-13T18:00",
+        "location": "Saal der Landesmusikschule Sierning (AUT)",
+        "eventUrl": "https://lizardensemble.com/blog/2025/10/12/co-operationen/",
+        "description": "Music by Uğurlu, Roth, Rizza, Cossidente, Lee, Gimenez-Comas",
+        "coverUrl": "https://lizardensemble.com/wp-content/uploads/2023/03/Lizard-Bild-4-1.jpg"
+    },
+    {
+        "id": 28,
+        "name": "About Normal and Right - Verena Merstallinger CD's presentation",
+        "date": "2025-12-14T16:00",
+        "location": "Kunstgarten, Graz (AUT)",
+        "eventUrl": "https://kunstgarten.at/events/album-praesentation-concerning-normal-and-right/",
+        "description": "Music by I. Gil, S. Pratt, A. Shahabolmolkfard",
+        "coverUrl": "https://www.trekel.de/res/user/trekel/media/13466.jpg"
+    },
+    {
+        "id": 29,
+        "name": "Lizard Ensemble",
+        "date": "2026-01-20T14:00",
+        "location": "Kunst Universität Linz (AUT)",
+        "eventUrl": "",
+        "description": "Workshop with students of the Kunst Universität Linz",
+        "coverUrl": "https://lizardensemble.com/wp-content/uploads/2023/03/Lizard-Bild-4-1.jpg"
+    },
+    {
+        "id": 30,
+        "name": "Die Neuen - Group Exhibition",
+        "date": "2026-01-20T19:00",
+        "location": "Die Kunstschaffenden, Linz (AUT)",
+        "eventUrl": "https://www.diekunstschaffenden.at/",
+        "description": "Why Listening? A Hacked Interpretation of Vinko Globokar's ?Corporel (1985) through Pauline Oliveros' meditations (1971 - 2016) - Intermedia Installation (partial)",
+        "coverUrl": "https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/refs/heads/main/img/01_E_DieNeuen_26_web_VS.jpg"
+    },
+    {
+        "id": 31,
+        "name": "For Percussion and Feedback",
+        "date": "2026-06-12",
+        "location": "Schlossbunker Ebelsberg, Linz (AUT)",
+        "eventUrl": "https://www.instagram.com/schlossbunker/",
+        "description": "Solo Concert - Music by S. Stefanovic (premier), P. Matthusen, J. Pranulytė and improvisations",
+        "coverUrl": "https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/refs/heads/main/img/Research_Lorenzo_.jpg"
+    },
+    {
+        "id": 32,
+        "name": "Resonances - A Feedback in Between",
+        "date": "2026-11-12T19:30",
+        "location": "Kultum, Graz (AUT)",
+        "eventUrl": "https://www.kultum.at/einrichtung/137",
+        "description": "Solo Concert and CD Release - Music by M. Ciciliani (premier), H. Kerschbaumer (premier), S. Stefanovic, A. Kobzar (premier), W. Olencki (premier), J. Pranulytė",
+        "coverUrl": "https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/refs/heads/main/img/Research_Lorenzo_.jpg"
+    },
+    {
+        "id": 33,
+        "name": "Resonances - A Feedback in Between",
+        "date": "2026-12-10T19:30",
+        "location": "Röda, Steyr (AUT)",
+        "eventUrl": "https://röda.at/",
+        "description": "Solo Concert and CD Release - Music by Music by M. Ciciliani, H. Kerschbaumer, S. Stefanovic, A. Kobzar, W. Olencki, J. Pranulytė",
+        "coverUrl": "https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/refs/heads/main/img/Research_Lorenzo_.jpg"
+    },
+    {
+        "id": 34,
+        "name": "enuntiatio.praefatio.formulae",
+        "date": "2026-06-22",
+        "end date": "2026-06-27",
+        "location": "Bled (SK)",
+        "eventUrl": "https://enuntiatio-praefatio-formulae.com/FESTIVAL/",
+        "description": "Artistic Research Presentation and Contemporary Music Festival",
+        "coverUrl": "https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/refs/heads/main/img/Research_Lorenzo_.jpg"
+    },
+    {
+        "id": 35,
+        "name": "Ensemble Kontrapunkte",
+        "date": "2026-02-16T19:30",
+        "location": "Musikverein, Glaeserner Saal, Wien",
+        "eventUrl": "https://www.kontrapunkte.at/kalender",
+        "description": "Music by Milhaub, Babbit, Karpman, Bentzon, Schmitt, Françaix",
+        "coverUrl": "https://spielplan.musikverein.at/enrichment/uploads/pictures/concert/Gottfried_Rabl_c_Maria_Frodl.jpg"
     }
 ]
