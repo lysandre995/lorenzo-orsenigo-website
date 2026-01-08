@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <meta name="description" content="Composer &amp; Researcher">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <header class="site-header">
+        <div class="site-logo">
+          <a href="/">Lorenzo Orsenigo</a>
+        </div>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/bio/">Bio</a></li>
+            <li><a href="/events/">Events</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/phd/">PHD</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="site-main">
+        
+          <nav aria-label="Breadcrumb" class="site-breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    
+    
+    
+    
+    
+      
+    
+      
+        
+        
+        
+           <li><a href="/projects/">Projects</a></li>
+        
+      
+    
+      
+    
+  </ol>
+</nav>
+
+        
+        
+<div class="project-landing-container">
+  
+  <h1 class="page-title">Projects</h1>
+  
+
+  <div class="circles-grid">
+    
+
+    
+    
+      
+        <a href="/projects/duo" class="circle-link">
+          <div class="circle-inner" style="background-image: url('/assets/img/DuoMerors_1.jpg');">
+            <span class="circle-title">Duo Merors</span>
+          </div>
+        </a>
+      
+        <a href="/projects/solo" class="circle-link">
+          <div class="circle-inner" style="background-image: url('/assets/img/Solo_BW.jpg');">
+            <span class="circle-title">Solo</span>
+          </div>
+        </a>
+      
+        <a href="/projects/research" class="circle-link">
+          <div class="circle-inner" style="background-image: url('/assets/img/Research_Lorenzo_.jpg');">
+            <span class="circle-title">Research</span>
+          </div>
+        </a>
+      
+        <a href="/projects/intermedia-installations" class="circle-link">
+          <div class="circle-inner" style="background-image: url('/assets/img/the-king-of-denmark-morton-feldman.png');">
+            <span class="circle-title">Intermedia Installations</span>
+          </div>
+        </a>
+      
+    
+  </div>
+</div>
+
+<style>
+  .project-landing-container {
+    padding: var(--size-xl) var(--size-m);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .page-title {
+    text-align: center;
+    margin-bottom: var(--size-xl);
+    font-weight: normal;
+  }
+
+  .circles-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--size-xl);
+  }
+
+  .circle-link {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .circle-link:hover {
+    transform: scale(1.05);
+  }
+
+  .circle-inner {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+  }
+
+  .circle-inner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    transition: background 0.3s;
+  }
+
+  .circle-link:hover .circle-inner::after {
+    background: rgba(0,0,0,0.7);
+  }
+
+  .circle-title {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: var(--size-m);
+    text-align: center;
+    padding: var(--size-s);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+  }
+</style>
+
+      </main>
+      <footer class="site-footer">
+        <div class="contact-info">
+          <a href="https://instagram.com/lorso_percussion" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="ph ph-instagram-logo"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCSELABk7HStKmOlyKvCeBrA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube">
+            <i class="ph ph-youtube-logo"></i>
+          </a>
+          <a href="mailto:info@lorenzoorsenigo.com" aria-label="Email">
+            <i class="ph ph-envelope-simple"></i>
+          </a>
+        </div>
+        <div class="credits">
+          <p>&copy; 2026 Lorenzo Orsenigo. Site by
+            <a href="https://alessandroalfano.com" target="_blank" rel="noopener noreferrer">Alessandro Alfano</a>.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
