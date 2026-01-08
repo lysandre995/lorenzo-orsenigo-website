@@ -12,6 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "cross-env": "^7.0.3"
+    "@11ty/eleventy-img": "^6.0.4",
+    "cross-env": "^7.0.3",
+    "sharp-cli": "^5.2.0"
   }
 }
