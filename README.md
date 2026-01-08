@@ -102,3 +102,45 @@ Ensure your repository settings have:
 - **Custom domain**: `lorenzoorsenigo.com`
 
 The CNAME file in the `docs/` folder ensures the custom domain is preserved after each deployment.
+
+## Image Optimization
+
+This site uses optimized images to ensure fast loading times. When adding new images:
+
+### Quick Optimization (Recommended)
+
+Use the installed `sharp-cli` to optimize images before adding them:
+
+```bash
+# Optimize a single image (resize to max 1920px width, quality 85%)
+npx sharp-cli -i src/assets/img/your-image.jpg -o src/assets/img/your-image.jpg resize 1920 --withoutEnlargement --quality 85 --mozjpeg
+
+# Optimize multiple images at once
+cd src/assets/img
+for file in *.jpg; do
+  npx sharp-cli -i "$file" -o "${file%.*}_opt.jpg" resize 1920 --withoutEnlargement --quality 85 --mozjpeg
+  mv "${file%.*}_opt.jpg" "$file"
+done
+```
+
+### Optimization Guidelines
+
+- **Maximum width**: 1920px (sufficient for most screens)
+- **Quality**: 85% (good balance between size and quality)
+- **Format**:
+  - Use JPG for photos
+  - Use PNG only for images requiring transparency
+  - Consider converting PNG to JPG if transparency isn't needed
+- **Target size**: Aim for under 500KB per image
+
+### Tools Installed
+
+- `@11ty/eleventy-img` - For advanced image processing
+- `sharp-cli` - Command-line image optimization
+
+### Example Optimizations
+
+Recent optimizations achieved:
+- 6.3MB → 236KB (96% reduction)
+- 4.7MB → 214KB (95% reduction)
+- 3.2MB → 664KB (79% reduction)
