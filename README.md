@@ -47,6 +47,58 @@ _site/                  # Generated site (after build)
 - **Phosphor Icons** - Icon library
 - Vanilla CSS with custom properties
 
-## Deployment
+## Deployment to GitHub Pages
 
-Build the site with `npm run build` and deploy the `_site` folder to any static hosting service.
+This site is deployed to GitHub Pages using the `gh-pages` branch with a custom domain.
+
+### Initial Setup (already done)
+
+The repository has two main branches:
+- `main` - Source code and development
+- `gh-pages` - Deployment branch serving the `docs/` folder
+- `master` - Legacy branch (kept for reference)
+
+### Deploy New Changes
+
+1. **Make changes on the `main` branch:**
+   ```bash
+   git checkout main
+   # Make your changes
+   git add .
+   git commit -m "Your commit message"
+   git push origin main
+   ```
+
+2. **Build and deploy to GitHub Pages:**
+   ```bash
+   # Build the site
+   npm run build
+
+   # Switch to gh-pages branch
+   git checkout gh-pages
+
+   # Copy built site to docs folder
+   rm -rf docs/*
+   cp -r _site/* docs/
+
+   # Ensure CNAME file exists
+   echo "lorenzoorsenigo.com" > docs/CNAME
+
+   # Commit and push
+   git add docs/
+   git commit -m "Deploy: $(date +'%Y-%m-%d %H:%M')"
+   git push origin gh-pages
+
+   # Return to main branch
+   git checkout main
+   ```
+
+### GitHub Pages Settings
+
+Ensure your repository settings have:
+- **Source**: Deploy from a branch
+- **Branch**: `gh-pages`
+- **Folder**: `/docs`
+- **Custom domain**: `lorenzoorsenigo.com`
+
+The CNAME file in the `docs/` folder ensures the custom domain is preserved after each deployment.
