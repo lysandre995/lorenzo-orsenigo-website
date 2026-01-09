@@ -10,9 +10,9 @@
         {% set currentPath = currentPath + "/" + segment %}
         
         {% if loop.last %}
-           <li><span aria-current="page">{{ segment | capitalize | replace("-", " ") }}</span></li>
+           <li><span aria-current="page">{{ segment | titleCase | replace("-", " ") }}</span></li>
         {% else %}
-           <li><a href="{{ currentPath }}/">{{ segment | capitalize | replace("-", " ") }}</a></li>
+           <li><a href="{{ currentPath }}/">{{ segment | titleCase | replace("-", " ") }}</a></li>
         {% endif %}
       {% endif %}
     {% endfor %}

@@ -50,6 +50,14 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // Add filter to capitalize all words in hyphenated strings
+  eleventyConfig.addFilter("titleCase", function(str) {
+    if (!str) return "";
+    return str.split('-').map(word =>
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('-');
+  });
+
   // Passthrough copies - keep original images for background-image CSS
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/img");

@@ -13,7 +13,7 @@ layout: "layouts/base.njk"
 
   <div class="random-grid">
     {% for project in globokarProjects %}
-      <a href="/phd/{{ project.id }}" class="grid-item" data-index="{{ loop.index0 }}">
+      <a href="/projects/research/globokar-oliveros/{{ project.id }}" class="grid-item" data-index="{{ loop.index0 }}">
         <div class="item-inner" style="background-image: url('{{ project.pictureUrl }}');">
           <div class="item-overlay"></div>
           <span class="item-title">{{ project.name }}</span>
