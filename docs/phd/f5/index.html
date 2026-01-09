@@ -107,7 +107,7 @@
 
 <div class="phd-project-container">
   <div class="project-header">
-    <a href="/phd" class="back-link">← Back to All Projects</a>
+    <a href="/projects/research/globokar-oliveros" class="back-link">← Back to Globokar-Oliveros</a>
     <h1 class="project-title">F.5 &amp; In Consideration of the Earth</h1>
   </div>
 
@@ -118,6 +118,25 @@
   
 
   
+
+  
+  <div class="bottom-images-section">
+    
+      <div class="single-image-container">
+        <img src="/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.5_F.jpg" alt="F.5 &amp; Earth" loading="lazy" class="bottom-image-single">
+      </div>
+    
+  </div>
+  
+
+  
+</div>
+
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" alt="">
+  <button class="lightbox-prev" aria-label="Previous image">‹</button>
+  <button class="lightbox-next" aria-label="Next image">›</button>
 </div>
 
 <script>
@@ -181,6 +200,86 @@
 
     updateSlides();
   })();
+
+  // Lightbox functionality
+  (function() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+    const bottomImages = document.querySelectorAll('.bottom-image-single, .bottom-image-multiple');
+
+    if (bottomImages.length === 0) return;
+
+    let currentImageIndex = 0;
+    const imageArray = Array.from(bottomImages);
+
+    // Open lightbox on image click
+    bottomImages.forEach((img, index) => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        currentImageIndex = index;
+        openLightbox(img.src);
+      });
+    });
+
+    function openLightbox(src) {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = src;
+      document.body.style.overflow = 'hidden';
+
+      // Show/hide navigation buttons for single image
+      if (imageArray.length === 1) {
+        lightboxPrev.style.display = 'none';
+        lightboxNext.style.display = 'none';
+      } else {
+        lightboxPrev.style.display = 'block';
+        lightboxNext.style.display = 'block';
+      }
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    function showNextImage() {
+      currentImageIndex = (currentImageIndex + 1) % imageArray.length;
+      lightboxImg.src = imageArray[currentImageIndex].src;
+    }
+
+    function showPrevImage() {
+      currentImageIndex = (currentImageIndex - 1 + imageArray.length) % imageArray.length;
+      lightboxImg.src = imageArray[currentImageIndex].src;
+    }
+
+    // Close lightbox
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Navigation
+    lightboxPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showPrevImage();
+    });
+
+    lightboxNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showNextImage();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.style.display === 'flex') {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft' && imageArray.length > 1) showPrevImage();
+        if (e.key === 'ArrowRight' && imageArray.length > 1) showNextImage();
+      }
+    });
+  })();
 </script>
 
 <style>
@@ -235,7 +334,7 @@
 
   .carousel-slides {
     position: relative;
-    min-height: 400px;
+    min-height: 600px;
   }
 
   .carousel-slide {
@@ -243,12 +342,14 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    min-height: 600px;
   }
 
   .carousel-slide img,
   .carousel-slide video {
     max-width: 100%;
     max-height: 70vh;
+    min-height: 400px;
     object-fit: contain;
     display: block;
   }
@@ -326,6 +427,145 @@
     background: var(--color-text);
   }
 
+  /* Bottom Images Section */
+  .bottom-images-section {
+    margin-top: var(--size-xl);
+  }
+
+  .single-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--size-l) 0;
+  }
+
+  .bottom-image-single {
+    max-width: 70%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .bottom-image-single:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .image-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--size-m);
+    padding: var(--size-l) 0;
+  }
+
+  .collage-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    aspect-ratio: 4/3;
+    background: #1a1a1a;
+  }
+
+  .bottom-image-multiple {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+
+  .bottom-image-multiple:hover {
+    transform: scale(1.05);
+  }
+
+  /* Bottom Text Section */
+  .bottom-text-section {
+    margin-top: var(--size-xl);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    padding: var(--size-l);
+    background: rgba(0, 0, 0, 0.02);
+    border-left: 3px solid var(--color-text-light);
+    border-radius: 4px;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    animation: zoom 0.3s;
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1001;
+  }
+
+  .lightbox-close:hover {
+    color: #bbb;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    font-size: 3rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    z-index: 1001;
+  }
+
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .lightbox-prev {
+    left: 20px;
+  }
+
+  .lightbox-next {
+    right: 20px;
+  }
+
   @media (max-width: 768px) {
     .project-title {
       font-size: 2rem;
@@ -348,6 +588,32 @@
       font-size: 2rem;
       padding: 0.5rem 1rem;
     }
+
+    .bottom-image-single {
+      max-width: 85%;
+    }
+
+    .image-collage {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--size-s);
+    }
+
+    .bottom-text-section {
+      font-size: 1rem;
+      padding: var(--size-m);
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .lightbox-close {
+      font-size: 30px;
+      top: 10px;
+      right: 15px;
+    }
   }
 
   @media (max-width: 480px) {
@@ -363,6 +629,42 @@
     .carousel-next {
       font-size: 1.5rem;
       padding: 0.5rem 0.75rem;
+    }
+
+    .bottom-image-single {
+      max-width: 95%;
+    }
+
+    .image-collage {
+      grid-template-columns: 1fr;
+      gap: var(--size-s);
+    }
+
+    .bottom-text-section {
+      font-size: 0.95rem;
+      padding: var(--size-s);
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+      font-size: 1.5rem;
+      padding: 0.5rem 0.75rem;
+      left: 5px;
+    }
+
+    .lightbox-next {
+      right: 5px;
+    }
+
+    .lightbox-close {
+      font-size: 25px;
+      top: 5px;
+      right: 10px;
+    }
+
+    .lightbox-content {
+      max-width: 95%;
+      max-height: 85%;
     }
   }
 </style>

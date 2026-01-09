@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorenzo Orsenigo</title>
+    <meta name="description" content="Composer &amp; Researcher">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <header class="site-header">
+        <div class="site-logo">
+          <a href="/">Lorenzo Orsenigo</a>
+        </div>
+        <nav class="site-nav">
+          <ul>
+            
+            <li>
+              <a href="/bio/">Bio</a>
+            </li>
+            <li>
+              <a href="/events/">Events</a>
+            </li>
+            <li>
+              <a href="/projects/">Projects</a>
+            </li>
+            
+          </ul>
+        </nav>
+      </header>
+      <main class="site-main">
+        
+          <nav aria-label="Breadcrumb" class="site-breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    
+    
+    
+    
+    
+      
+    
+      
+        
+        
+        
+           <li><a href="/projects/">Projects</a></li>
+        
+      
+    
+      
+        
+        
+        
+           <li><a href="/projects/research/">Research</a></li>
+        
+      
+    
+      
+        
+        
+        
+           <li><a href="/projects/research/globokar-oliveros/">Globokar Oliveros</a></li>
+        
+      
+    
+      
+        
+        
+        
+           <li><a href="/projects/research/globokar-oliveros/f8/">F8</a></li>
+        
+      
+    
+      
+    
+  </ol>
+</nav>
+
+        
+        
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+<div class="phd-project-container">
+  <div class="project-header">
+    <a href="/projects/research/globokar-oliveros" class="back-link">← Back to Globokar-Oliveros</a>
+    <h1 class="project-title">F.8 &amp; XXIV</h1>
+  </div>
+
+  
+  <div class="project-description">
+    Vinko Globokar's F.8 is about 'snoring'.<br>Pauline Oliveros' XXIV invites us to focus our attention on an external source of constant sound, and to imagine and produce alternate sounds while remaining aware of the external source.<br><br>What you see here is the actual participatory meditation/performance of F.8 & XXIV. Before and in preparation, I led the audience in some of the exercises that Oliveros herself had developed to help participants join in her meditations. Globokar's 'snoring' was used as Oliveros' 'external source of constant sound'. By playing the snoring through a background tape and some portable speakers, the participants began to interact and respond not only to the snoring itself, but also to each other in very different and surprising ways, producing alternate sounds and thus contributing to a vibrant soundscape.<br><br>This fragment was performed and recorded* in the library of the Institute 16, KUG, Graz, on 5/06/2024.<br><br>Roman Gavryliuk - audio and video.<br><br>*All the participants have been informed and agreed on being included in the video recording.
+  </div>
+  
+
+  
+
+  
+  <div class="bottom-images-section">
+    
+      <div class="single-image-container">
+        <img src="/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.8_F.jpg" alt="F.8 &amp; XXIV" loading="lazy" class="bottom-image-single">
+      </div>
+    
+  </div>
+  
+
+  
+</div>
+
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" alt="">
+  <button class="lightbox-prev" aria-label="Previous image">‹</button>
+  <button class="lightbox-next" aria-label="Next image">›</button>
+</div>
+
+<script>
+  (function() {
+    const container = document.querySelector('.carousel-container');
+    if (!container) return;
+
+    const slides = container.querySelectorAll('.carousel-slide');
+    const prevBtn = container.querySelector('.carousel-prev');
+    const nextBtn = container.querySelector('.carousel-next');
+    const indicators = container.querySelector('.carousel-indicators');
+
+    if (slides.length <= 1) return;
+
+    let currentSlide = 0;
+
+    // Create indicators
+    slides.forEach((_, index) => {
+      const dot = document.createElement('button');
+      dot.classList.add('carousel-indicator');
+      dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(index));
+      indicators.appendChild(dot);
+    });
+
+    const dots = indicators.querySelectorAll('.carousel-indicator');
+
+    function updateSlides() {
+      slides.forEach((slide, index) => {
+        slide.style.display = index === currentSlide ? 'flex' : 'none';
+      });
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateSlides();
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlides();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlides();
+    }
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowRight') nextSlide();
+    });
+
+    updateSlides();
+  })();
+
+  // Lightbox functionality
+  (function() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+    const bottomImages = document.querySelectorAll('.bottom-image-single, .bottom-image-multiple');
+
+    if (bottomImages.length === 0) return;
+
+    let currentImageIndex = 0;
+    const imageArray = Array.from(bottomImages);
+
+    // Open lightbox on image click
+    bottomImages.forEach((img, index) => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        currentImageIndex = index;
+        openLightbox(img.src);
+      });
+    });
+
+    function openLightbox(src) {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = src;
+      document.body.style.overflow = 'hidden';
+
+      // Show/hide navigation buttons for single image
+      if (imageArray.length === 1) {
+        lightboxPrev.style.display = 'none';
+        lightboxNext.style.display = 'none';
+      } else {
+        lightboxPrev.style.display = 'block';
+        lightboxNext.style.display = 'block';
+      }
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    function showNextImage() {
+      currentImageIndex = (currentImageIndex + 1) % imageArray.length;
+      lightboxImg.src = imageArray[currentImageIndex].src;
+    }
+
+    function showPrevImage() {
+      currentImageIndex = (currentImageIndex - 1 + imageArray.length) % imageArray.length;
+      lightboxImg.src = imageArray[currentImageIndex].src;
+    }
+
+    // Close lightbox
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Navigation
+    lightboxPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showPrevImage();
+    });
+
+    lightboxNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showNextImage();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.style.display === 'flex') {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft' && imageArray.length > 1) showPrevImage();
+        if (e.key === 'ArrowRight' && imageArray.length > 1) showNextImage();
+      }
+    });
+  })();
+</script>
+
+<style>
+  .phd-project-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--size-xl) var(--size-m);
+  }
+
+  .project-header {
+    margin-bottom: var(--size-xl);
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--color-text-light);
+    margin-bottom: var(--size-m);
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover {
+    color: var(--color-text);
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: var(--size-m);
+  }
+
+  .project-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: var(--size-xl);
+    white-space: pre-wrap;
+  }
+
+  .project-carousel {
+    margin-top: var(--size-xl);
+  }
+
+  .carousel-container {
+    position: relative;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+
+  .carousel-slides {
+    position: relative;
+    min-height: 600px;
+  }
+
+  .carousel-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 600px;
+  }
+
+  .carousel-slide img,
+  .carousel-slide video {
+    max-width: 100%;
+    max-height: 70vh;
+    min-height: 400px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .video-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  }
+
+  .video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .audio-player {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .audio-player audio {
+    width: 100%;
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    font-size: 3rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    z-index: 10;
+  }
+
+  .carousel-prev:hover,
+  .carousel-next:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .carousel-prev {
+    left: 0;
+  }
+
+  .carousel-next {
+    right: 0;
+  }
+
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--color-text);
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .carousel-indicator.active {
+    background: var(--color-text);
+  }
+
+  /* Bottom Images Section */
+  .bottom-images-section {
+    margin-top: var(--size-xl);
+  }
+
+  .single-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--size-l) 0;
+  }
+
+  .bottom-image-single {
+    max-width: 70%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .bottom-image-single:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .image-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--size-m);
+    padding: var(--size-l) 0;
+  }
+
+  .collage-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    aspect-ratio: 4/3;
+    background: #1a1a1a;
+  }
+
+  .bottom-image-multiple {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+
+  .bottom-image-multiple:hover {
+    transform: scale(1.05);
+  }
+
+  /* Bottom Text Section */
+  .bottom-text-section {
+    margin-top: var(--size-xl);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    padding: var(--size-l);
+    background: rgba(0, 0, 0, 0.02);
+    border-left: 3px solid var(--color-text-light);
+    border-radius: 4px;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    animation: zoom 0.3s;
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1001;
+  }
+
+  .lightbox-close:hover {
+    color: #bbb;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    font-size: 3rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    z-index: 1001;
+  }
+
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .lightbox-prev {
+    left: 20px;
+  }
+
+  .lightbox-next {
+    right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .project-title {
+      font-size: 2rem;
+    }
+
+    .project-description {
+      font-size: 1rem;
+    }
+
+    .carousel-slides {
+      min-height: 300px;
+    }
+
+    .carousel-slide {
+      padding: 1rem;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .bottom-image-single {
+      max-width: 85%;
+    }
+
+    .image-collage {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--size-s);
+    }
+
+    .bottom-text-section {
+      font-size: 1rem;
+      padding: var(--size-m);
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .lightbox-close {
+      font-size: 30px;
+      top: 10px;
+      right: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .project-title {
+      font-size: 1.5rem;
+    }
+
+    .carousel-slides {
+      min-height: 250px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+      font-size: 1.5rem;
+      padding: 0.5rem 0.75rem;
+    }
+
+    .bottom-image-single {
+      max-width: 95%;
+    }
+
+    .image-collage {
+      grid-template-columns: 1fr;
+      gap: var(--size-s);
+    }
+
+    .bottom-text-section {
+      font-size: 0.95rem;
+      padding: var(--size-s);
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+      font-size: 1.5rem;
+      padding: 0.5rem 0.75rem;
+      left: 5px;
+    }
+
+    .lightbox-next {
+      right: 5px;
+    }
+
+    .lightbox-close {
+      font-size: 25px;
+      top: 5px;
+      right: 10px;
+    }
+
+    .lightbox-content {
+      max-width: 95%;
+      max-height: 85%;
+    }
+  }
+</style>
+
+
+      </main>
+      <footer class="site-footer">
+        <div class="contact-info">
+          <a href="https://instagram.com/lorso_percussion" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="ph ph-instagram-logo"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCSELABk7HStKmOlyKvCeBrA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube">
+            <i class="ph ph-youtube-logo"></i>
+          </a>
+          <a href="mailto:info@lorenzoorsenigo.com" aria-label="Email">
+            <i class="ph ph-envelope-simple"></i>
+          </a>
+        </div>
+        <div class="credits">
+          <p>&copy; 2026 Lorenzo Orsenigo. Site by
+            <a href="https://alessandroalfano.com" target="_blank" rel="noopener noreferrer">Alessandro Alfano</a>.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
