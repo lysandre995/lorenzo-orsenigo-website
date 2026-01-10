@@ -47,6 +47,14 @@ run("npm run build")
 
 # 5. Prepare worktree
 print("\n[3/6] Preparing gh-pages worktree...")
+# Clean up any existing worktree (registered or not)
+try:
+    subprocess.run(f"git worktree remove {WORKTREE_PATH} --force", shell=True, cwd=REPO_ROOT, capture_output=True)
+except:
+    pass
+# Also prune any missing worktrees
+subprocess.run("git worktree prune", shell=True, cwd=REPO_ROOT, capture_output=True)
+# Remove directory if it still exists
 if WORKTREE_PATH.exists():
     shutil.rmtree(WORKTREE_PATH)
 run(f"git worktree add {WORKTREE_PATH} gh-pages")
@@ -74,7 +82,13 @@ run("git push origin gh-pages --force", cwd=WORKTREE_PATH)
 
 # 9. Cleanup
 print("\nCleaning up...")
-run(f"git worktree remove {WORKTREE_PATH}")
+try:
+    run(f"git worktree remove {WORKTREE_PATH}")
+except:
+    # If worktree removal fails, try to clean up manually
+    if WORKTREE_PATH.exists():
+        shutil.rmtree(WORKTREE_PATH)
+    subprocess.run("git worktree prune", shell=True, cwd=REPO_ROOT, capture_output=True)
 
 print("\n========================================")
 print("Deployment completed successfully!")
