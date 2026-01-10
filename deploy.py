@@ -9,14 +9,17 @@ WORKTREE_PATH = REPO_ROOT.parent / "gh-pages-temp"
 SITE_DIR = REPO_ROOT / "_site"
 DOCS_DIR = WORKTREE_PATH / "docs"
 
+
 def run(cmd, cwd=REPO_ROOT):
     print(f"> {cmd}")
     result = subprocess.run(cmd, shell=True, cwd=cwd)
     if result.returncode != 0:
         sys.exit(result.returncode)
 
+
 def git_output(cmd):
     return subprocess.check_output(cmd, shell=True, cwd=REPO_ROOT).decode().strip()
+
 
 print("========================================")
 print("Lorenzo Orsenigo Website - Deploy Script")
@@ -63,7 +66,7 @@ print("\n[6/6] Commit & push...")
 date = datetime.now().strftime("%Y-%m-%d %H:%M")
 run("git add docs/", cwd=WORKTREE_PATH)
 run(f'git commit -m "Deploy: {date}"', cwd=WORKTREE_PATH)
-run("git push origin gh-pages", cwd=WORKTREE_PATH)
+run("git push origin gh-pages --force", cwd=WORKTREE_PATH)
 
 # 9. Cleanup
 print("\nCleaning up...")
