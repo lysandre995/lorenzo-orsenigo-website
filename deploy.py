@@ -51,6 +51,10 @@ if WORKTREE_PATH.exists():
     shutil.rmtree(WORKTREE_PATH)
 run(f"git worktree add {WORKTREE_PATH} gh-pages")
 
+# Sync gh-pages with remote
+run("git fetch origin gh-pages", cwd=WORKTREE_PATH)
+run("git reset --hard origin/gh-pages", cwd=WORKTREE_PATH)
+
 # 6. Copy files
 print("\n[4/6] Copying site files...")
 if DOCS_DIR.exists():
