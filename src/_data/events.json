@@ -324,5 +324,14 @@
         "eventUrl": "https://www.kontrapunkte.at/kalender",
         "description": "Music by Milhaub, Babbit, Karpman, Bentzon, Schmitt, Françaix",
         "coverUrl": "https://spielplan.musikverein.at/enrichment/uploads/pictures/concert/Gottfried_Rabl_c_Maria_Frodl.jpg"
+    },
+    {
+        "id": 36,
+        "name": "Dummy",
+        "date": "2026-02-16T19:30",
+        "location": "Musikverein, Glaeserner Saal, Wien",
+        "eventUrl": "https://www.kontrapunkte.at/kalender",
+        "description": "Music by Milhaub, Babbit, Karpman, Bentzon, Schmitt, Françaix",
+        "coverUrl": "https://spielplan.musikverein.at/enrichment/uploads/pictures/concert/Gottfried_Rabl_c_Maria_Frodl.jpg"
     }
 ]
