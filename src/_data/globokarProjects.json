@@ -20,7 +20,7 @@
       "/assets/img/globokar-oliveros-projects/F.0_Carosello/F.0_TransparentSheet_Audience_2.jpg",
       "/assets/img/globokar-oliveros-projects/F.0_Carosello/F.0_TransparentSheet_Audience_3.jpg"
     ],
-    "bottomText": "This documentation presents the Globokar–Oliveros pairing (1), selected exercise sheets used to train my left-hand writing (2,3), and artistic outcomes from performances of the fragment on various occasions (4–7). Some of the transparent sheets were also written on by audience members, who engaged playfully with the setup."
+    "bottomText": "This documentation presents the Globokar-Oliveros pairing (1), selected exercise sheets used to train my left-hand writing (2,3), and artistic outcomes from performances of the fragment on various occasions (4–7). Some of the transparent sheets were also written on by audience members, who engaged playfully with the setup."
   },
   {
     "id": "f1",
@@ -45,7 +45,7 @@
       "src/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListofPeople.2.jpeg",
       "src/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListOfPeople.3.jpeg"
     ],
-    "bottomText": "This documentation presents the Globokar–Oliveros pairing (1), some of the 25 postcards (with stamps) ready to be sent (2) and the 'List of People I Have Ever Known' (3-5, Foto: Manjunath Sonnad)"
+    "bottomText": "This documentation presents the Globokar-Oliveros pairing (1), some of the 25 postcards (with stamps) ready to be sent (2) and the 'List of People I Have Ever Known' (3-5, Foto: Manjunath Sonnad)"
   },
   {
     "id": "f2",
@@ -62,7 +62,7 @@
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.2_F.jpg"
     ],
-    "bottomText": ""
+    "bottomText": "This documentation presents the Globokar-Oliveros pairing."
   },
   {
     "id": "f3",
@@ -192,7 +192,7 @@
         "type": "youtube",
         "src": "ihzkJ_qbBsg"
       }
-    ]
+    ],
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.12_F.jpg"
     ],
@@ -233,7 +233,12 @@
     "name": "F.14 & Metacolors",
     "title": "F.14 & Metacolors",
     "description": "Vinko Globokar's F.14 consists of a rhythmic pattern (to be played on any part of the body) which leads to the final gesture of the piece, the suicide.\nPauline Oliveros' Metacolors, originally written for \"[…] Musicians Who See and Hear in Color\", is an invitation to play colours as emotions, or emotions as colours.\n\nIn this fragment I collected 81 video performances of ?Corporel, mainly available on YouTube. Then I cut the videos according to the beginning of F.14 and puzzled them in the frame. Finally, I practised Oliveros' meditation and edited each video according to her list of \"emotion-colour\" pairings (see here on the side). In some cases it was easy to associate the video with a particular emotion (and therefore a particular colour). In other cases, it was not possible to distinguish one emotion from another, so I decided to leave the videos in their original colours or in black and white.",
-    "carouselItems": [],
+    "carouselItems": [
+      {
+        "type": "youtube",
+        "src": "0tRcARr3iAk"
+      }
+    ], 
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.14_F.jpg"
     ],
