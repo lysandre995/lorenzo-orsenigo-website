@@ -223,7 +223,9 @@
       }
     ],
     "bottomImages": [
-      "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.13_F.jpg"
+      "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.13_F.jpg",
+      "src/assets/img/globokar-oliveros-projects/F.13_BottomImages/Response_1.jpg",
+      "src/assets/img/globokar-oliveros-projects/F.13_BottomImages/Response_2.jpg"
     ],
     "bottomText": ""
   },
@@ -242,6 +244,6 @@
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.14_F.jpg"
     ],
-    "bottomText": ""
+    "bottomText": "This documentation presents the Globokar-Oliveros pairing."
   }
 ]
