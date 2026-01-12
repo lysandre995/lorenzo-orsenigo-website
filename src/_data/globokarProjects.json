@@ -35,13 +35,13 @@
       },
       {
         "type": "image",
-        "src": "assets/img/globokar-oliveros-projects/F.1_Carosello/f.1_Postcard_Backside_low.png"
+        "src": "/assets/img/globokar-oliveros-projects/F.1_Carosello/f.1_Postcard_Backside_low.png"
       }
     ],
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.1_F.jpg",
       "/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_Postcards.jpg",
-      "/assets/img/globokar-oliveros-projects/F.1_BottomImagesF.1_ListOfPeople.jpeg",
+      "/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListOfPeople.jpeg",
       "/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListofPeople.2.jpeg",
       "/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListOfPeople.3.jpeg"
     ],
@@ -134,7 +134,7 @@
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.8_F.jpg"
     ],
-    "bottomText": ""
+    "bottomText": "This documentation presents the Globokar-Oliveros pairing."
   },
   {
     "id": "f9",
@@ -196,7 +196,7 @@
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.12_F.jpg"
     ],
-    "bottomText": ""
+    "bottomText": "This documentation presents the Globokar-Oliveros pairing."
   },
   {
     "id": "f13",
@@ -227,7 +227,7 @@
       "/assets/img/globokar-oliveros-projects/F.13_BottomImages/Response_1.jpg",
       "/assets/img/globokar-oliveros-projects/F.13_BottomImages/Response_2.jpg"
     ],
-    "bottomText": ""
+    "bottomText": "This documentation presents the Globokar-Oliveros pairing (1) as well as some of the entries (2,3) that visitors wrote on the 'This is also a yawning diary'."
   },
   {
     "id": "f14",
