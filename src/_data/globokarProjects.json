@@ -35,17 +35,17 @@
       },
       {
         "type": "image",
-        "src": "src/assets/img/globokar-oliveros-projects/F.1_Carosello/f.1_Postcard_Backside_low.png"
+        "src": "assets/img/globokar-oliveros-projects/F.1_Carosello/f.1_Postcard_Backside_low.png"
       }
     ],
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.1_F.jpg",
-      "src/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_Postcards.jpg",
-      "src/assets/img/globokar-oliveros-projects/F.1_BottomImagesF.1_ListOfPeople.jpeg",
-      "src/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListofPeople.2.jpeg",
-      "src/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListOfPeople.3.jpeg"
+      "/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_Postcards.jpg",
+      "/assets/img/globokar-oliveros-projects/F.1_BottomImagesF.1_ListOfPeople.jpeg",
+      "/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListofPeople.2.jpeg",
+      "/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListOfPeople.3.jpeg"
     ],
-    "bottomText": "This documentation presents the Globokar-Oliveros pairing (1), some of the 25 postcards (with stamps) ready to be sent (2) and the 'List of People I Have Ever Known' (3-5, Foto: Manjunath Sonnad)"
+    "bottomText": "This documentation presents the Globokar-Oliveros pairing (1), some of the 25 postcards (with stamps) ready to be sent (2) and the 'List of People I Have Ever Known' (3-5, Foto: Manjunath Sonnad)."
   },
   {
     "id": "f2",
@@ -57,7 +57,7 @@
       {
         "type": "youtube",
         "src": "/assets/img/globokar-oliveros-projects/f1.png"
-      },
+      }
     ],
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.2_F.jpg"
@@ -224,8 +224,8 @@
     ],
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.13_F.jpg",
-      "src/assets/img/globokar-oliveros-projects/F.13_BottomImages/Response_1.jpg",
-      "src/assets/img/globokar-oliveros-projects/F.13_BottomImages/Response_2.jpg"
+      "/assets/img/globokar-oliveros-projects/F.13_BottomImages/Response_1.jpg",
+      "/assets/img/globokar-oliveros-projects/F.13_BottomImages/Response_2.jpg"
     ],
     "bottomText": ""
   },
