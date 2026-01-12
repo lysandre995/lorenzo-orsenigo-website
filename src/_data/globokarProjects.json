@@ -7,41 +7,20 @@
     "description": "Vinko Globokar's F.0 is '?Corporel', the title of the piece.\nPauline Oliveros' XXV - Your Name. The Signature Meditation invites us to dwell on our own names, visualize them and, at last, sign them backwards, forwards, upside down or inside out.\n\nIn this fragment, the name I dwelt on is '?Corporel'. I then signed it on a transparent sheet of paper placed on an overhead projector. Using a pair of contact microphones, I recorded the sounds produced by the act of writing '?Corporel' (with one hand, with the other, with both hands at the same time and in different directions).\n\nThe transparent sheets resulting from F.0 & XXV - Your Name. The Signature Meditation (with the collaboration of the audience who engaged with the set up), as well as my own 'left-hand-practicing-sheets' are shown below.\n\nThis fragment was recorded in the Herman-Markus-Pressl-Saal, (KUG) Graz, on 28/03/24.\n\nAlisa Kobzar, Artem Rybchenko - video and light setting.\nLorenzo Orsenigo - audio and post-production.",
     "carouselItems": [
       {
-        "type": "image",
-        "src": "/assets/img/globokar-oliveros-projects/F.0_Carosello/InPreparation_F.0.jpg"
-      },
-      {
-        "type": "image",
-        "src": "/assets/img/globokar-oliveros-projects/F.0_Carosello/InPreparation_F.0_1.jpg"
-      },
-      {
-        "type": "image",
-        "src": "/assets/img/globokar-oliveros-projects/F.0_Carosello/Test_F.0.jpg"
-      },
-      {
-        "type": "image",
-        "src": "/assets/img/globokar-oliveros-projects/F.0_Carosello/F.0_TransparentSheet_Audience.jpg"
-      },
-      {
-        "type": "image",
-        "src": "/assets/img/globokar-oliveros-projects/F.0_Carosello/F.0_TransparentSheet_Audience_1.jpg"
-      },
-      {
-        "type": "image",
-        "src": "/assets/img/globokar-oliveros-projects/F.0_Carosello/F.0_TransparentSheet_Audience_2.jpg"
-      },
-      {
-        "type": "image",
-        "src": "/assets/img/globokar-oliveros-projects/F.0_Carosello/F.0_TransparentSheet_Audience_3.jpg"
+        "type": "youtube",
+        "src": "HD3nCrR5DI4"
       }
     ],
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.0_F.jpg",
       "/assets/img/globokar-oliveros-projects/F.0_Carosello/InPreparation_F.0.jpg",
       "/assets/img/globokar-oliveros-projects/F.0_Carosello/Test_F.0.jpg",
-      "/assets/img/globokar-oliveros-projects/F.0_Carosello/F.0_TransparentSheet_Audience.jpg"
+      "/assets/img/globokar-oliveros-projects/F.0_Carosello/F.0_TransparentSheet_Audience.jpg",
+      "/assets/img/globokar-oliveros-projects/F.0_Carosello/F.0_TransparentSheet_Audience_1.jpg",
+      "/assets/img/globokar-oliveros-projects/F.0_Carosello/F.0_TransparentSheet_Audience_2.jpg",
+      "/assets/img/globokar-oliveros-projects/F.0_Carosello/F.0_TransparentSheet_Audience_3.jpg"
     ],
-    "bottomText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "bottomText": "This documentation presents the Globokar–Oliveros pairing (1), selected exercise sheets used to train my left-hand writing (2,3), and artistic outcomes from performances of the fragment on various occasions (4–7). Some of the transparent sheets were also written on by audience members, who engaged playfully with the setup."
   },
   {
     "id": "f1",
@@ -49,7 +28,12 @@
     "name": "F.1 & Theatre Piece",
     "title": "F.1 & Theatre Piece",
     "description": "Vinko Globokar's F.1 consists of vocal sounds (h, f, s, sch, r) and body-scratching gestures.\nPauline Oliveros' Theatre Piece invites us to make a list of everyone we have ever known, design our own postcard, think of a message (about social change) to write on the postcards, and send the postcards to everyone we have ever known.\n\nIf you look closely at the front of the postcards, you can see how Globokar's visual representations of sonic gestures, the signs and symbols in the score, were used as raw material to draw the original imaginary drawing - then I inverted the colours and digitalised the image. What is written on the back of the postcard reflects an attempt to bring together a message of social change and the sonic dimension of Globokar's F.1, which would otherwise be lost.\n\nTwenty-five postcards, as a representative sample, have been sent to 25 people on the list of \"everyone you have ever known\".\n\nLinz, January - March 2025.\n\nWould you like to receive a personalized postcard?\nDrop me an email and leave me your address. I will soon send you a postcard!",
-    "carouselItems": [],
+    "carouselItems": [
+      {
+        "type": "image",
+        "src": "/assets/img/globokar-oliveros-projects/f1.png"
+      }
+    ],
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.1_F.jpg"
     ],
