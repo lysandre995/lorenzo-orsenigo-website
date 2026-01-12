@@ -32,10 +32,18 @@
       {
         "type": "image",
         "src": "/assets/img/globokar-oliveros-projects/f1.png"
+      },
+      {
+        "type": "image",
+        "src": "src/assets/img/globokar-oliveros-projects/F.1_Carosello/f.1_Postcard_Backside_low.png"
       }
     ],
     "bottomImages": [
-      "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.1_F.jpg"
+      "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.1_F.jpg",
+      "src/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_Postcards.jpg",
+      "src/assets/img/globokar-oliveros-projects/F.1_BottomImagesF.1_ListOfPeople.jpeg",
+      "src/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListofPeople.2.jpeg",
+      "src/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListOfPeople.3.jpeg"
     ],
     "bottomText": ""
   },
