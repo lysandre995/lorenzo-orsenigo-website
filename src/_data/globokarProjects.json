@@ -45,7 +45,7 @@
       "src/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListofPeople.2.jpeg",
       "src/assets/img/globokar-oliveros-projects/F.1_BottomImages/F.1_ListOfPeople.3.jpeg"
     ],
-    "bottomText": ""
+    "bottomText": "This documentation presents the Globokar–Oliveros pairing (1), some of the 25 postcards (with stamps) ready to be sent (2) and the 'List of People I Have Ever Known' (3-5, Foto: Manjunath Sonnad)"
   },
   {
     "id": "f2",
@@ -53,7 +53,12 @@
     "name": "F.2 & XXI",
     "title": "F.2 & XXI",
     "description": "Vinko Globokar's F.2 is about \"teeth chattering\", from very fast and piano, to slow and loud.\nPauline Oliveros' XXI says \"What constitutes your musical universe?\".\n\nMy musical universe can be represented as space in constant expansion. In this fragment, I recorded the same gesture (teeth chattering) several times, but each time I moved the microphone farther away. The greater the distance between the microphone and my mouth, the more reverberant the sound produced by my teeth chattering. The idea of expansion is also reinforced here by the zooming out of the cameras.\n\nThis fragment was recorded at the Herz-Jesu-Kirche, Graz, on 5/09/2024.\n\nAlisa Kobzar, Artem Rybchenko - video, audio and light setting.\nLorenzo Orsenigo - audio and post-production.",
-    "carouselItems": [],
+    "carouselItems": [
+      {
+        "type": "youtube",
+        "src": "/assets/img/globokar-oliveros-projects/f1.png"
+      },
+    ],
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.2_F.jpg"
     ],
@@ -182,7 +187,12 @@
     "name": "F.12 & Tumbling Song",
     "title": "F.12 & Tumbling Song",
     "description": "Vinko Globokar's F.12 is a combination of vocal gestures (kiss, tongue snapping, tightening of the throat while inhaling, \"ts\" while inhaling, retracting tongue stuck to palate) and head scratching.\nPauline Oliveros' XIV - Tumbling Song invites us to produce any vocal sound, but always going down in pitch - in glissando or in discrete steps. There are no limitations regarding 'distance in range, speed, dynamics or quality', except for the length of the downward gestures, which is to be determined by the breath.\n\nIn this fragment, I repeated Globokar's sequence of vocal gestures several times, each time descending in pitch, as suggested by Oliveros. With each repetition, I increased the intensity of my playing in a climax that led to the final gesture. As a result, my mouth, tongue, and facial expressions became the focus of my experimentation, resulting in unusual techniques and unexpected sounds.\n\nThis fragment was recorded at IEM, Graz, on 26/04/2024.\n\nAlisa Kobzar, Artem Rybchenko - video, audio and light setting.\nLorenzo Orsenigo - audio and post-production.",
-    "carouselItems": [],
+    "carouselItems": [    
+      {
+        "type": "youtube",
+        "src": "ihzkJ_qbBsg"
+      }
+    ]
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.12_F.jpg"
     ],
