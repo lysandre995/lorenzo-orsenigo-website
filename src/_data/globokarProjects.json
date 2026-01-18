@@ -56,7 +56,7 @@
     "carouselItems": [
       {
         "type": "youtube",
-        "src": ""
+        "src": "GRBaNjIvuuY"
       }
     ],
     "bottomImages": [
@@ -90,7 +90,7 @@
     "carouselItems": [
       {
         "type": "youtube",
-        "src": ""
+        "src": "lBv8AN2RH3M"
       }
     ],
     "bottomImages": [
@@ -124,7 +124,7 @@
     "carouselItems": [
       {
         "type": "youtube",
-        "src": ""
+        "src": "dm6are3qYpA"
       }
     ],
     "bottomImages": [
@@ -138,11 +138,16 @@
     "name": "F.7 & For Alison",
     "title": "F.7 & For Alison",
     "description": "Vinko Globokar's F.7 is a rhythmic combination of vocal sounds (g, p, t, d, s, f), body hits and scratches.\nPauline Oliveros' For Alison Knowles is an invitation to 'perform a sound, gesture, word, movement, graphic for each year of your life'. Each year could also be subdivided in \"seasons, months, weeks, days, hours, moments\".\n\nFor the last month I have been recording Globokar's F.10 (the 'gesture' mentioned in Oliveros' meditation) in different places and (at least) once a day. The various recordings were then broken down into fragments and juxtaposed to reconstruct the entire original performance, creating a complex network of spatial and temporal interactions.\nAs I plan to continue recording Globokar's fragment once a day for the next month (or a few months), the version presented here should be considered provisional.\n\nLorenzo Orsenigo - concept, performance, video/audio recordings and editing.",
-    "carouselItems": [],
+    "carouselItems": [
+      {
+        "type": "youtube",
+        "src": "TWM8bcvoI-Q"
+      }
+    ], 
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.7_F.jpg"
     ],
-    "bottomText": ""
+    "bottomText": "This documentation presents the Globokar-Oliveros pairing."
   },
   {
     "id": "f8",
@@ -180,7 +185,7 @@
     "bottomImages": [
       "/assets/img/globokar-oliveros-projects/Pictures_descriptions/F.9_F.jpg"
     ],
-    "bottomText": ""
+    "bottomText": "This documentation presents the Globokar-Oliveros pairing."
   },
   {
     "id": "f10",
