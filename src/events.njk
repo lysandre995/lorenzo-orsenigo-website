@@ -5,7 +5,6 @@ title: "Events"
 
 <div class="events-container">
   <h1>Events</h1>
-
   <section class="events-section">
     <h2>Upcoming</h2>
     <div class="events-grid">
@@ -13,239 +12,207 @@ title: "Events"
       {% set upcomingEvents = events | sortByDate("asc") %}
       {% for event in upcomingEvents %}
         {% if event.date >= now %}
-      <article class="event-card">
-        {% if event.coverUrl %}
-        <div class="event-image">
-          <img src="{{ event.coverUrl }}" alt="{{ event.name }}" loading="lazy">
-        </div>
-        {% endif %}
-        <div class="event-content">
-          <time class="event-date" datetime="{{ event.date }}">
-            {{ event.date | formatDate }}
-          </time>
-          <h3 class="event-title">{{ event.name }}</h3>
-          <p class="event-location">{{ event.location }}</p>
-          {% if event.description %}
-          <p class="event-description">{{ event.description }}</p>
+          <article class="event-card">
+            {% if event.coverUrl %}
+              <div class="event-image">
+                <img src="{{ event.coverUrl }}" alt="{{ event.name }}" loading="lazy"></div>
+              {% endif %}
+              <div class="event-content">
+                <time class="event-date" datetime="{{ event.date }}">
+                  {{ event.date | formatDate }}
+                </time>
+                <h3 class="event-title">{{ event.name }}</h3>
+                <p class="event-location">{{ event.location }}</p>
+                {% if event.description %}
+                  <p class="event-description">{{ event.description }}</p>
+                {% endif %}
+                <div class="event-links">
+                  {% if event.eventUrl %}
+                    <a href="{{ event.eventUrl }}" class="event-link" target="_blank" rel="noopener noreferrer">Event Info</a>
+                  {% endif %}
+                  {% if event.ticketsUrl %}
+                    <a href="{{ event.ticketsUrl }}" class="event-link event-link-tickets" target="_blank" rel="noopener noreferrer">Get Tickets</a>
+                  {% endif %}
+                </div>
+              </div>
+            </article>
           {% endif %}
-          <div class="event-links">
-            {% if event.eventUrl %}
-            <a href="{{ event.eventUrl }}" class="event-link" target="_blank" rel="noopener noreferrer">Event Info</a>
+        {% endfor %}
+      </div>
+    </section>
+    <section class="events-section">
+      <h2>Past Events</h2>
+      <div class="events-grid">
+        {% set now = "now" | dateFilter %}
+        {% set pastEvents = events | sortByDate("desc") %}
+        {% for event in pastEvents %}
+          {% if event.date < now %}
+            <article class="event-card event-card-past">
+              {% if event.coverUrl %}
+                <div class="event-image">
+                  <img src="{{ event.coverUrl }}" alt="{{ event.name }}" loading="lazy"></div>
+                {% endif %}
+                <div class="event-content">
+                  <time class="event-date" datetime="{{ event.date }}">
+                    {{ event.date | formatDate }}
+                  </time>
+                  <h3 class="event-title">{{ event.name }}</h3>
+                  <p class="event-location">{{ event.location }}</p>
+                  {% if event.description %}
+                    <p class="event-description">{{ event.description }}</p>
+                  {% endif %}
+                  {% if event.eventUrl %}
+                    <div class="event-links">
+                      <a href="{{ event.eventUrl }}" class="event-link" target="_blank" rel="noopener noreferrer">Event Info</a>
+                    </div>
+                  {% endif %}
+                </div>
+              </article>
             {% endif %}
-            {% if event.ticketsUrl %}
-            <a href="{{ event.ticketsUrl }}" class="event-link event-link-tickets" target="_blank" rel="noopener noreferrer">Get Tickets</a>
-            {% endif %}
-          </div>
+          {% endfor %}
         </div>
-      </article>
-        {% endif %}
-      {% endfor %}
+      </section>
     </div>
-  </section>
-
-  <section class="events-section">
-    <h2>Past Events</h2>
-    <div class="events-grid">
-      {% set now = "now" | dateFilter %}
-      {% set pastEvents = events | sortByDate("desc") %}
-      {% for event in pastEvents %}
-        {% if event.date < now %}
-      <article class="event-card event-card-past">
-        {% if event.coverUrl %}
-        <div class="event-image">
-          <img src="{{ event.coverUrl }}" alt="{{ event.name }}" loading="lazy">
-        </div>
-        {% endif %}
-        <div class="event-content">
-          <time class="event-date" datetime="{{ event.date }}">
-            {{ event.date | formatDate }}
-          </time>
-          <h3 class="event-title">{{ event.name }}</h3>
-          <p class="event-location">{{ event.location }}</p>
-          {% if event.description %}
-          <p class="event-description">{{ event.description }}</p>
-          {% endif %}
-          {% if event.eventUrl %}
-          <div class="event-links">
-            <a href="{{ event.eventUrl }}" class="event-link" target="_blank" rel="noopener noreferrer">Event Info</a>
-          </div>
-          {% endif %}
-        </div>
-      </article>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </section>
-</div>
-
-<style>
-  .events-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-
-  .events-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .events-section {
-    margin-bottom: 4rem;
-  }
-
-  .events-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--color-border);
-  }
-
-  .events-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
-  }
-
-  .event-card {
-    background: #2a2a2a;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  }
-
-  .event-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    border-color: #666;
-  }
-
-  .event-card-past {
-    opacity: 0.7;
-  }
-
-  .event-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    background: #1a1a1a;
-  }
-
-  .event-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .event-content {
-    padding: 1.5rem;
-  }
-
-  .event-date {
-    display: block;
-    font-size: 0.9rem;
-    color: var(--color-text-light);
-    font-family: var(--font-mono);
-    margin-bottom: 0.5rem;
-  }
-
-  .event-title {
-    font-size: 1.3rem;
-    margin: 0 0 0.5rem 0;
-    color: var(--color-text);
-  }
-
-  .event-location {
-    font-size: 0.95rem;
-    color: var(--color-text-light);
-    margin-bottom: 1rem;
-  }
-
-  .event-description {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .event-links {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-
-  .event-link {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #444;
-    color: var(--color-text);
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    transition: background 0.2s;
-    border: 1px solid var(--color-border);
-  }
-
-  .event-link:hover {
-    background: #555;
-    border-color: #666;
-  }
-
-  .event-link-tickets {
-    background: #555;
-    border-color: var(--color-accent);
-  }
-
-  .event-link-tickets:hover {
-    background: #666;
-    border-color: var(--color-text-light);
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .events-container {
-      padding: 1rem;
-    }
-
-    .events-container h1 {
-      font-size: 2rem;
-    }
-
-    .events-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    .event-content {
-      padding: 1rem;
-    }
-
-    .event-title {
-      font-size: 1.1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .events-container h1 {
-      font-size: 1.5rem;
-    }
-
-    .event-image {
-      height: 160px;
-    }
-
-    .event-links {
-      flex-direction: column;
-    }
-
-    .event-link {
-      text-align: center;
-      width: 100%;
-    }
-  }
-</style>
+    <style>
+      .events-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .events-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+      }
+      .events-section {
+        margin-bottom: 4rem;
+      }
+      .events-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--color-border);
+      }
+      .events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+      .event-card {
+        background: #2a2a2a;
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      }
+      .event-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        border-color: #666;
+      }
+      .event-card-past {
+        opacity: 0.7;
+      }
+      .event-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        background: #1a1a1a;
+      }
+      .event-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .event-content {
+        padding: 1.5rem;
+      }
+      .event-date {
+        display: block;
+        font-size: 0.9rem;
+        color: var(--color-text-light);
+        font-family: var(--font-mono);
+        margin-bottom: 0.5rem;
+      }
+      .event-title {
+        font-size: 1.3rem;
+        margin: 0 0 0.5rem;
+        color: var(--color-text);
+      }
+      .event-location {
+        font-size: 0.95rem;
+        color: var(--color-text-light);
+        margin-bottom: 1rem;
+      }
+      .event-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: var(--color-text);
+        margin-bottom: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .event-links {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+      .event-link {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: #444;
+        color: var(--color-text);
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        transition: background 0.2s;
+        border: 1px solid var(--color-border);
+      }
+      .event-link:hover {
+        background: #555;
+        border-color: #666;
+      }
+      .event-link-tickets {
+        background: #555;
+        border-color: var(--color-accent);
+      }
+      .event-link-tickets:hover {
+        background: #666;
+        border-color: var(--color-text-light);
+      }
+      /* Responsive */
+      @media(max-width: 768px) {
+        .events-container {
+          padding: 1rem;
+        }
+        .events-container h1 {
+          font-size: 2rem;
+        }
+        .events-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+        .event-content {
+          padding: 1rem;
+        }
+        .event-title {
+          font-size: 1.1rem;
+        }
+      }
+      @media(max-width: 480px) {
+        .events-container h1 {
+          font-size: 1.5rem;
+        }
+        .event-image {
+          height: 160px;
+        }
+        .event-links {
+          flex-direction: column;
+        }
+        .event-link {
+          text-align: center;
+          width: 100%;
+        }
+      }
+    </style>

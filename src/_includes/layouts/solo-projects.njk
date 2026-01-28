@@ -1,0 +1,134 @@
+---
+layout: "layouts/base.njk"
+---
+
+<div class="solo-projects-container">
+  <div class="solo-projects-header">
+    <a href="/projects" class="back-link">← Back to Projects</a>
+    <h1>Solo Projects</h1>
+  </div>
+  {% if soloProjects and soloProjects.length > 0 %}
+    <div class="solo-projects-list">
+      {% for project in soloProjects %}
+        <article class="solo-project-item">
+          <div class="solo-video-wrapper">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/{{ project.youtubeUrl }}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+          {% if project.description and project.description.trim() %}
+            <p class="solo-project-description">{{ project.description }}</p>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="solo-projects-empty">
+      <p>No solo projects available at the moment.</p>
+    </div>
+  {% endif %}
+</div>
+<style>
+  .solo-projects-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .solo-projects-header {
+    margin-bottom: 3rem;
+  }
+  .solo-projects-header .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--color-text-light, #ccc);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+  .solo-projects-header .back-link:hover {
+    color: var(--color-text, #f8f8f8);
+  }
+  .solo-projects-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--color-text, #f8f8f8);
+  }
+  .solo-projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .solo-project-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .solo-video-wrapper {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+    background: #000;
+  }
+  .video-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .video-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .solo-project-description {
+    color: var(--color-text-light, #ccc);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 1rem;
+  }
+  .solo-projects-empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--color-text-light, #ccc);
+    font-size: 1.1rem;
+  }
+  /* Responsive design */
+  @media(max-width: 768px) {
+    .solo-projects-container {
+      padding: 1rem;
+    }
+    .solo-projects-header h1 {
+      font-size: 1.8rem;
+    }
+    .solo-projects-list {
+      gap: 2rem;
+    }
+    .solo-project-item {
+      gap: 1rem;
+    }
+    .solo-project-description {
+      font-size: 0.95rem;
+    }
+  }
+  @media(max-width: 480px) {
+    .solo-projects-header h1 {
+      font-size: 1.5rem;
+    }
+    .solo-projects-container {
+      padding: 1rem 0.5rem;
+    }
+    .solo-projects-list {
+      gap: 1.5rem;
+    }
+    .solo-project-description {
+      padding: 0 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
