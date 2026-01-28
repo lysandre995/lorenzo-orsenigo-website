@@ -29,6 +29,14 @@ module.exports = function (eleventyConfig) {
   // Add image shortcode
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
+  // Add filter to get current date/time
+  eleventyConfig.addFilter("dateFilter", function(value) {
+    if (value === "now") {
+      return new Date().toISOString();
+    }
+    return value;
+  });
+
   // Add date formatting filter
   eleventyConfig.addFilter("formatDate", function(dateString) {
     if (!dateString) return "";

@@ -93,7 +93,7 @@
     {
         "id": 10,
         "name": "mdw Spring School | Sonic Dialogues: Intersections of Art and Sound in Public Spaces",
-        "date": "2024-06-12",
+        "date": "2024-06-12T10:00",
         "location": "mdw, Wien",
         "eventUrl": "https://www.researchcatalogue.net/portal/announcement?announcement=2633215",
         "description": "Presentation: 'Artistic Hacking. On public performance venues as _loci_ of transformative encounters'",
@@ -102,7 +102,7 @@
     {
         "id": 11,
         "name": "Artistic Research Session",
-        "date": "2024-07-03",
+        "date": "2024-07-03T14:00",
         "location": "KUG, Graz",
         "eventUrl": "",
         "description": "Collaboration with composer Juta Pranulytė",
@@ -111,7 +111,7 @@
     {
         "id": 12,
         "name": "Trio Bio: Experimentation and Research Session",
-        "date": "2024-07-24",
+        "date": "2024-07-24T14:00",
         "location": "DH5, Linz",
         "eventUrl": "",
         "description": "Collaboration with guitarist and theater scholar Svetoslav Stoychev",
@@ -120,7 +120,7 @@
     {
         "id": 13,
         "name": "ARTikulationen 2024. A Festival of Artistic Research",
-        "date": "2024-10-02",
+        "date": "2024-10-02T14:00",
         "location": "KUG, Graz",
         "eventUrl": "https://www.researchcatalogue.net/view/2920331/2940584",
         "description": "Presentation and participatory performance",
@@ -183,7 +183,7 @@
     {
         "id": 20,
         "name": "Ar@k International Conference for Artistic Research",
-        "date": "2025-03-17",
+        "date": "2025-03-17T10:00",
         "location": "Kristiania University College, Oslo (NO)",
         "eventUrl": "https://www.researchcatalogue.net/view/2421554/2674688",
         "description": "Presentation: 'Standard and truthful, or alternative and creative..? Artistic Hacking as a method to challenge one-truth approaches to (music) interpretation",
@@ -192,7 +192,7 @@
     {
         "id": 21,
         "name": "Why Listening? - Intermedia Installation",
-        "date": "2025-03-26",
+        "date": "2025-03-26T14:00",
         "location": "ESC medien kunst labor Graz",
         "eventUrl": "https://esc.mur.at/en/projekt/our-next-guest-why-listening",
         "description": "A Hacked Interpretation of Vinko Globokar's ?Corporel (1985) through Pauline Oliveros' meditations (1971 - 2016)",
@@ -201,7 +201,7 @@
     {
         "id": 22,
         "name": "Saison 2025 KORPUS III: SKIN - Schallfeld Ensemble",
-        "date": "2025-05-24",
+        "date": "2025-05-24T19:00",
         "location": "Minoriten Saal, Graz",
         "eventUrl": "https://www.schallfeldensemble.com/de/event/saison-2025-korpus-iii/",
         "description": "Music by Saunders",
@@ -210,7 +210,7 @@
     {
         "id": 23,
         "name": "We Left Babel",
-        "date": "2025-06-13",
+        "date": "2025-06-13T19:00",
         "location": "Lentos Kunstmuseum, Linz",
         "eventUrl": "https://www.lentos.at/programm/calender/musiktheaterlabor-dont-you-want-a-warm-embrace-2",
         "description": "'Don't you want a warm embrace?' is a Musiktheaterlabor by the composition students of Anton Bruckner Private University Linz (class. Prof. Francois Sarhan)",
@@ -219,7 +219,7 @@
     {
         "id": 24,
         "name": "We Left Babel",
-        "date": "2025-06-14",
+        "date": "2025-06-14T19:00",
         "location": "Lentos Kunstmuseum, Linz",
         "eventUrl": "https://www.lentos.at/programm/calender/musiktheaterlabor-dont-you-want-a-warm-embrace-2",
         "description": "'Don't you want a warm embrace?' is a Musiktheaterlabor by the composition students of Anton Bruckner Private University Linz (class. Prof. Francois Sarhan)",
@@ -228,7 +228,7 @@
     {
         "id": 25,
         "name": "Cassandra v.1.0.3025“ von Alisa Kobzar",
-        "date": "2025-09-14",
+        "date": "2025-09-14T14:00",
         "location": "Oesterreichischer Skulpturenpark, Graz",
         "eventUrl": "https://www.museum-joanneum.at/skulpturenpark/unser-programm/ausstellungen/skulpturenpark/event/sound-park-fest-im-skulpturenpark",
         "description": "Gehen. Hören. Entdecken. Performance-Tour. Mit dem Kollektiv Seven Circles: Elina Viļuma-Helling (Gesang), Lorenzo Orsenigo (Schlagzeug), Alexandra Škrilec,(Flöten), Anna Grenzner (Violoncello), Judith Selenko (Visuelles Design)",
@@ -237,7 +237,7 @@
     {
         "id": 26,
         "name": "Lizard Ensemble @ 2k+ Festival",
-        "date": "2025-11-21",
+        "date": "2025-11-21T19:00",
         "location": "Novi Sad (SRB)",
         "eventUrl": "https://zkv.rs/2kplus/2025/11/20/lizard-ensemble/",
         "description": "Music by Uğurlu, Roth, Rizza, Cossidente, Lee, Gimenez-Comas",
@@ -282,7 +282,7 @@
     {
         "id": 31,
         "name": "For Percussion and Feedback",
-        "date": "2026-06-12",
+        "date": "2026-06-12T19:00",
         "location": "Schlossbunker Ebelsberg, Linz (AUT)",
         "eventUrl": "https://www.instagram.com/schlossbunker/",
         "description": "Solo Concert - Music by S. Stefanovic (premier), P. Matthusen, J. Pranulytė and improvisations",
@@ -309,7 +309,7 @@
     {
         "id": 34,
         "name": "enuntiatio.praefatio.formulae",
-        "date": "2026-06-22",
+        "date": "2026-06-22T10:00",
         "end date": "2026-06-27",
         "location": "Bled (SK)",
         "eventUrl": "https://enuntiatio-praefatio-formulae.com/FESTIVAL/",
