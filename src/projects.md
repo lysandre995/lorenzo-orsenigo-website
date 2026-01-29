@@ -1,4 +1,5 @@
 ---
 layout: "layouts/project-landing.njk"
-title: "Projects"
+title: "Lorenzo Orsenigo – Projects"
+description: "Explore Lorenzo Orsenigo's artistic projects, including research collaborations, solo works, and the Globokar-Oliveros project series."
 ---

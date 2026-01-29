@@ -70,6 +70,7 @@ module.exports = function (eleventyConfig) {
   // Passthrough copies - keep original images for background-image CSS
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/img");
+  eleventyConfig.addPassthroughCopy("public/robots.txt");
   eleventyConfig.addPassthroughCopy(
     "src/content/**/*.{jpg,jpeg,png,gif,mp4,mp3,pdf}",
   );
