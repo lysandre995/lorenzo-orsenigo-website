@@ -1,19 +1,55 @@
 [
   {
     "id": 1,
-    "title": "Solo Concert - Example 1",
-    "youtubeUrl": "JWBxyIE0LRI",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    "title": "Meow-Mouth",
+    "youtubeUrl": "hn2xhy9v_Tk",
+    "description": "Music, Juta Pranulytė; Performance and Video Editing, Lorenzo Orsenigo; Video, Aliza Kobsar; Audio, Roamn Gavryliuk"
   },
   {
     "id": 2,
-    "title": "Solo Concert - Example 2",
+    "title": "Vibrafono",
     "youtubeUrl": "JWBxyIE0LRI",
-    "description": ""
+    "description": "Performance and Video, Lorenzo Orsenigo\n\nMusic and Video Editing, Luca Mazzilli"
   },
   {
     "id": 3,
-    "title": "Solo Concert - Example 3",
-    "youtubeUrl": "JWBxyIE0LRI"
+    "title": "The Ending of Things from a Distance",
+    "youtubeUrl": "BPnxm-8bx1o",
+    "description": ""
+  },
+  {
+    "id": 4,
+    "title": "Tap Oratory",
+    "youtubeUrl": "bNuY5j7Xmyc"
+  },
+  {
+    "id": 5,
+    "title": "Hangar 84",
+    "youtubeUrl": "rvO69PMKrW8"
+  },
+  {
+    "id": 6,
+    "title": "The Warning Lights are Blinking Red",
+    "youtubeUrl": "fkiM4KXqY00"
+  },
+  {
+    "id": 7,
+    "title": "Psappha",
+    "youtubeUrl": "wZo9FdoBitc"
+  },
+  {
+    "id": 8,
+    "title": "Mentacide",
+    "youtubeUrl": "ipibzq-8iKY"
+  },
+  {
+    "id": 9,
+    "title": "Bach",
+    "youtubeUrl": "KKL0_NkYH5o"
+  },
+  {
+    "id": 10,
+    "title": "A Cool Gadget for Tambourine",
+    "youtubeUrl": "TBw-RDiGkvE"
   }
 ]
