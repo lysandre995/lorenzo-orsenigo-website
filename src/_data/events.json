@@ -324,5 +324,14 @@
         "eventUrl": "https://www.kontrapunkte.at/kalender",
         "description": "Music by Milhaub, Babbit, Karpman, Bentzon, Schmitt, Françaix",
         "coverUrl": "https://spielplan.musikverein.at/enrichment/uploads/pictures/concert/Gottfried_Rabl_c_Maria_Frodl.jpg"
+    },
+    {
+        "id": 36,
+        "name": "EPARM - European Platform for Artistic Research in Music",
+        "date": "2026-04-11T12:00",
+        "location": "Norwegian Academy of Music, Oslo",
+        "eventUrl": "https://aec-music.eu/event/european-platform-for-artistic-research-in-music-eparm-2026/programme",
+        "description": "Presentation: Artistic Hacking as transformative encounter Interpretation, Collapse, Co-Creation, and Relational Responsibility - Orsenigo, Lorenzo ",
+        "coverUrl": "https://aec-music.eu/media/2021/02/aec-logo.png"
     }
 ]
