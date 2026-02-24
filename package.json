@@ -1,5 +1,5 @@
 {
-  "name": "lorenzo-website-new",
+  "name": "lorenzo-orsenigo-website",
   "version": "1.0.0",
   "description": "Static research-oriented artistic website",
   "scripts": {
@@ -8,12 +8,16 @@
     "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alessandro Alfano",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.4",
     "cross-env": "^7.0.3",
     "sharp-cli": "^5.2.0"
+  },
+  "overrides": {
+    "@11ty/recursive-copy": "5.0.0",
+    "glob": "^11.1.0"
   }
 }
