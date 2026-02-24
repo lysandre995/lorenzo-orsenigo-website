@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Index</title>
+    <meta name="description" content="Composer &amp; Researcher">
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <header class="site-header">
+        <div class="site-logo">
+          <a href="/">Lorenzo</a>
+        </div>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/bio/">Bio</a></li>
+            <li><a href="/events/">Events</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/phd/">PHD</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="site-main">
+        
+          <nav aria-label="Breadcrumb" class="site-breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    
+    
+    
+    
+    
+      
+    
+      
+        
+        
+        
+           <li><a href="/research/">Research</a></li>
+        
+      
+    
+      
+    
+  </ol>
+</nav>
+
+        
+        
+<!-- 
+  Research Index Layout
+  
+  Philosophy:
+  - "Spatial": Deterministic random layout for large screens. Exploratory.
+  - "Linear": Ordered narrative layout for small screens. Readable.
+  
+  Note: Logic relies on Frontmatter data (position.spatial.* and position.linear.order).
+  This avoids JavaScript runtime randomness, preserving "academic defensibility" 
+  and reproducibility.
+-->
+
+<div class="research-index-container">
+  
+    <a href="/research/subproject-1/" class="research-item" id="item-1" aria-label="Subproject One (Phase 1)">
+      <div class="research-item-inner">
+        
+          <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" aria-hidden="true">
+        
+        <span class="research-title">Subproject One</span>
+      </div>
+    </a>
+    
+    <style>
+      /* Inject SPATIAL Positions via Nunjucks */
+      @media (min-width: 769px) {
+        #item-1 {
+          top: 10%;
+          left: 10%;
+          transform: rotate(5deg) scale(0.9);
+          z-index: 1;
+        }
+      }
+    </style>
+  
+    <a href="/research/subproject-2/" class="research-item" id="item-2" aria-label="Subproject Two (Phase 2)">
+      <div class="research-item-inner">
+        
+          <img src="https://images.unsplash.com/photo-1502014822147-1aed806167fa?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" aria-hidden="true">
+        
+        <span class="research-title">Subproject Two</span>
+      </div>
+    </a>
+    
+    <style>
+      /* Inject SPATIAL Positions via Nunjucks */
+      @media (min-width: 769px) {
+        #item-2 {
+          top: 20%;
+          left: 40%;
+          transform: rotate(-10deg) scale(1.1);
+          z-index: 1;
+        }
+      }
+    </style>
+  
+    <a href="/research/subproject-3/" class="research-item" id="item-3" aria-label="Subproject Three (Phase 3)">
+      <div class="research-item-inner">
+        
+          <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" aria-hidden="true">
+        
+        <span class="research-title">Subproject Three</span>
+      </div>
+    </a>
+    
+    <style>
+      /* Inject SPATIAL Positions via Nunjucks */
+      @media (min-width: 769px) {
+        #item-3 {
+          top: 15%;
+          left: 70%;
+          transform: rotate(15deg) scale(0.8);
+          z-index: 1;
+        }
+      }
+    </style>
+  
+    <a href="/research/subproject-4/" class="research-item" id="item-4" aria-label="Subproject Four (Phase 4)">
+      <div class="research-item-inner">
+        
+          <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" aria-hidden="true">
+        
+        <span class="research-title">Subproject Four</span>
+      </div>
+    </a>
+    
+    <style>
+      /* Inject SPATIAL Positions via Nunjucks */
+      @media (min-width: 769px) {
+        #item-4 {
+          top: 50%;
+          left: 20%;
+          transform: rotate(0deg) scale(1.2);
+          z-index: 1;
+        }
+      }
+    </style>
+  
+    <a href="/research/subproject-5/" class="research-item" id="item-5" aria-label="Subproject Five (Phase 5)">
+      <div class="research-item-inner">
+        
+          <img src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" aria-hidden="true">
+        
+        <span class="research-title">Subproject Five</span>
+      </div>
+    </a>
+    
+    <style>
+      /* Inject SPATIAL Positions via Nunjucks */
+      @media (min-width: 769px) {
+        #item-5 {
+          top: 60%;
+          left: 60%;
+          transform: rotate(-5deg) scale(1);
+          z-index: 1;
+        }
+      }
+    </style>
+  
+</div>
+
+<style>
+  .research-index-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .research-item {
+    display: block;
+    text-align: center;
+    transition: transform 0.3s ease, z-index 0s;
+  }
+  
+  .research-item:hover {
+    z-index: 100 !important;
+  }
+
+  .research-item-inner {
+    transition: transform 0.3s ease;
+  }
+  
+  .research-item:hover .research-item-inner {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+
+  .placeholder-circle {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-border);
+    border-radius: 50%;
+    margin: 0 auto var(--size-xs);
+  }
+  
+  .research-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: var(--size-xs);
+  }
+
+  /* LAYOUT MODE: SPATIAL (Desktop) */
+  @media (min-width: 769px) {
+    .research-item {
+      position: absolute;
+      /* Top/Left set inline in the loop via percentage */
+    }
+  }
+
+  /* LAYOUT MODE: LINEAR (Mobile) */
+  @media (max-width: 768px) {
+    .research-index-container {
+      display: flex;
+      flex-direction: column;
+      padding: var(--size-m);
+      gap: var(--size-l);
+    }
+
+    .research-item {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      transform: none !important;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: var(--size-m);
+      text-align: left;
+    }
+    
+    .research-item img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 0;
+    }
+  }
+</style>
+
+      </main>
+      <footer class="site-footer">
+        <div class="contact-info">
+          <p>Contact:
+            <a href="mailto:contact@lorenzo.com">contact@lorenzo.com</a>
+          </p>
+        </div>
+        <div class="credits">
+          <p>&copy; 2026 Lorenzo. Site by Antigravity.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
