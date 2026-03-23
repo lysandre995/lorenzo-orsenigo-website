@@ -40,6 +40,14 @@ layout: "layouts/base.njk"
             </div>
           </a>
         {% endfor %}
+      {% elif variousProjects and dataSource == 'variousProjects' %}
+        {% for project in variousProjects %}
+          <a href="{{ project.path }}" class="circle-link">
+            <div class="circle-inner" style="background-image: url('{{ project.pictureUrl }}');">
+              <span class="circle-title">{{ project.name }}</span>
+            </div>
+          </a>
+        {% endfor %}
       {% endif %}
 
     {# 4. Otherwise, use global projects data if available #}

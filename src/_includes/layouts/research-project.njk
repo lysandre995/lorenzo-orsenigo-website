@@ -1,0 +1,343 @@
+---
+layout: "layouts/base.njk"
+---
+
+{% set project = null %}
+{% for p in pageProjects %}
+  {% if p.id == projectId %}
+    {% set project = p %}
+  {% endif %}
+{% endfor %}
+
+{% if project %}
+<div class="rp-container">
+  <div class="rp-header">
+    <a href="{{ backLink | default('/projects/research/') }}" class="back-link">{{ backLinkText | default('← Back to Research') }}</a>
+    <h1 class="rp-title">{{ project.title }}</h1>
+  </div>
+
+  {% if project.description %}
+  <div class="rp-description">
+    {{ project.description | replace('\n', '<br>') | safe }}
+  </div>
+  {% endif %}
+
+  {% if project.video %}
+  <div class="rp-video-section">
+    {% if project.video.type == 'youtube' %}
+    <div class="rp-video-embed">
+      <iframe
+        src="https://www.youtube.com/embed/{{ project.video.youtubeId }}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    {% elif project.video.type == 'soundcloud' %}
+    <div class="rp-soundcloud-embed">
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="{{ project.video.soundcloudEmbedUrl }}">
+      </iframe>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if project.photos and project.photos.length > 0 %}
+  <div class="rp-photos-section">
+    {% for photo in project.photos %}
+    <div class="rp-photo-item">
+      <div class="rp-photo-wrapper">
+        <img src="{{ photo.url }}" alt="{{ project.title }}" loading="lazy">
+      </div>
+      {% if photo.caption %}
+      <p class="rp-photo-caption">{{ photo.caption }}</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" alt="">
+  <button class="lightbox-prev" aria-label="Previous image">‹</button>
+  <button class="lightbox-next" aria-label="Next image">›</button>
+</div>
+
+<script>
+  (function() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+    const photos = document.querySelectorAll('.rp-photo-wrapper img');
+
+    if (photos.length === 0) return;
+
+    let currentIndex = 0;
+    const photoArray = Array.from(photos);
+
+    photos.forEach((img, index) => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        currentIndex = index;
+        openLightbox(img.src);
+      });
+    });
+
+    function openLightbox(src) {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = src;
+      document.body.style.overflow = 'hidden';
+      lightboxPrev.style.display = photoArray.length > 1 ? 'block' : 'none';
+      lightboxNext.style.display = photoArray.length > 1 ? 'block' : 'none';
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+    lightboxPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + photoArray.length) % photoArray.length;
+      lightboxImg.src = photoArray[currentIndex].src;
+    });
+
+    lightboxNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % photoArray.length;
+      lightboxImg.src = photoArray[currentIndex].src;
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.style.display === 'flex') {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft' && photoArray.length > 1) {
+          currentIndex = (currentIndex - 1 + photoArray.length) % photoArray.length;
+          lightboxImg.src = photoArray[currentIndex].src;
+        }
+        if (e.key === 'ArrowRight' && photoArray.length > 1) {
+          currentIndex = (currentIndex + 1) % photoArray.length;
+          lightboxImg.src = photoArray[currentIndex].src;
+        }
+      }
+    });
+  })();
+</script>
+
+<style>
+  .rp-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--size-xl) var(--size-m);
+  }
+
+  .rp-header {
+    margin-bottom: var(--size-xl);
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--color-text-light);
+    margin-bottom: var(--size-m);
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover {
+    color: var(--color-text);
+  }
+
+  .rp-title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+
+  .rp-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: var(--size-xl);
+    white-space: pre-wrap;
+  }
+
+  .rp-video-section {
+    margin-bottom: var(--size-xl);
+  }
+
+  .rp-video-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+
+  .rp-video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .rp-soundcloud-embed {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+
+  .rp-soundcloud-embed iframe {
+    display: block;
+  }
+
+  .rp-photos-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--size-l);
+    margin-top: var(--size-xl);
+  }
+
+  .rp-photo-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-s);
+  }
+
+  .rp-photo-wrapper {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #1a1a1a;
+    border: 1px solid var(--color-border);
+  }
+
+  .rp-photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .rp-photo-wrapper img:hover {
+    transform: scale(1.03);
+  }
+
+  .rp-photo-caption {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text-light);
+    margin: 0;
+    padding: 0 var(--size-xs, 0.25rem);
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    animation: zoom 0.3s;
+  }
+
+  @keyframes zoom {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1001;
+  }
+
+  .lightbox-close:hover { color: #bbb; }
+
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    font-size: 3rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    z-index: 1001;
+  }
+
+  .lightbox-prev:hover,
+  .lightbox-next:hover { background: rgba(255, 255, 255, 0.2); }
+
+  .lightbox-prev { left: 20px; }
+  .lightbox-next { right: 20px; }
+
+  @media (max-width: 768px) {
+    .rp-title { font-size: 2rem; }
+    .rp-description { font-size: 1rem; }
+    .rp-photos-section {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--size-m);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .rp-title { font-size: 1.5rem; }
+    .rp-photos-section {
+      grid-template-columns: 1fr;
+    }
+    .lightbox-prev, .lightbox-next {
+      font-size: 1.5rem;
+      padding: 0.5rem 0.75rem;
+    }
+    .lightbox-prev { left: 5px; }
+    .lightbox-next { right: 5px; }
+    .lightbox-close { font-size: 25px; top: 10px; right: 15px; }
+  }
+</style>
+
+{% else %}
+<div class="rp-container">
+  <p>Project not found.</p>
+  <a href="{{ backLink | default('/projects/research/') }}" class="back-link">{{ backLinkText | default('← Back to Research') }}</a>
+</div>
+{% endif %}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "[PLACEHOLDER] Example YouTube Video",
+    "type": "youtube",
+    "youtubeId": "dQw4w9WgXcQ",
+    "description": "[PLACEHOLDER] Description of this video. Can include credits, context, or programme notes."
+  },
+  {
+    "id": 2,
+    "title": "[PLACEHOLDER] Example SoundCloud Track",
+    "type": "soundcloud",
+    "soundcloudEmbedUrl": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1234567890&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+    "description": "[PLACEHOLDER] Description of this audio track. To update this embed, paste the SoundCloud share URL here (from the SoundCloud 'Share > Embed' option, take the value of the 'src' attribute of the iframe)."
+  },
+  {
+    "id": 3,
+    "title": "[PLACEHOLDER] Another YouTube Video",
+    "type": "youtube",
+    "youtubeId": "dQw4w9WgXcQ",
+    "description": ""
+  }
+]

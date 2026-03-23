@@ -1,0 +1,75 @@
+[
+  {
+    "id": "stele-gerard-grisey",
+    "title": "Stéle, Gérard Grisey",
+    "description": "[PLACEHOLDER] Gérard Grisey's Stéle (1995) is a work for two percussionists composed in memory of two friends who died young. The piece is structured around the idea of monuments — steles — inscribed with names and dates. Through the interplay of two marimba voices, Grisey explores a kind of musical archaeology: fragments of melody surface, are buried, and re-emerge transformed.\n\nThis interpretation investigates the sonic and spatial possibilities offered by the score, asking what it means to play 'in memory of' someone, and how the performer's body becomes itself a kind of monument in the act of performance.",
+    "video": {
+      "type": "youtube",
+      "youtubeId": "dQw4w9WgXcQ"
+    },
+    "photos": [
+      {
+        "url": "/assets/img/stele-gerard-grisey.jpg",
+        "caption": "[PLACEHOLDER] Performance documentation. The two marimba voices are positioned symmetrically on stage, reinforcing the duality at the heart of the piece."
+      },
+      {
+        "url": "/assets/img/Research_Lorenzo_.jpg",
+        "caption": "[PLACEHOLDER] Score detail showing Grisey's notation for the opening section."
+      },
+      {
+        "url": "/assets/img/globokar-oliveros.jpg"
+      }
+    ]
+  },
+  {
+    "id": "the-king-of-denmark-morton-feldman",
+    "title": "The King of Denmark, Morton Feldman",
+    "description": "[PLACEHOLDER] Morton Feldman's The King of Denmark (1964) is a landmark work in the solo percussion repertoire. Written for Max Neuhaus, it is one of the first pieces to prescribe playing with the fingers alone — no mallets — demanding an entirely different relationship between the performer's hands and the instruments.\n\nThis interpretation explores the intimate sonic world created by Feldman's rejection of traditional percussion technique. The piece becomes a meditation on touch, silence, and the fragile boundary between sound and noise.",
+    "video": {
+      "type": "youtube",
+      "youtubeId": "dQw4w9WgXcQ"
+    },
+    "photos": [
+      {
+        "url": "/assets/img/the-king-of-denmark-morton-feldman.jpg",
+        "caption": "[PLACEHOLDER] Setup for The King of Denmark. The performer uses only the fingers and hands directly on the instruments — no mallets."
+      },
+      {
+        "url": "/assets/img/Research_Lorenzo_.jpg"
+      }
+    ]
+  },
+  {
+    "id": "various-circle1",
+    "title": "[PLACEHOLDER] Circle 1 Title",
+    "description": "[PLACEHOLDER] Description of this project. This section can contain several paragraphs of text describing the work, its context, the artistic approach, and any relevant background information.\n\nA second paragraph can continue the description, providing further depth or documentation notes.",
+    "video": {
+      "type": "youtube",
+      "youtubeId": "dQw4w9WgXcQ"
+    },
+    "photos": [
+      {
+        "url": "/assets/img/various_cover.png",
+        "caption": "[PLACEHOLDER] Caption / description for this image. Can be used as an extended note, a credit, or contextual information."
+      },
+      {
+        "url": "/assets/img/Research_Lorenzo_.jpg"
+      }
+    ]
+  },
+  {
+    "id": "various-circle2",
+    "title": "[PLACEHOLDER] Circle 2 Title",
+    "description": "[PLACEHOLDER] Description of this project. This section can contain several paragraphs of text describing the work, its context, the artistic approach, and any relevant background information.\n\nA second paragraph can continue the description.",
+    "video": {
+      "type": "soundcloud",
+      "soundcloudEmbedUrl": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1234567890&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+    },
+    "photos": [
+      {
+        "url": "/assets/img/various_cover.png",
+        "caption": "[PLACEHOLDER] This example uses a SoundCloud embed for the main media, demonstrating that both YouTube and SoundCloud are supported."
+      }
+    ]
+  }
+]
