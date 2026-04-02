@@ -43,7 +43,7 @@ layout: "layouts/base.njk"
       </div>
 
       {% if item.description and item.description.trim() %}
-      <p class="vm-item-description">{{ item.description }}</p>
+      <div class="vm-item-description">{{ item.description | md | safe }}</div>
       {% endif %}
     </article>
     {% endfor %}

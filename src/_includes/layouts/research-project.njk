@@ -18,7 +18,7 @@ layout: "layouts/base.njk"
 
   {% if project.description %}
   <div class="rp-description">
-    {{ project.description | replace('\n', '<br>') | safe }}
+    {{ project.description | md | safe }}
   </div>
   {% endif %}
 

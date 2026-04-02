@@ -26,7 +26,7 @@ keywords: "Lorenzo Orsenigo events, concerts, performances, artistic events, upc
                                 <h3 class="event-title">{{ event.name }}</h3>
                                 <p class="event-location">{{ event.location }}</p>
                                 {% if event.description %}
-                                    <p class="event-description">{{ event.description }}</p>
+                                    <div class="event-description">{{ event.description | md | safe }}</div>
                                 {% endif %}
                                 <div class="event-links">
                                     {% if event.eventUrl %}
@@ -61,7 +61,7 @@ keywords: "Lorenzo Orsenigo events, concerts, performances, artistic events, upc
                                     <h3 class="event-title">{{ event.name }}</h3>
                                     <p class="event-location">{{ event.location }}</p>
                                     {% if event.description %}
-                                        <p class="event-description">{{ event.description }}</p>
+                                        <div class="event-description">{{ event.description | md | safe }}</div>
                                     {% endif %}
                                     {% if event.eventUrl %}
                                         <div class="event-links">
