@@ -1,4 +1,5 @@
 const Image = require("@11ty/eleventy-img");
+const markdownIt = require("markdown-it")();
 
 async function imageShortcode(src, alt, sizes = "100vw") {
   if (!src) return "";
@@ -26,6 +27,12 @@ async function imageShortcode(src, alt, sizes = "100vw") {
 }
 
 module.exports = function (eleventyConfig) {
+  // Add markdown filter
+  eleventyConfig.addFilter("md", function (content) {
+    if (!content) return "";
+    return markdownIt.render(content);
+  });
+
   // Add image shortcode
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 

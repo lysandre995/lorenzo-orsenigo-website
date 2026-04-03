@@ -21,6 +21,10 @@ layout: "layouts/base.njk"
       </a>
     {% endfor %}
   </div>
+
+  <div class="grid-footer">
+    <a href="/projects/research/globokar-oliveros-info/" class="info-link">Click here for more info</a>
+  </div>
 </div>
 
 <script>
@@ -165,6 +169,45 @@ layout: "layouts/base.njk"
     padding: 1rem;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
     font-weight: 500;
+  }
+
+  .grid-footer {
+    text-align: center;
+    margin-top: var(--size-xxl);
+    padding: var(--size-xl) 0;
+  }
+
+  .info-link {
+    display: inline-block;
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 4px;
+  }
+
+  .info-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-text-light);
+    transform: scaleX(0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .info-link:hover {
+    color: var(--color-text);
+  }
+
+  .info-link:hover::after {
+    transform: scaleX(1);
+    background-color: var(--color-text);
   }
 
   /* Responsive adjustments */

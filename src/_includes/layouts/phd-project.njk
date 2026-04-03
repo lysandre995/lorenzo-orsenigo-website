@@ -18,7 +18,7 @@ layout: "layouts/base.njk"
 
   {% if project.description %}
   <div class="project-description">
-    {{ project.description | replace('\n', '<br>') | safe }}
+    {{ project.description | md | safe }}
   </div>
   {% endif %}
 
@@ -87,7 +87,7 @@ layout: "layouts/base.njk"
 
   {% if project.bottomText %}
   <div class="bottom-text-section">
-    {{ project.bottomText | replace('\n', '<br>') | safe }}
+    {{ project.bottomText | md | safe }}
   </div>
   {% endif %}
 </div>

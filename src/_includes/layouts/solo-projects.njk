@@ -21,7 +21,7 @@ layout: "layouts/base.njk"
             </div>
           </div>
           {% if project.description and project.description.trim() %}
-            <p class="solo-project-description">{{ project.description }}</p>
+            <div class="solo-project-description">{{ project.description | md | safe }}</div>
           {% endif %}
         </article>
       {% endfor %}
