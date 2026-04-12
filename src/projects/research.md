@@ -1,5 +1,5 @@
 ---
 layout: "layouts/project-landing.njk"
-title: "Research Projects"
+title: "Artistic Hacking - A Creative, Practice-based Approach to Performance"
 dataSource: "researchProjects"
 ---
