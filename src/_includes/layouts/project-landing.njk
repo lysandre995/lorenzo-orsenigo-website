@@ -61,9 +61,30 @@ layout: "layouts/base.njk"
       {% endfor %}
     {% endif %}
   </div>
+
+  {% if dataSource == 'researchProjects' %}
+  <div class="research-disclaimer">
+    <p><strong>Disclaimer:</strong> The content presented on this section of the website has been developed within the framework of artistic and academic research activities. All materials are published exclusively for research, educational, documentation, and critical discourse purposes. The website and its contents are not intended for commercial use, commercial exploitation, or profit-generating activities.</p>
+  </div>
+  {% endif %}
 </div>
 
 <style>
+  .research-disclaimer {
+    max-width: 720px;
+    margin: var(--size-xxl) auto 0;
+    padding: var(--size-l);
+    border-top: 1px solid var(--color-border);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+    text-align: center;
+  }
+
+  .research-disclaimer strong {
+    color: var(--color-text);
+  }
+
   .project-landing-container {
     padding: var(--size-xl) var(--size-m);
     min-height: 80vh;

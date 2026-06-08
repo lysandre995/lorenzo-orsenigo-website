@@ -1,0 +1,158 @@
+---
+layout: "layouts/base.njk"
+---
+
+<div class="pranulyte-grid-container">
+  {% if title %}
+  <h1 class="page-title">{{ title }}</h1>
+  {% endif %}
+
+  {% if subtitle %}
+  <p class="page-subtitle">{{ subtitle }}</p>
+  {% endif %}
+
+  <div class="pranulyte-circles-grid">
+    {% for project in pranuyteProjects %}
+      <a href="/projects/research/meow-mouth-juta-pranulyte/{{ project.id }}" class="pranulyte-circle-link">
+        <div class="pranulyte-circle-inner" style="background-image: url('{{ project.pictureUrl }}');">
+          <div class="pranulyte-circle-overlay"></div>
+          <span class="pranulyte-circle-title">{{ project.name }}</span>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% include "components/disclaimer-modal.njk" %}
+
+<script>
+  (function() {
+    const grid = document.querySelector('.pranulyte-circles-grid');
+    if (!grid) return;
+
+    const items = Array.from(grid.querySelectorAll('.pranulyte-circle-link'));
+
+    function shuffle(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    shuffle(items).forEach(item => grid.appendChild(item));
+  })();
+</script>
+
+<style>
+  .pranulyte-grid-container {
+    padding: var(--size-xl) var(--size-m);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .page-title {
+    text-align: center;
+    margin-bottom: var(--size-m);
+    font-weight: normal;
+    font-size: 2.5rem;
+  }
+
+  .page-subtitle {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--size-xl);
+    color: var(--color-text-light);
+    line-height: 1.6;
+  }
+
+  .pranulyte-circles-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--size-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .pranulyte-circle-link {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .pranulyte-circle-link:hover {
+    transform: scale(1.05);
+  }
+
+  .pranulyte-circle-inner {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    position: relative;
+  }
+
+  .pranulyte-circle-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    transition: background 0.3s;
+  }
+
+  .pranulyte-circle-link:hover .pranulyte-circle-overlay {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .pranulyte-circle-title {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: var(--size-m);
+    text-align: center;
+    padding: var(--size-s);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2rem;
+    }
+
+    .pranulyte-circle-link {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .page-title {
+      font-size: 1.5rem;
+    }
+
+    .pranulyte-circles-grid {
+      gap: var(--size-l);
+    }
+
+    .pranulyte-circle-link {
+      width: 150px;
+      height: 150px;
+    }
+
+    .pranulyte-circle-title {
+      font-size: 0.85rem;
+    }
+  }
+</style>

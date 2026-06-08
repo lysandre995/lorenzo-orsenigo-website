@@ -3,7 +3,7 @@ layout: "layouts/base.njk"
 ---
 
 {% set project = null %}
-{% for p in globokarProjects %}
+{% for p in pranuyteProjects %}
   {% if p.id == projectId %}
     {% set project = p %}
   {% endif %}
@@ -12,7 +12,7 @@ layout: "layouts/base.njk"
 {% if project %}
 <div class="phd-project-container">
   <div class="project-header">
-    <a href="/projects/research/globokar-oliveros" class="back-link">← Back to Globokar-Oliveros</a>
+    <a href="/projects/research/meow-mouth-juta-pranulyte/" class="back-link">← Back to Meow-Mouth</a>
     <h1 class="project-title">{{ project.title }}</h1>
   </div>
 
@@ -92,14 +92,14 @@ layout: "layouts/base.njk"
   {% endif %}
 </div>
 
-{% include "components/disclaimer-modal.njk" %}
-
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>
   <img class="lightbox-content" id="lightbox-img" alt="">
   <button class="lightbox-prev" aria-label="Previous image">‹</button>
   <button class="lightbox-next" aria-label="Next image">›</button>
 </div>
+
+{% include "components/disclaimer-modal.njk" %}
 
 <script>
   (function() {
@@ -115,7 +115,6 @@ layout: "layouts/base.njk"
 
     let currentSlide = 0;
 
-    // Create indicators
     slides.forEach((_, index) => {
       const dot = document.createElement('button');
       dot.classList.add('carousel-indicator');
@@ -141,29 +140,23 @@ layout: "layouts/base.njk"
       updateSlides();
     }
 
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      updateSlides();
-    }
-
-    function prevSlide() {
+    prevBtn.addEventListener('click', () => {
       currentSlide = (currentSlide - 1 + slides.length) % slides.length;
       updateSlides();
-    }
+    });
+    nextBtn.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlides();
+    });
 
-    prevBtn.addEventListener('click', prevSlide);
-    nextBtn.addEventListener('click', nextSlide);
-
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') prevSlide();
-      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') { currentSlide = (currentSlide - 1 + slides.length) % slides.length; updateSlides(); }
+      if (e.key === 'ArrowRight') { currentSlide = (currentSlide + 1) % slides.length; updateSlides(); }
     });
 
     updateSlides();
   })();
 
-  // Lightbox functionality
   (function() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -177,68 +170,43 @@ layout: "layouts/base.njk"
     let currentImageIndex = 0;
     const imageArray = Array.from(bottomImages);
 
-    // Open lightbox on image click
     bottomImages.forEach((img, index) => {
       img.style.cursor = 'pointer';
       img.addEventListener('click', () => {
         currentImageIndex = index;
-        openLightbox(img.src);
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        document.body.style.overflow = 'hidden';
+        lightboxPrev.style.display = imageArray.length > 1 ? 'block' : 'none';
+        lightboxNext.style.display = imageArray.length > 1 ? 'block' : 'none';
       });
     });
 
-    function openLightbox(src) {
-      lightbox.style.display = 'flex';
-      lightboxImg.src = src;
-      document.body.style.overflow = 'hidden';
-
-      // Show/hide navigation buttons for single image
-      if (imageArray.length === 1) {
-        lightboxPrev.style.display = 'none';
-        lightboxNext.style.display = 'none';
-      } else {
-        lightboxPrev.style.display = 'block';
-        lightboxNext.style.display = 'block';
-      }
-    }
-
     function closeLightbox() {
       lightbox.style.display = 'none';
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = '';
     }
 
-    function showNextImage() {
-      currentImageIndex = (currentImageIndex + 1) % imageArray.length;
-      lightboxImg.src = imageArray[currentImageIndex].src;
-    }
-
-    function showPrevImage() {
-      currentImageIndex = (currentImageIndex - 1 + imageArray.length) % imageArray.length;
-      lightboxImg.src = imageArray[currentImageIndex].src;
-    }
-
-    // Close lightbox
     lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 
-    // Navigation
     lightboxPrev.addEventListener('click', (e) => {
       e.stopPropagation();
-      showPrevImage();
+      currentImageIndex = (currentImageIndex - 1 + imageArray.length) % imageArray.length;
+      lightboxImg.src = imageArray[currentImageIndex].src;
     });
 
     lightboxNext.addEventListener('click', (e) => {
       e.stopPropagation();
-      showNextImage();
+      currentImageIndex = (currentImageIndex + 1) % imageArray.length;
+      lightboxImg.src = imageArray[currentImageIndex].src;
     });
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
       if (lightbox.style.display === 'flex') {
         if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft' && imageArray.length > 1) showPrevImage();
-        if (e.key === 'ArrowRight' && imageArray.length > 1) showNextImage();
+        if (e.key === 'ArrowLeft' && imageArray.length > 1) { currentImageIndex = (currentImageIndex - 1 + imageArray.length) % imageArray.length; lightboxImg.src = imageArray[currentImageIndex].src; }
+        if (e.key === 'ArrowRight' && imageArray.length > 1) { currentImageIndex = (currentImageIndex + 1) % imageArray.length; lightboxImg.src = imageArray[currentImageIndex].src; }
       }
     });
   })();
@@ -319,7 +287,7 @@ layout: "layouts/base.njk"
   .video-embed {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
   }
 
   .video-embed iframe {
@@ -359,13 +327,8 @@ layout: "layouts/base.njk"
     background: rgba(0, 0, 0, 0.9);
   }
 
-  .carousel-prev {
-    left: 0;
-  }
-
-  .carousel-next {
-    right: 0;
-  }
+  .carousel-prev { left: 0; }
+  .carousel-next { right: 0; }
 
   .carousel-indicators {
     display: flex;
@@ -389,7 +352,6 @@ layout: "layouts/base.njk"
     background: var(--color-text);
   }
 
-  /* Bottom Images Section */
   .bottom-images-section {
     margin-top: var(--size-xl);
   }
@@ -440,7 +402,6 @@ layout: "layouts/base.njk"
     transform: scale(1.05);
   }
 
-  /* Bottom Text Section */
   .bottom-text-section {
     margin-top: var(--size-xl);
     font-size: 1.05rem;
@@ -452,7 +413,6 @@ layout: "layouts/base.njk"
     border-radius: 4px;
   }
 
-  /* Lightbox */
   .lightbox {
     display: none;
     position: fixed;
@@ -474,14 +434,8 @@ layout: "layouts/base.njk"
   }
 
   @keyframes zoom {
-    from {
-      transform: scale(0.8);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
   }
 
   .lightbox-close {
@@ -496,9 +450,7 @@ layout: "layouts/base.njk"
     z-index: 1001;
   }
 
-  .lightbox-close:hover {
-    color: #bbb;
-  }
+  .lightbox-close:hover { color: #bbb; }
 
   .lightbox-prev,
   .lightbox-next {
@@ -516,123 +468,40 @@ layout: "layouts/base.njk"
   }
 
   .lightbox-prev:hover,
-  .lightbox-next:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
+  .lightbox-next:hover { background: rgba(255, 255, 255, 0.2); }
 
-  .lightbox-prev {
-    left: 20px;
-  }
-
-  .lightbox-next {
-    right: 20px;
-  }
+  .lightbox-prev { left: 20px; }
+  .lightbox-next { right: 20px; }
 
   @media (max-width: 768px) {
-    .project-title {
-      font-size: 2rem;
-    }
-
-    .project-description {
-      font-size: 1rem;
-    }
-
-    .carousel-slides {
-      min-height: 300px;
-    }
-
-    .carousel-slide {
-      padding: 1rem;
-    }
-
-    .carousel-prev,
-    .carousel-next {
-      font-size: 2rem;
-      padding: 0.5rem 1rem;
-    }
-
-    .bottom-image-single {
-      max-width: 85%;
-    }
-
-    .image-collage {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: var(--size-s);
-    }
-
-    .bottom-text-section {
-      font-size: 1rem;
-      padding: var(--size-m);
-    }
-
-    .lightbox-prev,
-    .lightbox-next {
-      font-size: 2rem;
-      padding: 0.5rem 1rem;
-    }
-
-    .lightbox-close {
-      font-size: 30px;
-      top: 10px;
-      right: 15px;
-    }
+    .project-title { font-size: 2rem; }
+    .project-description { font-size: 1rem; }
+    .carousel-slides { min-height: 300px; }
+    .carousel-slide { padding: 1rem; }
+    .carousel-prev, .carousel-next { font-size: 2rem; padding: 0.5rem 1rem; }
+    .bottom-image-single { max-width: 85%; }
+    .image-collage { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--size-s); }
+    .bottom-text-section { font-size: 1rem; padding: var(--size-m); }
+    .lightbox-prev, .lightbox-next { font-size: 2rem; padding: 0.5rem 1rem; }
+    .lightbox-close { font-size: 30px; top: 10px; right: 15px; }
   }
 
   @media (max-width: 480px) {
-    .project-title {
-      font-size: 1.5rem;
-    }
-
-    .carousel-slides {
-      min-height: 250px;
-    }
-
-    .carousel-prev,
-    .carousel-next {
-      font-size: 1.5rem;
-      padding: 0.5rem 0.75rem;
-    }
-
-    .bottom-image-single {
-      max-width: 95%;
-    }
-
-    .image-collage {
-      grid-template-columns: 1fr;
-      gap: var(--size-s);
-    }
-
-    .bottom-text-section {
-      font-size: 0.95rem;
-      padding: var(--size-s);
-    }
-
-    .lightbox-prev,
-    .lightbox-next {
-      font-size: 1.5rem;
-      padding: 0.5rem 0.75rem;
-      left: 5px;
-    }
-
-    .lightbox-next {
-      right: 5px;
-    }
-
-    .lightbox-close {
-      font-size: 25px;
-      top: 5px;
-      right: 10px;
-    }
-
-    .lightbox-content {
-      max-width: 95%;
-      max-height: 85%;
-    }
+    .project-title { font-size: 1.5rem; }
+    .carousel-slides { min-height: 250px; }
+    .carousel-prev, .carousel-next { font-size: 1.5rem; padding: 0.5rem 0.75rem; }
+    .bottom-image-single { max-width: 95%; }
+    .image-collage { grid-template-columns: 1fr; gap: var(--size-s); }
+    .bottom-text-section { font-size: 0.95rem; padding: var(--size-s); }
+    .lightbox-prev { left: 5px; }
+    .lightbox-next { right: 5px; font-size: 1.5rem; padding: 0.5rem 0.75rem; }
+    .lightbox-close { font-size: 25px; top: 5px; right: 10px; }
+    .lightbox-content { max-width: 95%; max-height: 85%; }
   }
 </style>
 {% else %}
 <div class="phd-project-container">
   <p>Project not found.</p>
-  <a href="/projects/research/globokar-oliveros">← Back to Globokar-Oliveros</a>
+  <a href="/projects/research/meow-mouth-juta-pranulyte/" class="back-link">← Back to Meow-Mouth</a>
 </div>
 {% endif %}
