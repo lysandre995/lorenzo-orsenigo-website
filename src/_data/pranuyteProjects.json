@@ -1,7 +1,7 @@
 [
   {
     "id": "p1",
-    "pictureUrl": "/assets/img/meow-mouth-juta-pranulyte.png",
+    "pictureUrl": "assets/img/Research_Pranulyte/Juta_1_A.png",
     "name": "Work 1",
     "title": "Work 1",
     "description": "",
@@ -11,7 +11,7 @@
   },
   {
     "id": "p2",
-    "pictureUrl": "/assets/img/meow-mouth-juta-pranulyte.png",
+    "pictureUrl": "/assets/img/Research_Pranulyte/Juta_2.png",
     "name": "Work 2",
     "title": "Work 2",
     "description": "",
@@ -31,7 +31,7 @@
   },
   {
     "id": "p4",
-    "pictureUrl": "/assets/img/meow-mouth-juta-pranulyte.png",
+    "pictureUrl": "/assets/img/Research_Pranulyte/Juta_4.png",
     "name": "Work 4",
     "title": "Work 4",
     "description": "",
