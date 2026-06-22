@@ -1,21 +1,35 @@
 [
   {
     "id": "p1",
-    "pictureUrl": "assets/img/Research_Pranulyte/Juta_1_A.png",
-    "name": "Work 1",
-    "title": "Work 1",
+    "pictureUrl": "/assets/img/Research_Pranulyte/Juta_1_A.png",
+    "name": "I. Deep Weep",
+    "title": "I. Deep Weep - Distance",
     "description": "",
-    "carouselItems": [],
+    "carouselItems": [
+      {
+        "type": "youtube",
+        "src": "SrL8H0BG6q4"
+      },
+      {
+        "type": "youtube",
+        "src": "mDqX-egJzVE"
+      }
+    ],
     "bottomImages": [],
     "bottomText": ""
   },
   {
     "id": "p2",
     "pictureUrl": "/assets/img/Research_Pranulyte/Juta_2.png",
-    "name": "Work 2",
-    "title": "Work 2",
+    "name": "II. E-Guitars",
+    "title": "II- E-Guitars - On an Inhabited Planet",
     "description": "",
-    "carouselItems": [],
+    "carouselItems": [
+      {
+        "type": "youtube",
+        "src": ""
+      }
+    ],
     "bottomImages": [],
     "bottomText": ""
   },
@@ -25,17 +39,27 @@
     "name": "Work 3",
     "title": "Work 3",
     "description": "",
-    "carouselItems": [],
+    "carouselItems": [
+      {
+        "type": "youtube",
+        "src": ""
+      }
+    ],
     "bottomImages": [],
     "bottomText": ""
   },
   {
     "id": "p4",
     "pictureUrl": "/assets/img/Research_Pranulyte/Juta_4.png",
-    "name": "Work 4",
-    "title": "Work 4",
+    "name": "IV. Out of Breath",
+    "title": "IV. Out of Breath - I Don't Know What to Do, Therefore I Scream!",
     "description": "",
-    "carouselItems": [],
+    "carouselItems": [
+      {
+        "type": "youtube",
+        "src": "o3A18f9JB0g"
+      }
+    ],
     "bottomImages": [],
     "bottomText": ""
   }
