@@ -128,7 +128,12 @@
 
   
   <div class="project-description">
-    Vinko Globokar's F.3 consists of a combination of vocal gestures (p, k, d, g, t), body scratching and body percussion (on the chest and stomach).<br>Pauline Oliveros' VIII - Environmental Dialogue invites the audience to find their own space (either indoors or outdoors) and to amplify, i.e. strengthen or sustain, the (pitch of the) surrounding sound sources.<br><br>In this fragment I conducted a group meditation. The audience was first guided through Oliveros' steps for beginning a meditation. Then, to create a specific soundscape from which the audience could choose sounds to amplify, a pre-recorded tape (with sounds from Globokar's fragment) was played through speakers. In the video you can see the whole meditation-performance, which took place at the Theater im Palais (KUG), Graz, as part of the festival ARTikulationen on 04.10.2024.<br><br>Lorenzo Orsenigo - concept and performance.<br>Benedikt Alphart - audio/video recording and editing
+    <p>Vinko Globokar's F.3 consists of a combination of vocal gestures (p, k, d, g, t), body scratching and body percussion (on the chest and stomach).
+Pauline Oliveros' VIII - Environmental Dialogue invites the audience to find their own space (either indoors or outdoors) and to amplify, i.e. strengthen or sustain, the (pitch of the) surrounding sound sources.</p>
+<p>In this fragment I conducted a group meditation. The audience was first guided through Oliveros' steps for beginning a meditation. Then, to create a specific soundscape from which the audience could choose sounds to amplify, a pre-recorded tape (with sounds from Globokar's fragment) was played through speakers. In the video you can see the whole meditation-performance, which took place at the Theater im Palais (KUG), Graz, as part of the festival ARTikulationen on 04.10.2024.</p>
+<p>Lorenzo Orsenigo - concept and performance.
+Benedikt Alphart - audio/video recording and editing</p>
+
   </div>
   
 
@@ -171,10 +176,128 @@
 
   
   <div class="bottom-text-section">
-    This documentation presents the Globokar-Oliveros pairing.
+    <p>This documentation presents the Globokar-Oliveros pairing.</p>
+
   </div>
   
 </div>
+
+<div class="disclaimer-btn-wrapper">
+  <button class="disclaimer-btn" id="disclaimer-open-btn">Disclaimer</button>
+</div>
+
+<div id="disclaimer-modal" class="disclaimer-modal" style="display:none" role="dialog" aria-modal="true" aria-label="Disclaimer">
+  <div class="disclaimer-modal-content">
+    <button class="disclaimer-modal-close" id="disclaimer-close-btn" aria-label="Close disclaimer">&times;</button>
+    <p class="disclaimer-modal-text">
+      The content presented on this section of the website has been developed within the framework of artistic and academic research activities. All materials are published exclusively for research, educational, documentation, and critical discourse purposes. The website and its contents are not intended for commercial use, commercial exploitation, or profit-generating activities.
+    </p>
+  </div>
+</div>
+
+<style>
+  .disclaimer-btn-wrapper {
+    text-align: center;
+    padding: var(--size-xl) 0 var(--size-m);
+  }
+
+  .disclaimer-btn {
+    background: none;
+    border: 1px solid var(--color-text-light);
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+    padding: 0.4rem 1.2rem;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: inherit;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .disclaimer-btn:hover {
+    color: var(--color-text);
+    border-color: var(--color-text);
+  }
+
+  .disclaimer-modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    padding: var(--size-m);
+    box-sizing: border-box;
+  }
+
+  .disclaimer-modal-content {
+    background: #111;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    max-width: 620px;
+    width: 100%;
+    padding: var(--size-xl);
+    position: relative;
+  }
+
+  .disclaimer-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    font-family: inherit;
+    transition: color 0.2s;
+  }
+
+  .disclaimer-modal-close:hover {
+    color: var(--color-text);
+  }
+
+  .disclaimer-modal-text {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin: 0;
+    padding-right: var(--size-m);
+  }
+</style>
+
+<script>
+  (function() {
+    const modal = document.getElementById('disclaimer-modal');
+    const openBtn = document.getElementById('disclaimer-open-btn');
+    const closeBtn = document.getElementById('disclaimer-close-btn');
+    if (!modal || !openBtn) return;
+
+    openBtn.addEventListener('click', function() {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+    });
+  })();
+</script>
+
 
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>

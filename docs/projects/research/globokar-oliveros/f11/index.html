@@ -128,7 +128,12 @@
 
   
   <div class="project-description">
-    Vinko Globokar's F.11 consists of René Char's sentence "J'ai lu récemment cette phrase: l'histoire des hommes est la longue succession des synonymes d'un même vocable. Y contredire est un devoir".<br>Pauline Oliveros' XII - One Word invites us to choose a word, listen to it mentally, and speak it out increasing the speed with each repetition until we reach the maximum possible speed - then, the process could be reversed.<br><br>In this fragment, I chose Char's sentence as the 'word' that Oliveros mentions in her meditation. First, I translated Char's sentence into three different languages (Italian, English and German). Then, I recorded each translation (plus the original French version) by speaking the sentences from very slow to very fast, and back to very slow. Finally, I superimposed the four recordings.<br><br>This fragment was recorded at KWDS, Graz, on 19/03/2024.<br><br>If you would like to contribute to the expansion of this fragment, feel free to translate Char's sentence into your own language(s), record it and send it to me (info@lorenzoorsenigo.com) so that I can learn from your pronunciation and then perform Oliveros' XII. If you like, you can also perform Oliveros' meditation on your own as described above, record it and send it to me. I will add your contribution to the main track and send you the latest update including your recording(s).
+    <p>Vinko Globokar's F.11 consists of René Char's sentence &quot;J'ai lu récemment cette phrase: l'histoire des hommes est la longue succession des synonymes d'un même vocable. Y contredire est un devoir&quot;.
+Pauline Oliveros' XII - One Word invites us to choose a word, listen to it mentally, and speak it out increasing the speed with each repetition until we reach the maximum possible speed - then, the process could be reversed.</p>
+<p>In this fragment, I chose Char's sentence as the 'word' that Oliveros mentions in her meditation. First, I translated Char's sentence into three different languages (Italian, English and German). Then, I recorded each translation (plus the original French version) by speaking the sentences from very slow to very fast, and back to very slow. Finally, I superimposed the four recordings.</p>
+<p>This fragment was recorded at KWDS, Graz, on 19/03/2024.</p>
+<p>If you would like to contribute to the expansion of this fragment, feel free to translate Char's sentence into your own language(s), record it and send it to me (info@lorenzoorsenigo.com) so that I can learn from your pronunciation and then perform Oliveros' XII. If you like, you can also perform Oliveros' meditation on your own as described above, record it and send it to me. I will add your contribution to the main track and send you the latest update including your recording(s).</p>
+
   </div>
   
 
@@ -177,10 +182,128 @@
 
   
   <div class="bottom-text-section">
-    This documentation presents the Globokar-Oliveros pairing (1) as well as the translations (English, German and Italian( of Rene Char's text (2) I used.
+    <p>This documentation presents the Globokar-Oliveros pairing (1) as well as the translations (English, German and Italian( of Rene Char's text (2) I used.</p>
+
   </div>
   
 </div>
+
+<div class="disclaimer-btn-wrapper">
+  <button class="disclaimer-btn" id="disclaimer-open-btn">Disclaimer</button>
+</div>
+
+<div id="disclaimer-modal" class="disclaimer-modal" style="display:none" role="dialog" aria-modal="true" aria-label="Disclaimer">
+  <div class="disclaimer-modal-content">
+    <button class="disclaimer-modal-close" id="disclaimer-close-btn" aria-label="Close disclaimer">&times;</button>
+    <p class="disclaimer-modal-text">
+      The content presented on this section of the website has been developed within the framework of artistic and academic research activities. All materials are published exclusively for research, educational, documentation, and critical discourse purposes. The website and its contents are not intended for commercial use, commercial exploitation, or profit-generating activities.
+    </p>
+  </div>
+</div>
+
+<style>
+  .disclaimer-btn-wrapper {
+    text-align: center;
+    padding: var(--size-xl) 0 var(--size-m);
+  }
+
+  .disclaimer-btn {
+    background: none;
+    border: 1px solid var(--color-text-light);
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+    padding: 0.4rem 1.2rem;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: inherit;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .disclaimer-btn:hover {
+    color: var(--color-text);
+    border-color: var(--color-text);
+  }
+
+  .disclaimer-modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    padding: var(--size-m);
+    box-sizing: border-box;
+  }
+
+  .disclaimer-modal-content {
+    background: #111;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    max-width: 620px;
+    width: 100%;
+    padding: var(--size-xl);
+    position: relative;
+  }
+
+  .disclaimer-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    font-family: inherit;
+    transition: color 0.2s;
+  }
+
+  .disclaimer-modal-close:hover {
+    color: var(--color-text);
+  }
+
+  .disclaimer-modal-text {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin: 0;
+    padding-right: var(--size-m);
+  }
+</style>
+
+<script>
+  (function() {
+    const modal = document.getElementById('disclaimer-modal');
+    const openBtn = document.getElementById('disclaimer-open-btn');
+    const closeBtn = document.getElementById('disclaimer-close-btn');
+    if (!modal || !openBtn) return;
+
+    openBtn.addEventListener('click', function() {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+
+    function closeModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+    });
+  })();
+</script>
+
 
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>
