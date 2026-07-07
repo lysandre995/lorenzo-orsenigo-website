@@ -41,8 +41,16 @@
     "description": "The third movement follows a similar interpretive direction to the first—feedback understood as a network of relationships—but pursues it differently. Rather than making relationships visible from the outside, I became interested in the possibility of collapsing the distance between listener and network entirely. My interpretation took the form of an interactive installation. A thunder sheet—one of the same thunder sheets used in my recordings of the piece—hangs from a stand, with a transducer attached to its surface playing back my recording of the movement at a deliberately low volume. The sound does not project strongly into the air, but it sets the metal itself into vibration, transforming the object into a resonant surface. The audience is given a stethoscope and invited to press it against the surface at different points, discovering that the sheet does not sound the same everywhere—that it has its own acoustic geography, and that listening from within the vibration is a different experience from listening to it from outside. During the development I also experimented with teeth conduction—transmitting vibration through a wooden or glass object held between the teeth—and with a Pinard horn, the wooden instrument traditionally used by midwives to listen to a foetal heartbeat. Both offered compelling modes of contact but raised practical concerns: the need for higher playback volumes, hygiene issues with shared objects, and the risk that too many tools would turn the installation into a demonstration of techniques rather than keeping the encounter between audience and surface itself at the centre.",
     "carouselItems": [
       {
-        "type": "youtube",
-        "src": ""
+        "type": "image",
+        "src": "/assets/img/Research_Pranulyte/Juta_3_1.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/assets/img/Research_Pranulyte/Juta_3_2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/assets/img/Research_Pranulyte/Juta_3_3.jpg"
       }
     ],
     "bottomImages": [],
