@@ -27,7 +27,7 @@
     "carouselItems": [
       {
         "type": "youtube",
-        "src": "BQ9OngofHgM"
+        "src": "GoBfJIQqDVE"
       }
     ],
     "bottomImages": [],
@@ -51,6 +51,10 @@
       {
         "type": "image",
         "src": "/assets/img/Research_Pranulyte/Juta_3_3.jpg"
+      },
+      {
+        "type": "youtube",
+        "src": "82zXgS_7ez8"
       }
     ],
     "bottomImages": [],
