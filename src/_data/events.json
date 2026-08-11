@@ -333,5 +333,14 @@
         "eventUrl": "https://aec-music.eu/event/european-platform-for-artistic-research-in-music-eparm-2026/programme",
         "description": "Presentation: Artistic Hacking as transformative encounter. Interpretation, Collapse, Co-Creation, and Relational Responsibility - Orsenigo, Lorenzo ",
         "coverUrl": "https://aec-music.eu/media/2021/02/aec-logo.png"
+    },
+    {
+        "id": 37,
+        "name": "LOG BOOK - François Sarhan, with Lizard Ensemble",
+        "date": "2026-08-28T18:00",
+        "location": "HP23, Linz",
+        "eventUrl": "https://www.ignm.at/post/log-book",
+        "description": " LOG BOOK ist ein Kartenspiel des Komponisten François Sarhan mit 80 wundervoll gestalteten Motivkarten und einer ebenso umfangreichen musikalischen Sammlung. Im Spiel wird versucht, der erklingenden Musik Bilder zuzuordnen und die anderen kreativ von der eigenen Wahl zu überzeugen. Ein wunderbarer Startpunkt, sich über Musik auszutauschen und die Spielpartner*innen kennenzulernen. Das Publikum wird durch eine Live-Performance des Komponisten selbst sowie des Lizard Ensembles und Anselma Schneider in die Geschichte eingeführt. Im Anschluss sind die Besucherinnen und Besucher eingeladen, das Kartenspiel in Gruppen auszuprobieren.",
+        "coverUrl": "https://aec-music.eu/media/2021/02/aec-logo.png"
     }
 ]
