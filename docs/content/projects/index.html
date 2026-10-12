@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <meta name="description" content="Composer &amp; Researcher">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="site-header">
+      <div class="site-logo">
+        <a href="/">Lorenzo</a>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/bio/">Bio</a></li>
+          <li><a href="/events/">Events</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/research/">Research</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      
+<div class="project-landing-container">
+  
+  <h1 class="page-title">Projects</h1>
+  
+
+  <div class="circles-grid">
+    
+    
+    
+    
+      
+        <a href="/projects/research/" class="circle-link">
+          <div class="circle-inner" style="background-image: url('https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80');">
+            <span class="circle-title">The Research</span>
+          </div>
+        </a>
+      
+        <a href="/projects/orchestral/" class="circle-link">
+          <div class="circle-inner" style="background-image: url('https://images.unsplash.com/photo-1507838153414-b4b713384ebd?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80');">
+            <span class="circle-title">Orchestral Works</span>
+          </div>
+        </a>
+      
+        <a href="/projects/installations/" class="circle-link">
+          <div class="circle-inner" style="background-image: url('https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80');">
+            <span class="circle-title">Installations</span>
+          </div>
+        </a>
+      
+    
+    
+    
+  </div>
+</div>
+
+<style>
+  .project-landing-container {
+    padding: var(--size-xl) var(--size-m);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .page-title {
+    text-align: center;
+    margin-bottom: var(--size-xl);
+    font-weight: normal;
+  }
+
+  .circles-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--size-xl);
+  }
+
+  .circle-link {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .circle-link:hover {
+    transform: scale(1.05);
+  }
+
+  .circle-inner {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+  }
+  
+  .circle-inner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    transition: background 0.3s;
+  }
+  
+  .circle-link:hover .circle-inner::after {
+    background: rgba(0,0,0,0.6);
+  }
+
+  .circle-title {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: var(--size-m);
+    text-align: center;
+    padding: var(--size-s);
+  }
+</style>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="contact-info">
+        <p>Contact: <a href="mailto:contact@lorenzo.com">contact@lorenzo.com</a></p>
+      </div>
+      <div class="credits">
+        <p>&copy; 2026 Lorenzo. Site by Antigravity.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
