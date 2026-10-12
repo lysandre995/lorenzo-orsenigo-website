@@ -4,14 +4,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title | default("Lorenzo Orsenigo – Percussionist & Researcher") }}</title>
+    <title>{{ title | default("Lorenzo Orsenigo – Percussionist & Researcher", true) }}</title>
     <meta name="description" content="{{ description | default("Official site of Lorenzo Orsenigo – percussionist, performer and researcher in contemporary and experimental music.") }}">
     <meta name="author" content="Lorenzo Orsenigo">
     <link
     rel="canonical" href="https://lorenzoorsenigo.com{{ page.url }}"> <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lorenzoorsenigo.com{{ page.url }}">
-    <meta property="og:title" content="{{ title | default("Lorenzo Orsenigo – Percussionist & Researcher") }}">
+    <meta property="og:title" content="{{ title | default("Lorenzo Orsenigo – Percussionist & Researcher", true) }}">
     <meta property="og:description" content="{{ description | default("Official site of Lorenzo Orsenigo – percussionist, performer and researcher in contemporary and experimental music.") }}">
     <meta property="og:image" content="https://lorenzoorsenigo.com{{ ogImage }}">
     <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
