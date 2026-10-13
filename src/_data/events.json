@@ -351,5 +351,23 @@
         "eventUrl": "https://alte-schmiede.at/",
         "description": "Solo Concert and CD Release - Music by M. Ciciliani, H. Kerschbaumer, S. Stefanovic, A. Kobzar, W. Olencki, J. Pranulytė",
         "coverUrl": "https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/refs/heads/main/img/Research_Lorenzo_.jpg"
+    },
+    {
+        "id": 39,
+        "name": "Trans-Art with Astrid Rieder",
+        "date": "2026-16-10T18:00",
+        "location": "Galerie Expuls, Klammstraße 14, Linz",
+        "eventUrl": "https://www.donauregion.at/oesterreich-veranstaltung/detail/430299308/geburtstagsfeier-expuls-galerie.html",
+        "description": "Astrid Rieder in dialogue with the Linz-based performer and percussionist Lorenzo Orsenigo.",
+        "coverUrl": "https://img.destination.one/remote/.jpg?url=https://dam.tourdata.at/471451/9E45573162F29A2B89069408B84F14BAC4A6B885339F08655674A660E2DAB24B/expuls-galerie-png.png&width=1920&height="
+    },
+    {
+        "id": 40,
+        "name": "Resonances - A Feedback in Between",
+        "date": "2026-22-10T17:00",
+        "location": "Meeting point: Baumgärtelpark, Baumgärtelstraße 7, 4040 Linz",
+        "eventUrl": "https://naturschutzbund-ooe.at/terminreader/events/talking-trees-baeume-hoeren-stadt-erleben.html",
+        "description": "Soundwalk and improvisations with Gudrun Fuß (Naturvermittlung, Naturschutzund Oberösterreich) and Margarethe Maierhofer-Lischka (Wissenschaftsvermittlung, Sonifikation)",
+        "coverUrl": "https://naturschutzbund-ooe.at/files/ooe_homepage/termine/Baum_Spaziergang.jpg"
     }
 ]
