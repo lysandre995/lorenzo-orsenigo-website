@@ -355,7 +355,7 @@
     {
         "id": 39,
         "name": "Trans-Art with Astrid Rieder",
-        "date": "2026-16-10T18:00",
+        "date": "2026-10-16T19:30",
         "location": "Galerie Expuls, Klammstraße 14, Linz",
         "eventUrl": "https://www.donauregion.at/oesterreich-veranstaltung/detail/430299308/geburtstagsfeier-expuls-galerie.html",
         "description": "Astrid Rieder in dialogue with the Linz-based performer and percussionist Lorenzo Orsenigo.",
@@ -364,10 +364,28 @@
     {
         "id": 40,
         "name": "Resonances - A Feedback in Between",
-        "date": "2026-22-10T17:00",
+        "date": "2026-10-22T17:00",
         "location": "Meeting point: Baumgärtelpark, Baumgärtelstraße 7, 4040 Linz",
         "eventUrl": "https://naturschutzbund-ooe.at/terminreader/events/talking-trees-baeume-hoeren-stadt-erleben.html",
         "description": "Soundwalk and improvisations with Gudrun Fuß (Naturvermittlung, Naturschutzund Oberösterreich) and Margarethe Maierhofer-Lischka (Wissenschaftsvermittlung, Sonifikation)",
         "coverUrl": "https://naturschutzbund-ooe.at/files/ooe_homepage/termine/Baum_Spaziergang.jpg"
+    },
+    {
+        "id": 41,
+        "name": "Rigorosum - Doctoral Defense",
+        "date": "2026-10-07T14:30",
+        "location": "ARTikulationen Festival, KUG, Graz",
+        "eventUrl": "https://vimeo.com/event/6170632",
+        "description": "Full event here: https://www.researchcatalogue.net/view/4730688/4730642",
+        "coverUrl": "https://www.kug.ac.at/fileadmin/03_Microsites/01_Kuenstlerisch_wissenschaftliche_Einheiten/02_Doktorratsschulen/Doktoratsschule_fuer_das_kuenstlerisch_wissenschaftliche_Doktoratsstudium/03_ARTikulationen/Artikulationen_2026/Lorenzo_Orsenigo_2.jpg"
+    },
+    {
+        "id": 42,
+        "name": "SINNE - SINN 05: Zeit | Formen",
+        "date": "2026-10-31T11:00",
+        "location": "Musikwissenschaftlichen Institut der Christian-Albrechts-Universität zu Kiel",
+        "eventUrl": "https://chiffren.de/zeitformen/",
+        "description": "Lecture-performance with Margarethe Maierhofer-Lischka (double bass)",
+        "coverUrl": "https://chiffren.de/wp-content/uploads/2026/03/SS26-Web-Banner-260319_gross-1536x864.jpg"
     }
 ]
