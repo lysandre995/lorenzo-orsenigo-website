@@ -13,6 +13,47 @@ layout: "layouts/base.njk"
       <h1 class="home-title">Lorenzo Orsenigo</h1>
     {% endif %}
   </div>
+
+  {# News carousel: only the most recent `carouselLimit` news, newest first.
+     If there are more, a link leads to /news/ with the full list. #}
+  {% set carouselLimit = 10 %}
+  {% if news and news.length %}
+  {% set newsItems = news | sortByDate("desc") | limit(carouselLimit) %}
+  <section class="home-news" aria-labelledby="home-news-title">
+    <h2 id="home-news-title" class="home-news-title">News</h2>
+
+    <div class="news-carousel" data-autoplay="7000" aria-roledescription="carousel">
+      <div class="news-viewport">
+        <div class="news-track">
+          {% for item in newsItems %}
+          <article class="news-slide" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ newsItems.length }}">
+            {% include "components/news-item.njk" %}
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+
+      {% if newsItems.length > 1 %}
+      <div class="news-controls">
+        <button type="button" class="news-arrow news-prev" aria-label="Previous news">&larr;</button>
+        <div class="news-dots">
+          {% for item in newsItems %}
+          <button type="button" class="news-dot" aria-label="Go to news {{ loop.index }}"></button>
+          {% endfor %}
+        </div>
+        <button type="button" class="news-arrow news-next" aria-label="Next news">&rarr;</button>
+      </div>
+      {% endif %}
+    </div>
+
+    {% if news.length > carouselLimit %}
+    <div class="home-news-all">
+      <a href="/news/" class="news-link">All news →</a>
+    </div>
+    {% endif %}
+  </section>
+  {% endif %}
+
   <style>
     .home-container {
       height: 100vh; /* Full viewport */
@@ -41,4 +82,134 @@ layout: "layouts/base.njk"
       height: 100%;
       background-color: #ccc;
     }
+
+    /* NEWS CAROUSEL (entry styles in main.css) */
+    .home-news {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: var(--size-xxl) var(--size-m);
+    }
+    .home-news-title {
+      font-size: var(--size-l);
+      font-weight: normal;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: var(--size-l);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .news-viewport {
+      overflow: hidden;
+    }
+    .news-track {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+    .news-slide {
+      flex: 0 0 100%;
+      min-width: 0;
+    }
+    .news-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--size-m);
+      margin-top: var(--size-l);
+    }
+    .news-arrow {
+      background: none;
+      border: none;
+      color: var(--color-text-light);
+      font-size: 1.4rem;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      font-family: inherit;
+      transition: color 0.2s;
+    }
+    .news-arrow:hover {
+      color: var(--color-text);
+    }
+    .news-dots {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+    .news-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid var(--color-text-light);
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+    }
+    .news-dot[aria-current="true"] {
+      background: var(--color-text);
+      border-color: var(--color-text);
+    }
+    .home-news-all {
+      text-align: center;
+      margin-top: var(--size-l);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .news-track {
+        transition: none;
+      }
+    }
   </style>
+
+  <script>
+    (function () {
+      const carousel = document.querySelector('.news-carousel');
+      if (!carousel) return;
+      const track = carousel.querySelector('.news-track');
+      const slides = Array.from(carousel.querySelectorAll('.news-slide'));
+      const dots = Array.from(carousel.querySelectorAll('.news-dot'));
+      if (slides.length < 2) return;
+
+      const delay = parseInt(carousel.dataset.autoplay, 10) || 7000;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let index = 0;
+      let timer = null;
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        track.style.transform = 'translateX(' + (-100 * index) + '%)';
+        slides.forEach(function (s, n) { s.setAttribute('aria-hidden', String(n !== index)); s.inert = n !== index; });
+        dots.forEach(function (d, n) { d.setAttribute('aria-current', String(n === index)); });
+      }
+
+      function stop() { clearInterval(timer); timer = null; }
+      function start() {
+        if (reducedMotion || timer) return;
+        timer = setInterval(function () { goTo(index + 1); }, delay);
+      }
+      function restart() { stop(); start(); }
+
+      carousel.querySelector('.news-prev').addEventListener('click', function () { goTo(index - 1); restart(); });
+      carousel.querySelector('.news-next').addEventListener('click', function () { goTo(index + 1); restart(); });
+      dots.forEach(function (d, n) { d.addEventListener('click', function () { goTo(n); restart(); }); });
+
+      // Pause while the user is reading / interacting
+      carousel.addEventListener('mouseenter', stop);
+      carousel.addEventListener('mouseleave', start);
+      carousel.addEventListener('focusin', stop);
+      carousel.addEventListener('focusout', start);
+      document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+
+      // Swipe on touch devices
+      let touchX = null;
+      carousel.addEventListener('touchstart', function (e) { touchX = e.touches[0].clientX; stop(); }, { passive: true });
+      carousel.addEventListener('touchend', function (e) {
+        if (touchX === null) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 40) goTo(index + (dx < 0 ? 1 : -1));
+        touchX = null;
+        start();
+      });
+
+      goTo(0);
+      start();
+    })();
+  </script>

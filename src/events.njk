@@ -44,12 +44,13 @@ keywords: "Lorenzo Orsenigo events, concerts, performances, artistic events, upc
         </section>
         <section class="events-section">
             <h2>Past Events</h2>
-            <div class="events-grid">
-                {% set now = "now" | dateFilter %}
-                {% set pastEvents = events | sortByDate("desc") %}
+            {# First 10 visible, then "See more" / "See less" add or remove 5 at a time #}
+            {% set pastInitialCount = 10 %}
+            {% set pastStepCount = 5 %}
+            <div class="events-grid" data-show-more data-initial="{{ pastInitialCount }}" data-step="{{ pastStepCount }}">
+                {% set pastEvents = events | pastOnly | sortByDate("desc") %}
                 {% for event in pastEvents %}
-                    {% if event.date < now %}
-                        <article class="event-card event-card-past">
+                        <article class="event-card event-card-past" data-show-more-item{% if loop.index > pastInitialCount %} hidden{% endif %}>
                             {% if event.coverUrl %}
                                 <div class="event-image">
                                     <img src="{{ event.coverUrl }}" alt="{{ event.name }}" loading="lazy"></div>
@@ -70,11 +71,11 @@ keywords: "Lorenzo Orsenigo events, concerts, performances, artistic events, upc
                                     {% endif %}
                                 </div>
                             </article>
-                        {% endif %}
                     {% endfor %}
                 </div>
             </section>
         </div>
+        {% include "components/show-more.njk" %}
         <style>
             .events-container {
                 max-width: 1200px;

@@ -1,0 +1,68 @@
+{#
+  Progressive "See more / See less" for long lists.
+  Markup:
+    <div data-show-more data-initial="10" data-step="5">
+      <article data-show-more-item>…</article>          (first `initial` items)
+      <article data-show-more-item hidden>…</article>   (the rest, hidden server-side)
+    </div>
+  - "See more" reveals up to `step` more items; it disappears once everything is shown.
+  - "See less" appears after the first "See more" and removes exactly the last
+    batch that was added (so a final partial batch of 3 is removed as 3).
+  - If the list has `initial` items or fewer, no buttons are shown.
+  Include this file once per page.
+#}
+<script>
+  (function () {
+    document.querySelectorAll('[data-show-more]').forEach(function (list) {
+      var items = Array.prototype.slice.call(list.querySelectorAll('[data-show-more-item]'));
+      var initial = parseInt(list.dataset.initial, 10);
+      var step = parseInt(list.dataset.step, 10) || 5;
+      if (isNaN(initial) || items.length <= initial) {
+        items.forEach(function (el) { el.hidden = false; });
+        return;
+      }
+
+      var shown = initial;
+      var batches = []; // sizes of the batches added by "See more", newest last
+
+      var controls = document.createElement('div');
+      controls.className = 'show-more-controls';
+      var lessBtn = makeButton('See less');
+      var moreBtn = makeButton('See more');
+      controls.appendChild(lessBtn);
+      controls.appendChild(moreBtn);
+      list.parentNode.insertBefore(controls, list.nextSibling);
+
+      function makeButton(label) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'show-more-btn';
+        b.textContent = label;
+        return b;
+      }
+
+      function render() {
+        items.forEach(function (el, i) { el.hidden = i >= shown; });
+        moreBtn.hidden = shown >= items.length;
+        lessBtn.hidden = batches.length === 0;
+      }
+
+      moreBtn.addEventListener('click', function () {
+        var add = Math.min(step, items.length - shown);
+        batches.push(add);
+        shown += add;
+        render();
+        if (moreBtn.hidden) lessBtn.focus();
+      });
+
+      lessBtn.addEventListener('click', function () {
+        shown -= batches.pop();
+        render();
+        if (lessBtn.hidden) moreBtn.focus();
+        controls.scrollIntoView({ block: 'nearest' });
+      });
+
+      render();
+    });
+  })();
+</script>

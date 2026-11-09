@@ -56,6 +56,13 @@ module.exports = function (eleventyConfig) {
     return `${day}-${month}-${year} ${hours}:${minutes}`;
   });
 
+  // Date only (dd-mm-yyyy), used by the news section
+  eleventyConfig.addFilter("formatDay", function (dateString) {
+    if (!dateString) return "";
+    const [year, month, day] = String(dateString).slice(0, 10).split("-");
+    return `${day}-${month}-${year}`;
+  });
+
   // Add filter to sort events by date
   eleventyConfig.addFilter("sortByDate", function (array, order = "asc") {
     return array.slice().sort((a, b) => {
@@ -63,6 +70,17 @@ module.exports = function (eleventyConfig) {
       const dateB = new Date(b.date);
       return order === "asc" ? dateA - dateB : dateB - dateA;
     });
+  });
+
+  // First n items of an array
+  eleventyConfig.addFilter("limit", function (array, n) {
+    return (array || []).slice(0, n);
+  });
+
+  // Keep only events whose date is before the build time
+  eleventyConfig.addFilter("pastOnly", function (array) {
+    const now = new Date().toISOString();
+    return array.filter((item) => item.date < now);
   });
 
   // Add filter to capitalize all words in hyphenated strings

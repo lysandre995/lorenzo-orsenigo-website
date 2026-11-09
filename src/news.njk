@@ -1,0 +1,54 @@
+---
+layout: "layouts/base.njk"
+title: "News"
+description: "News from Lorenzo Orsenigo – releases, projects and announcements."
+---
+
+{# All news, newest first: the first `initialCount` are visible,
+   then "See more" / "See less" add or remove `stepCount` at a time. #}
+{% set initialCount = 20 %}
+{% set stepCount = 5 %}
+{% set allNews = news | sortByDate("desc") %}
+
+<div class="news-page">
+  <h1>News</h1>
+  <div class="news-list" data-show-more data-initial="{{ initialCount }}" data-step="{{ stepCount }}">
+    {% for item in allNews %}
+    <article class="news-list-item" data-show-more-item{% if loop.index > initialCount %} hidden{% endif %}>
+      {% include "components/news-item.njk" %}
+    </article>
+    {% endfor %}
+  </div>
+</div>
+
+{% include "components/show-more.njk" %}
+
+<style>
+  .news-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .news-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .news-list-item {
+    padding: var(--size-l) 0;
+    border-top: 1px solid var(--color-border);
+  }
+  .news-list-item .news-item {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+  @media (max-width: 768px) {
+    .news-page {
+      padding: 1rem;
+    }
+    .news-page h1 {
+      font-size: 2rem;
+    }
+    .news-list-item .news-item {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
