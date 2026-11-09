@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <meta name="description" content="News from Lorenzo Orsenigo – releases, projects and announcements.">
+    <meta name="author" content="Lorenzo Orsenigo">
+    <link
+    rel="canonical" href="https://lorenzoorsenigo.com/news/"> <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lorenzoorsenigo.com/news/">
+    <meta property="og:title" content="News">
+    <meta property="og:description" content="News from Lorenzo Orsenigo – releases, projects and announcements.">
+    <meta property="og:image" content="https://lorenzoorsenigo.com/assets/img/cover.jpeg">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <header class="site-header">
+        <div class="site-logo">
+          <a href="/">Lorenzo Orsenigo</a>
+        </div>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="/bio/">Bio</a></li>
+            <li><a href="/events/">Events</a></li>
+            <li><a href="/projects/">Projects</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="site-main">
+        
+          <nav aria-label="Breadcrumb" class="site-breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    
+    
+    
+    
+    
+      
+    
+      
+        
+        
+        
+           <li><a href="/news/">News</a></li>
+        
+      
+    
+      
+    
+  </ol>
+</nav>
+
+        
+        
+
+
+
+
+
+<div class="news-page">
+  <h1>News</h1>
+  <div class="news-list" data-show-more data-initial="20" data-step="5">
+    
+    <article class="news-list-item" data-show-more-item>
+      
+<div class="news-item">
+  <div class="news-image">
+    
+      <div class="news-image-placeholder" aria-hidden="true"></div>
+    
+  </div>
+  <div class="news-content">
+    
+      <time class="news-date" datetime="2026-11-12">12-11-2026</time>
+    
+    <h3 class="news-item-title">[PLACEHOLDER] New CD release</h3>
+    
+      <div class="news-text"><p>[PLACEHOLDER] Short description of the CD: repertoire, musicians, label. Supports <em>markdown</em>.</p>
+</div>
+    
+    
+      <a href="https://bandcamp.com/" class="news-link" target="_blank" rel="noopener noreferrer">Listen on Bandcamp →</a>
+    
+  </div>
+</div>
+
+    </article>
+    
+  </div>
+</div>
+
+
+<script>
+  (function () {
+    document.querySelectorAll('[data-show-more]').forEach(function (list) {
+      var items = Array.prototype.slice.call(list.querySelectorAll('[data-show-more-item]'));
+      var initial = parseInt(list.dataset.initial, 10);
+      var step = parseInt(list.dataset.step, 10) || 5;
+      if (isNaN(initial) || items.length <= initial) {
+        items.forEach(function (el) { el.hidden = false; });
+        return;
+      }
+
+      var shown = initial;
+      var batches = []; // sizes of the batches added by "See more", newest last
+
+      var controls = document.createElement('div');
+      controls.className = 'show-more-controls';
+      var lessBtn = makeButton('See less');
+      var moreBtn = makeButton('See more');
+      controls.appendChild(lessBtn);
+      controls.appendChild(moreBtn);
+      list.parentNode.insertBefore(controls, list.nextSibling);
+
+      function makeButton(label) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'show-more-btn';
+        b.textContent = label;
+        return b;
+      }
+
+      function render() {
+        items.forEach(function (el, i) { el.hidden = i >= shown; });
+        moreBtn.hidden = shown >= items.length;
+        lessBtn.hidden = batches.length === 0;
+      }
+
+      moreBtn.addEventListener('click', function () {
+        var add = Math.min(step, items.length - shown);
+        batches.push(add);
+        shown += add;
+        render();
+        if (moreBtn.hidden) lessBtn.focus();
+      });
+
+      lessBtn.addEventListener('click', function () {
+        shown -= batches.pop();
+        render();
+        if (lessBtn.hidden) moreBtn.focus();
+        controls.scrollIntoView({ block: 'nearest' });
+      });
+
+      render();
+    });
+  })();
+</script>
+
+
+<style>
+  .news-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .news-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .news-list-item {
+    padding: var(--size-l) 0;
+    border-top: 1px solid var(--color-border);
+  }
+  .news-list-item .news-item {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+  @media (max-width: 768px) {
+    .news-page {
+      padding: 1rem;
+    }
+    .news-page h1 {
+      font-size: 2rem;
+    }
+    .news-list-item .news-item {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+      </main>
+      <footer class="site-footer">
+        <div class="contact-info">
+          <a href="https://instagram.com/lorso_percussion" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="ph ph-instagram-logo"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCSELABk7HStKmOlyKvCeBrA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube">
+            <i class="ph ph-youtube-logo"></i>
+          </a>
+          <a href="mailto:info@lorenzoorsenigo.com" aria-label="Email">
+            <i class="ph ph-envelope-simple"></i>
+          </a>
+        </div>
+        <div class="credits">
+          <p>&copy; 2026 Lorenzo Orsenigo. Site by
+            <a href="https://alessandroalfano.com" target="_blank" rel="noopener noreferrer">Alessandro Alfano</a>.</p>
+        </div>
+      </footer>
+    </div>
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      { "@context": "https://schema.org", "@type": "Person", "name": "Lorenzo Orsenigo", "url": "https://lorenzoorsenigo.com",
+      "image": "https://lorenzoorsenigo.com/assets/img/Bio_Updated_compressed.jpg", "description": "percussionist, performer and researcher in contemporary and experimental music.", "sameAs": [
+      "https://www.youtube.com/channel/UCSELABk7HStKmOlyKvCeBrA", "https://instagram.com/lorso_percussion" ], "contactPoint":
+      { "@type": "ContactPoint", "contactType": "Email", "email": "info@lorenzoorsenigo.com" }, "jobTitle": ["Percussionist", "Researcher"] }
+    </script>
+  </body>
+</html>
