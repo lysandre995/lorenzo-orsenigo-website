@@ -395,7 +395,7 @@
         "location": "Galerie Expuls, Klammstraße 14, Linz",
         "eventUrl": "https://expuls-galerie.com/",
         "description": "Interdisciplinary improvisation feat. Verena Merstallinger (guitar) on poems by Robin Maxwell",
-        "coverUrl": "https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/main/img/duo.jpeg"
+        "coverUrl": "https://floriansamuelberger.wordpress.com/wp-content/uploads/2026/07/julia-renner.jpg?w=768"
     },
     {
         "id": 44,
@@ -407,12 +407,12 @@
         "coverUrl": "https://raw.githubusercontent.com/lorenzoorsenigo/lorenzo-orsenigo-website-data/refs/heads/main/img/Research_Lorenzo_.jpg"
     },
     {
-        "id": 35,
+        "id": 45,
         "name": "Trans-Art with Astrid Rieder",
         "date": "2027-02-26T18:00",
         "location": "Die Kunstschaffenden, Linz (AUT)",
         "eventUrl": "",
         "description": "Astrid Rieder in dialogue with the Linz-based performer and percussionist Lorenzo Orsenigo.",
-        "coverUrl": "https://img.destination.one/remote/.jpg?url=https://dam.tourdata.at/471451/9E45573162F29A2B89069408B84F14BAC4A6B885339F08655674A660E2DAB24B/expuls-galerie-png.png&width=1920&height="
+        "coverUrl": "https://www.astrid-rieder.com/uploads/w60VDTix/767x0_2560x0/Astrid_Rieder_do_trans-Art_124_WEB__msi___jpg.webp"
     }
 ]
