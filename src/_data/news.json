@@ -1,12 +1,2 @@
 [
-    {
-        "date": "2026-11-12",
-        "title": "[PLACEHOLDER] New CD release",
-        "text": "[PLACEHOLDER] Short description of the CD: repertoire, musicians, label. Supports *markdown*.",
-        "image": "",
-        "link": {
-            "url": "https://bandcamp.com/",
-            "label": "Listen on Bandcamp"
-        }
-    }
 ]
