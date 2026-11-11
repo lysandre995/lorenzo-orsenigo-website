@@ -189,26 +189,46 @@ video {
 .show-more-controls {
   display: flex;
   justify-content: center;
-  gap: var(--size-s);
+  gap: var(--size-l);
   margin-top: 2.5rem;
 }
 
+/* Same look as the "Click here for more info" link (.info-link) */
 .show-more-btn {
   background: none;
-  border: 1px solid var(--color-text-light);
+  border: none;
   color: var(--color-text-light);
   font-family: inherit;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.5rem 1.5rem;
+  padding: 0 0 4px;
   cursor: pointer;
-  transition: color 0.2s, border-color 0.2s;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.show-more-btn:hover {
+.show-more-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-text-light);
+  transform: scaleX(0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.show-more-btn:hover,
+.show-more-btn:focus-visible {
   color: var(--color-text);
-  border-color: var(--color-text);
+}
+
+.show-more-btn:hover::after,
+.show-more-btn:focus-visible::after {
+  transform: scaleX(1);
+  background-color: var(--color-text);
 }
 
 /* News entry (components/news-item.njk), used on home and /news/ */
